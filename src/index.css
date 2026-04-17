@@ -123,6 +123,16 @@
 
   .hairline { border: 1px solid hsl(var(--border)); }
 
+  /* On white cards, override globally-dark tokens for readability */
+  .bg-card {
+    --muted-foreground: 220 12% 38%;
+    --border: 220 16% 88%;
+    --secondary: 220 20% 96%;
+    --secondary-foreground: 220 28% 12%;
+    --muted: 220 20% 94%;
+    --foreground: 220 28% 10%;
+  }
+
   /* Reveal-on-scroll */
   .reveal {
     opacity: 0;
