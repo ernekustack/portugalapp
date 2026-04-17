@@ -125,21 +125,41 @@
 
   /* On white cards, force stronger contrast for readability */
   .bg-card {
-    --muted-foreground: 158 74% 24%;
+    --foreground: 220 39% 11%;
+    --card-foreground: 220 39% 11%;
+    --muted-foreground: 220 21% 23%;
     --border: 220 16% 84%;
     --secondary: 220 20% 95%;
     --secondary-foreground: 220 28% 12%;
     --muted: 220 20% 92%;
-    --foreground: 220 28% 10%;
-    --ink-soft: 158 74% 24%;
-    --accent: 158 74% 26%;
+    --ink-soft: 220 21% 23%;
+    --accent: 220 21% 23%;
     --accent-foreground: 0 0% 100%;
+    color: hsl(220 39% 11%) !important;
   }
 
+  .bg-card h1,
+  .bg-card h2,
+  .bg-card h3,
+  .bg-card h4,
+  .bg-card h5,
+  .bg-card h6,
+  .bg-card p,
+  .bg-card li,
+  .bg-card span,
+  .bg-card a,
+  .bg-card strong,
+  .bg-card em,
+  .bg-card label,
+  .bg-card small,
+  .bg-card dt,
+  .bg-card dd,
+  .bg-card .text-foreground,
+  .bg-card .text-card-foreground,
   .bg-card .text-muted-foreground,
   .bg-card .text-ink-soft,
   .bg-card .text-accent {
-    color: hsl(158 74% 24%);
+    color: hsl(220 21% 23%) !important;
   }
 
   /* Reveal-on-scroll */
