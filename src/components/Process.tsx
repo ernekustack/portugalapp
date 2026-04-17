@@ -22,7 +22,7 @@ export const Process = () => {
             <Reveal key={s.n} delay={i * 120}>
               <div className="relative rounded-3xl bg-card hairline p-8 md:p-9 shadow-soft hover:-translate-y-1 transition-transform duration-500">
                 <div className="flex items-center gap-4">
-                  <div className="h-10 w-10 rounded-full bg-primary text-primary-foreground flex items-center justify-center text-sm font-medium">
+                  <div className="h-10 w-10 rounded-full bg-accent text-accent-foreground flex items-center justify-center text-sm font-medium">
                     {i + 1}
                   </div>
                   <div className="text-xs text-muted-foreground tracking-widest">{s.n}</div>

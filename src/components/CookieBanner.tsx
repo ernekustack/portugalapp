@@ -26,7 +26,7 @@ export const CookieBanner = () => {
         <p className="text-sm text-muted-foreground leading-relaxed flex-1">{t.cookie.text}</p>
         <button
           onClick={accept}
-          className="shrink-0 inline-flex items-center rounded-full bg-primary text-primary-foreground px-4 py-2 text-xs font-medium hover:opacity-90 transition shadow-soft"
+          className="shrink-0 inline-flex items-center rounded-full bg-accent text-accent-foreground px-4 py-2 text-xs font-medium hover:opacity-90 transition shadow-soft"
         >
           {t.cookie.accept}
         </button>

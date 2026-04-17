@@ -39,7 +39,7 @@ export const Hero = () => {
           <div className="mt-10 flex flex-col sm:flex-row items-start sm:items-center gap-4">
             <a
               href="#kontakt"
-              className="group inline-flex items-center gap-2 rounded-full bg-primary text-primary-foreground px-6 py-3.5 text-sm font-medium shadow-soft hover:shadow-card transition-all"
+              className="group inline-flex items-center gap-2 rounded-full bg-accent text-accent-foreground px-6 py-3.5 text-sm font-medium shadow-glow hover:opacity-95 transition-all"
             >
               {t.hero.cta}
               <svg className="transition-transform group-hover:translate-x-0.5" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
