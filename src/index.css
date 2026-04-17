@@ -8,55 +8,56 @@
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 220 25% 12%;
+    /* Inverted: dark anthracite base, white as contrast */
+    --background: 220 28% 9%;
+    --foreground: 220 14% 96%;
 
     --card: 0 0% 100%;
-    --card-foreground: 220 25% 12%;
+    --card-foreground: 220 28% 10%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 220 25% 12%;
+    --popover: 220 28% 11%;
+    --popover-foreground: 220 14% 96%;
 
-    /* Anthracite primary */
-    --primary: 220 28% 14%;
-    --primary-foreground: 0 0% 100%;
+    /* Primary now light (white) on dark bg; CTAs use accent */
+    --primary: 0 0% 100%;
+    --primary-foreground: 220 28% 10%;
 
-    --secondary: 220 16% 96%;
-    --secondary-foreground: 220 25% 14%;
+    --secondary: 220 22% 14%;
+    --secondary-foreground: 220 14% 96%;
 
-    --muted: 220 14% 96%;
-    --muted-foreground: 220 10% 45%;
+    --muted: 220 22% 14%;
+    --muted-foreground: 220 12% 65%;
 
     /* Emerald accent */
-    --accent: 158 64% 42%;
-    --accent-foreground: 0 0% 100%;
-    --accent-soft: 158 70% 96%;
+    --accent: 158 64% 46%;
+    --accent-foreground: 220 28% 10%;
+    --accent-soft: 158 50% 18%;
 
-    --destructive: 0 72% 51%;
+    --destructive: 0 72% 55%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 220 16% 92%;
-    --input: 220 16% 92%;
-    --ring: 158 64% 42%;
+    --border: 220 20% 18%;
+    --input: 220 20% 18%;
+    --ring: 158 64% 46%;
 
     --radius: 0.875rem;
 
-    /* Surfaces */
-    --surface: 220 20% 99%;
-    --surface-2: 220 22% 97%;
-    --ink: 220 28% 10%;
-    --ink-soft: 220 18% 28%;
+    /* Surfaces — slight tonal variation on dark */
+    --surface: 220 28% 7%;
+    --surface-2: 220 26% 11%;
+    --ink: 220 30% 6%;
+    --ink-soft: 220 12% 78%;
 
     /* Gradients */
-    --gradient-hero: radial-gradient(1200px 600px at 80% -10%, hsl(158 64% 42% / 0.08), transparent 60%),
-                     radial-gradient(900px 500px at -10% 10%, hsl(220 28% 14% / 0.06), transparent 60%);
-    --gradient-ink: linear-gradient(180deg, hsl(220 28% 12%) 0%, hsl(220 30% 8%) 100%);
-    --gradient-accent: linear-gradient(135deg, hsl(158 64% 42%), hsl(165 70% 38%));
+    --gradient-hero: radial-gradient(1200px 600px at 80% -10%, hsl(158 64% 46% / 0.18), transparent 60%),
+                     radial-gradient(900px 500px at -10% 10%, hsl(220 28% 30% / 0.25), transparent 60%);
+    --gradient-ink: linear-gradient(180deg, hsl(220 28% 11%) 0%, hsl(220 32% 6%) 100%);
+    --gradient-accent: linear-gradient(135deg, hsl(158 64% 46%), hsl(165 70% 40%));
 
-    /* Shadows */
-    --shadow-soft: 0 1px 2px hsl(220 25% 12% / 0.04), 0 8px 24px -12px hsl(220 25% 12% / 0.08);
-    --shadow-card: 0 1px 0 hsl(220 25% 12% / 0.04), 0 24px 48px -24px hsl(220 25% 12% / 0.18);
-    --shadow-glow: 0 30px 80px -30px hsl(158 64% 42% / 0.35);
+    /* Shadows tuned for dark surfaces */
+    --shadow-soft: 0 1px 2px hsl(0 0% 0% / 0.3), 0 8px 24px -12px hsl(0 0% 0% / 0.5);
+    --shadow-card: 0 1px 0 hsl(0 0% 0% / 0.3), 0 30px 60px -24px hsl(0 0% 0% / 0.6);
+    --shadow-glow: 0 30px 80px -30px hsl(158 64% 46% / 0.5);
 
     /* Motion */
     --ease-out-soft: cubic-bezier(0.22, 1, 0.36, 1);
