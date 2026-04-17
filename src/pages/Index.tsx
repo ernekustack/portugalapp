@@ -4,6 +4,7 @@ import { Portfolio } from "@/components/Portfolio";
 import { TechStack } from "@/components/TechStack";
 import { Process } from "@/components/Process";
 import { CTA } from "@/components/CTA";
+import { Initiatives } from "@/components/Initiatives";
 import { ContactForm } from "@/components/ContactForm";
 import { Footer } from "@/components/Footer";
 import { CookieBanner } from "@/components/CookieBanner";
@@ -19,6 +20,7 @@ const Index = () => {
         <TechStack />
         <Process />
         <CTA />
+        <Initiatives />
         <ContactForm />
         <Footer />
         <CookieBanner />

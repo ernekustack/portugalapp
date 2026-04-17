@@ -30,6 +30,11 @@ export type Dict = {
     steps: { n: string; t: string; d: string }[];
   };
   cta: { eyebrow: string; title: string; titleItalic: string; desc: string; button: string; note: string };
+  initiatives: {
+    eyebrow: string; title: string; titleItalic: string; desc: string;
+    sponsorGoal: string; cta: string;
+    projects: { name: string; tagline: string; goal: string; tag: string }[];
+  };
   contact: {
     eyebrow: string; title: string; desc: string;
     name: string; email: string; message: string;
@@ -85,6 +90,15 @@ export const translations: Record<Lang, Dict> = {
       ],
     },
     cta: { eyebrow: "Bereit anzufangen?", title: "Lassen Sie uns über Ihre Idee ", titleItalic: "sprechen.", desc: "30 Minuten, unverbindlich, klar. Sie bekommen eine ehrliche Einschätzung – und einen realistischen Plan.", button: "Kostenloses Erstgespräch", note: "Antwort innerhalb von 24 Stunden" },
+    initiatives: {
+      eyebrow: "Initiativen & Partnerschaften", title: "Projekte mit ", titleItalic: "Haltung.",
+      desc: "Zwei Herzensprojekte, die ich aktiv vorantreibe. Werden Sie Partner und gestalten Sie mit.",
+      sponsorGoal: "Sponsoring-Ziel", cta: "Partnerschaft anfragen",
+      projects: [
+        { name: "Luz e Morte", tag: "Spieleprojekt", tagline: "Ein atmosphärisches Spielprojekt, das Storytelling und Kunst vereint.", goal: "Unterstützung bei der Finalisierung der Grafik und dem globalen Release." },
+        { name: "Alentejo Events", tag: "Event-App", tagline: "Die digitale Heimat für alle Veranstaltungen im Alentejo.", goal: "Strategische Partnerschaften mit regionalen Akteuren und Veranstaltern." },
+      ],
+    },
     contact: {
       eyebrow: "Kontakt", title: "Schreiben Sie mir.", desc: "Kurz Ihr Anliegen – ich melde mich innerhalb von 24 Stunden.",
       name: "Name", email: "E-Mail", message: "Nachricht",
@@ -134,6 +148,15 @@ export const translations: Record<Lang, Dict> = {
       ],
     },
     cta: { eyebrow: "Ready to start?", title: "Let's talk about your ", titleItalic: "idea.", desc: "30 minutes, no strings attached. You get an honest assessment — and a realistic plan.", button: "Free consultation", note: "Reply within 24 hours" },
+    initiatives: {
+      eyebrow: "Initiatives & Partnerships", title: "Projects with ", titleItalic: "purpose.",
+      desc: "Two passion projects I'm actively driving forward. Become a partner and shape them with me.",
+      sponsorGoal: "Sponsorship goal", cta: "Request partnership",
+      projects: [
+        { name: "Luz e Morte", tag: "Game project", tagline: "An atmospheric gaming project blending storytelling and art.", goal: "Support for finalising the artwork and the global release." },
+        { name: "Alentejo Events", tag: "Event app", tagline: "The digital home for all events in Alentejo.", goal: "Strategic partnerships with regional players and event organisers." },
+      ],
+    },
     contact: {
       eyebrow: "Contact", title: "Drop me a line.", desc: "Briefly tell me what you need — I'll get back within 24 hours.",
       name: "Name", email: "Email", message: "Message",
@@ -183,6 +206,15 @@ export const translations: Record<Lang, Dict> = {
       ],
     },
     cta: { eyebrow: "Pronto para começar?", title: "Vamos falar sobre a sua ", titleItalic: "ideia.", desc: "30 minutos, sem compromisso. Recebe uma avaliação honesta — e um plano realista.", button: "Conversa gratuita", note: "Resposta em 24 horas" },
+    initiatives: {
+      eyebrow: "Iniciativas e Parcerias", title: "Projetos com ", titleItalic: "propósito.",
+      desc: "Dois projetos de coração que estou a impulsionar. Torne-se parceiro e construa connosco.",
+      sponsorGoal: "Objetivo de patrocínio", cta: "Pedir parceria",
+      projects: [
+        { name: "Luz e Morte", tag: "Projeto de jogo", tagline: "Um projeto de jogo atmosférico que une narrativa e arte.", goal: "Apoio na finalização da arte e no lançamento global." },
+        { name: "Alentejo Events", tag: "App de eventos", tagline: "O lar digital para todos os eventos no Alentejo.", goal: "Parcerias estratégicas com agentes regionais e organizadores." },
+      ],
+    },
     contact: {
       eyebrow: "Contacto", title: "Escreva-me.", desc: "Conte-me brevemente o que precisa — respondo em 24 horas.",
       name: "Nome", email: "E-mail", message: "Mensagem",
@@ -232,6 +264,15 @@ export const translations: Record<Lang, Dict> = {
       ],
     },
     cta: { eyebrow: "Klaar om te beginnen?", title: "Laten we het over uw ", titleItalic: "idee hebben.", desc: "30 minuten, vrijblijvend en helder. U krijgt een eerlijke inschatting — en een realistisch plan.", button: "Gratis kennismaking", note: "Antwoord binnen 24 uur" },
+    initiatives: {
+      eyebrow: "Initiatieven & Partnerschappen", title: "Projecten met ", titleItalic: "betekenis.",
+      desc: "Twee hartprojecten die ik actief vooruithelp. Word partner en bouw mee.",
+      sponsorGoal: "Sponsordoel", cta: "Partnerschap aanvragen",
+      projects: [
+        { name: "Luz e Morte", tag: "Gameproject", tagline: "Een sfeervol spelproject dat storytelling en kunst combineert.", goal: "Ondersteuning bij het afronden van de graphics en de wereldwijde release." },
+        { name: "Alentejo Events", tag: "Evenementen-app", tagline: "Hét digitale platform voor alle evenementen in de Alentejo.", goal: "Strategische partnerschappen met regionale spelers en organisatoren." },
+      ],
+    },
     contact: {
       eyebrow: "Contact", title: "Stuur mij een bericht.", desc: "Vertel kort wat u zoekt — ik reageer binnen 24 uur.",
       name: "Naam", email: "E-mail", message: "Bericht",
