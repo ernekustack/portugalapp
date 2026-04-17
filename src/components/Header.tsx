@@ -53,7 +53,7 @@ export const Header = () => {
           <LanguageSwitcher />
           <a
             href="#kontakt"
-            className="inline-flex items-center gap-2 rounded-full bg-primary text-primary-foreground px-4 py-2 text-sm font-medium hover:opacity-90 transition shadow-soft"
+            className="inline-flex items-center gap-2 rounded-full bg-accent text-accent-foreground px-4 py-2 text-sm font-medium hover:opacity-90 transition shadow-soft"
           >
             {t.nav.cta}
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
@@ -85,7 +85,7 @@ export const Header = () => {
             <a
               href="#kontakt"
               onClick={() => setOpen(false)}
-              className="mt-2 inline-flex items-center justify-center rounded-full bg-primary text-primary-foreground px-4 py-3 text-sm font-medium"
+              className="mt-2 inline-flex items-center justify-center rounded-full bg-accent text-accent-foreground px-4 py-3 text-sm font-medium"
             >
               {t.nav.ctaLong}
             </a>
