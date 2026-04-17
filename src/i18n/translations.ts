@@ -30,6 +30,11 @@ export type Dict = {
     steps: { n: string; t: string; d: string }[];
   };
   cta: { eyebrow: string; title: string; titleItalic: string; desc: string; button: string; note: string };
+  initiatives: {
+    eyebrow: string; title: string; titleItalic: string; desc: string;
+    sponsorGoal: string; cta: string;
+    projects: { name: string; tagline: string; goal: string; tag: string }[];
+  };
   contact: {
     eyebrow: string; title: string; desc: string;
     name: string; email: string; message: string;
