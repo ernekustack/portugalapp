@@ -1,23 +1,5 @@
 import { Reveal } from "./Reveal";
-
-const cards = [
-  {
-    eyebrow: "01 — Business",
-    title: "Effizienz auf Knopfdruck.",
-    desc:
-      "Automatisierte Abläufe, die Zeit sparen und Fehler vermeiden. Interne Tools, exakt zugeschnitten auf Ihr Team.",
-    bullets: ["Prozess-Automatisierung", "Dashboards & Reporting", "Schnittstellen zu Ihrer IT"],
-    visual: "business",
-  },
-  {
-    eyebrow: "02 — Consumer",
-    title: "Kundenbindung in der Hosentasche.",
-    desc:
-      "Intuitive Bedienung und modernes Design für Ihre Marke. Native Apps für App Store und Google Play.",
-    bullets: ["iOS & Android nativ", "App Store Veröffentlichung", "Skalierbare Backends"],
-    visual: "consumer",
-  },
-] as const;
+import { useI18n } from "@/i18n/LanguageContext";
 
 const BusinessMock = () => (
   <div className="absolute inset-0 p-6 md:p-8">
@@ -71,10 +53,10 @@ const ConsumerMock = () => (
         <div className="h-full w-full rounded-[2rem] bg-background overflow-hidden relative">
           <div className="absolute top-2 left-1/2 -translate-x-1/2 h-4 w-20 bg-ink rounded-full" />
           <div className="pt-10 px-4">
-            <div className="text-[10px] text-muted-foreground">Guten Morgen,</div>
+            <div className="text-[10px] text-muted-foreground">Hi,</div>
             <div className="font-display text-lg font-semibold tracking-tight">Anna</div>
             <div className="mt-3 rounded-2xl bg-gradient-ink p-4 text-primary-foreground shadow-soft">
-              <div className="text-[10px] opacity-70">Aktiv</div>
+              <div className="text-[10px] opacity-70">Active</div>
               <div className="text-xl font-semibold mt-1">€ 2.480</div>
               <div className="mt-3 h-1 rounded-full bg-white/15 overflow-hidden">
                 <div className="h-full bg-accent w-2/3" />
@@ -94,15 +76,21 @@ const ConsumerMock = () => (
 );
 
 export const Portfolio = () => {
+  const { t } = useI18n();
+  const cards = [
+    { ...t.portfolio.business, visual: "business" as const },
+    { ...t.portfolio.consumer, visual: "consumer" as const },
+  ];
+
   return (
     <section id="leistungen" className="py-24 md:py-32 surface">
       <div className="container-px mx-auto max-w-7xl">
         <Reveal>
           <div className="max-w-2xl">
-            <div className="text-xs uppercase tracking-[0.2em] text-accent font-medium">Leistungen</div>
+            <div className="text-xs uppercase tracking-[0.2em] text-accent font-medium">{t.portfolio.eyebrow}</div>
             <h2 className="mt-4 font-display text-3xl md:text-5xl font-semibold tracking-tight text-balance">
-              Zwei Welten. Ein Anspruch:{" "}
-              <span className="font-serif-display italic text-ink-soft">echte Wirkung.</span>
+              {t.portfolio.title}
+              <span className="font-serif-display italic text-ink-soft">{t.portfolio.titleItalic}</span>
             </h2>
           </div>
         </Reveal>
@@ -116,9 +104,7 @@ export const Portfolio = () => {
                 </div>
                 <div className="p-7 md:p-9">
                   <div className="text-xs uppercase tracking-[0.2em] text-accent font-medium">{c.eyebrow}</div>
-                  <h3 className="mt-3 font-display text-2xl md:text-3xl font-semibold tracking-tight">
-                    {c.title}
-                  </h3>
+                  <h3 className="mt-3 font-display text-2xl md:text-3xl font-semibold tracking-tight">{c.title}</h3>
                   <p className="mt-4 text-muted-foreground leading-relaxed text-pretty">{c.desc}</p>
                   <ul className="mt-6 space-y-2.5">
                     {c.bullets.map((b) => (
