@@ -131,11 +131,15 @@
     --secondary-foreground: 220 28% 12%;
     --muted: 220 20% 92%;
     --foreground: 220 28% 10%;
+    --accent: 158 74% 26%;
   }
 
   .bg-card .text-muted-foreground,
   .bg-card .text-ink-soft {
     color: hsl(220 18% 24%);
+  }
+  .bg-card .text-accent {
+    color: hsl(158 74% 24%);
   }
 
   /* Reveal-on-scroll */
