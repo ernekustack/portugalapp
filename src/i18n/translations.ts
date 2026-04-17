@@ -1,0 +1,249 @@
+export type Lang = "de" | "en" | "pt" | "nl";
+
+export const LANGUAGES: { code: Lang; label: string }[] = [
+  { code: "de", label: "DE" },
+  { code: "en", label: "EN" },
+  { code: "pt", label: "PT" },
+  { code: "nl", label: "NL" },
+];
+
+export type Dict = {
+  nav: { services: string; quality: string; process: string; contact: string; cta: string; ctaLong: string };
+  hero: {
+    badge: string;
+    title1: string; titleItalic: string; titleAfter: string; subtitle: string;
+    desc: string; cta: string; secondary: string;
+    stats: { k: string; v: string }[];
+  };
+  portfolio: {
+    eyebrow: string; title: string; titleItalic: string;
+    business: { eyebrow: string; title: string; desc: string; bullets: string[] };
+    consumer: { eyebrow: string; title: string; desc: string; bullets: string[] };
+  };
+  tech: {
+    eyebrow: string; title: string; titleItalic: string; desc: string;
+    stack: { name: string; sub: string }[];
+    stats: { k: string; v: string }[];
+  };
+  process: {
+    eyebrow: string; title: string; titleItalic: string;
+    steps: { n: string; t: string; d: string }[];
+  };
+  cta: { eyebrow: string; title: string; titleItalic: string; desc: string; button: string; note: string };
+  contact: {
+    eyebrow: string; title: string; desc: string;
+    name: string; email: string; message: string;
+    submit: string; sending: string; success: string; error: string;
+    privacy: string;
+  };
+  footer: {
+    tagline: string; contact: string; legal: string; follow: string;
+    imprint: string; privacy: string; rights: string; made: string;
+    standards: string;
+  };
+  cookie: { text: string; accept: string };
+};
+
+export const translations: Record<Lang, Dict> = {
+  de: {
+    nav: { services: "Leistungen", quality: "Qualität", process: "Prozess", contact: "Kontakt", cta: "Erstgespräch", ctaLong: "Kostenloses Erstgespräch" },
+    hero: {
+      badge: "Aktuell verfügbar – neue Projekte ab Q2",
+      title1: "Ihre Idee als ", titleItalic: "maßgeschneiderte", titleAfter: " App",
+      subtitle: "einfach, schnell & zukunftssicher.",
+      desc: "Ich entwickle digitale Lösungen, die Ihre Prozesse optimieren oder Ihre Kunden begeistern. Professionelle Umsetzung – ohne kompliziertes IT-Vokabular.",
+      cta: "Kostenloses Erstgespräch vereinbaren", secondary: "Leistungen ansehen",
+      stats: [
+        { k: "100%", v: "Maßgeschneidert" },
+        { k: "DSGVO", v: "Konform entwickelt" },
+        { k: "7+ J.", v: "Erfahrung" },
+        { k: "1:1", v: "Direkter Kontakt" },
+      ],
+    },
+    portfolio: {
+      eyebrow: "Leistungen", title: "Zwei Welten. Ein Anspruch: ", titleItalic: "echte Wirkung.",
+      business: { eyebrow: "01 — Business", title: "Effizienz auf Knopfdruck.", desc: "Automatisierte Abläufe, die Zeit sparen und Fehler vermeiden. Interne Tools, exakt zugeschnitten auf Ihr Team.", bullets: ["Prozess-Automatisierung", "Dashboards & Reporting", "Schnittstellen zu Ihrer IT"] },
+      consumer: { eyebrow: "02 — Consumer", title: "Kundenbindung in der Hosentasche.", desc: "Intuitive Bedienung und modernes Design für Ihre Marke. Native Apps für App Store und Google Play.", bullets: ["iOS & Android nativ", "App Store Veröffentlichung", "Skalierbare Backends"] },
+    },
+    tech: {
+      eyebrow: "Industriestandards", title: "Entwickelt nach höchsten ", titleItalic: "Standards.",
+      desc: "Entwickelt nach höchsten Industriestandards für maximale Sicherheit und Skalierbarkeit.",
+      stack: [
+        { name: "JavaScript", sub: "Web & Apps" },
+        { name: "Python", sub: "Backend & KI" },
+        { name: "Swift", sub: "iOS" },
+        { name: "Kotlin", sub: "Android" },
+      ],
+      stats: [{ k: "Stabil", v: "Bewährt seit Jahren" }, { k: "Schnell", v: "Optimierte Performance" }, { k: "Skalierbar", v: "Wächst mit Ihnen" }],
+    },
+    process: {
+      eyebrow: "Der Prozess", title: "In drei Schritten zur ", titleItalic: "fertigen App.",
+      steps: [
+        { n: "01", t: "Gemeinsame Planung", d: "Wir definieren das Ziel. In einem klaren Gespräch verstehe ich Ihr Geschäft und schlage den schlankesten Weg vor." },
+        { n: "02", t: "Prototyping", d: "Sie sehen das Design vorab. Klickbare Entwürfe, bevor eine Zeile Code geschrieben wird – kein Blindflug." },
+        { n: "03", t: "Start & Support", d: "Ihre App geht live. Veröffentlichung, Übergabe und langfristige Betreuung – alles aus einer Hand." },
+      ],
+    },
+    cta: { eyebrow: "Bereit anzufangen?", title: "Lassen Sie uns über Ihre Idee ", titleItalic: "sprechen.", desc: "30 Minuten, unverbindlich, klar. Sie bekommen eine ehrliche Einschätzung – und einen realistischen Plan.", button: "Kostenloses Erstgespräch", note: "Antwort innerhalb von 24 Stunden" },
+    contact: {
+      eyebrow: "Kontakt", title: "Schreiben Sie mir.", desc: "Kurz Ihr Anliegen – ich melde mich innerhalb von 24 Stunden.",
+      name: "Name", email: "E-Mail", message: "Nachricht",
+      submit: "Anfrage senden", sending: "Wird gesendet…", success: "Vielen Dank! Ihre Nachricht ist angekommen.", error: "Etwas ist schiefgelaufen. Bitte später erneut versuchen.",
+      privacy: "Mit dem Absenden stimmen Sie der Verarbeitung Ihrer Angaben zu.",
+    },
+    footer: {
+      tagline: "Maßgeschneiderte App-Entwicklung für Unternehmer, die Wirkung statt Buzzwords suchen.",
+      contact: "Kontakt", legal: "Rechtliches", follow: "Folgen",
+      imprint: "Impressum", privacy: "Datenschutz", rights: "Alle Rechte vorbehalten.", made: "Made with care in Germany.",
+      standards: "Entwickelt nach höchsten Industriestandards für maximale Sicherheit und Skalierbarkeit.",
+    },
+    cookie: { text: "Wir nutzen Cookies, um Ihre Erfahrung zu verbessern.", accept: "Akzeptieren" },
+  },
+  en: {
+    nav: { services: "Services", quality: "Quality", process: "Process", contact: "Contact", cta: "Book a call", ctaLong: "Free consultation" },
+    hero: {
+      badge: "Available now – new projects from Q2",
+      title1: "Your idea as a ", titleItalic: "tailor-made", titleAfter: " app",
+      subtitle: "simple, fast & future-proof.",
+      desc: "I build digital solutions that streamline your processes or delight your customers. Professional execution — without IT jargon.",
+      cta: "Book a free consultation", secondary: "See services",
+      stats: [{ k: "100%", v: "Custom built" }, { k: "GDPR", v: "Compliant by design" }, { k: "7+ yrs", v: "Experience" }, { k: "1:1", v: "Direct contact" }],
+    },
+    portfolio: {
+      eyebrow: "Services", title: "Two worlds. One standard: ", titleItalic: "real impact.",
+      business: { eyebrow: "01 — Business", title: "Efficiency at the push of a button.", desc: "Automated workflows that save time and prevent errors. Internal tools tailored to your team.", bullets: ["Process automation", "Dashboards & reporting", "Integrations with your stack"] },
+      consumer: { eyebrow: "02 — Consumer", title: "Customer loyalty in their pocket.", desc: "Intuitive interaction and modern design for your brand. Native apps for App Store and Google Play.", bullets: ["Native iOS & Android", "App Store release", "Scalable backends"] },
+    },
+    tech: {
+      eyebrow: "Industry standards", title: "Built to the highest ", titleItalic: "standards.",
+      desc: "Built to the highest industry standards for maximum security and scalability.",
+      stack: [
+        { name: "JavaScript", sub: "Web & apps" },
+        { name: "Python", sub: "Backend & AI" },
+        { name: "Swift", sub: "iOS" },
+        { name: "Kotlin", sub: "Android" },
+      ],
+      stats: [{ k: "Stable", v: "Battle-tested" }, { k: "Fast", v: "Optimised performance" }, { k: "Scalable", v: "Grows with you" }],
+    },
+    process: {
+      eyebrow: "The process", title: "From idea to app in ", titleItalic: "three steps.",
+      steps: [
+        { n: "01", t: "Joint planning", d: "We define the goal together. A clear conversation, then the leanest way forward." },
+        { n: "02", t: "Prototyping", d: "You see the design first. Clickable drafts before a single line of code." },
+        { n: "03", t: "Launch & support", d: "Your app goes live. Release, handover and long-term support — from one hand." },
+      ],
+    },
+    cta: { eyebrow: "Ready to start?", title: "Let's talk about your ", titleItalic: "idea.", desc: "30 minutes, no strings attached. You get an honest assessment — and a realistic plan.", button: "Free consultation", note: "Reply within 24 hours" },
+    contact: {
+      eyebrow: "Contact", title: "Drop me a line.", desc: "Briefly tell me what you need — I'll get back within 24 hours.",
+      name: "Name", email: "Email", message: "Message",
+      submit: "Send message", sending: "Sending…", success: "Thanks! Your message has arrived.", error: "Something went wrong. Please try again later.",
+      privacy: "By submitting you agree to the processing of your data.",
+    },
+    footer: {
+      tagline: "Tailor-made app development for entrepreneurs who want impact, not buzzwords.",
+      contact: "Contact", legal: "Legal", follow: "Follow",
+      imprint: "Imprint", privacy: "Privacy", rights: "All rights reserved.", made: "Made with care in Germany.",
+      standards: "Built to the highest industry standards for maximum security and scalability.",
+    },
+    cookie: { text: "We use cookies to improve your experience.", accept: "Accept" },
+  },
+  pt: {
+    nav: { services: "Serviços", quality: "Qualidade", process: "Processo", contact: "Contacto", cta: "Marcar conversa", ctaLong: "Conversa gratuita" },
+    hero: {
+      badge: "Disponível agora – novos projetos a partir do 2.º trimestre",
+      title1: "A sua ideia transformada em ", titleItalic: "aplicação", titleAfter: " sob medida",
+      subtitle: "simples, rápida e preparada para o futuro.",
+      desc: "Desenvolvo soluções digitais que otimizam os seus processos ou encantam os seus clientes. Execução profissional — sem jargão técnico.",
+      cta: "Marcar conversa gratuita", secondary: "Ver serviços",
+      stats: [{ k: "100%", v: "Sob medida" }, { k: "RGPD", v: "Conforme por design" }, { k: "7+ anos", v: "Experiência" }, { k: "1:1", v: "Contacto direto" }],
+    },
+    portfolio: {
+      eyebrow: "Serviços", title: "Dois mundos. Uma exigência: ", titleItalic: "impacto real.",
+      business: { eyebrow: "01 — Empresarial", title: "Eficiência num clique.", desc: "Fluxos automatizados que poupam tempo e evitam erros. Ferramentas internas à medida da sua equipa.", bullets: ["Automação de processos", "Dashboards e relatórios", "Integração com os seus sistemas"] },
+      consumer: { eyebrow: "02 — Consumidor", title: "Fidelização no bolso do cliente.", desc: "Utilização intuitiva e design moderno para a sua marca. Apps nativas para App Store e Google Play.", bullets: ["iOS e Android nativos", "Publicação na App Store", "Backends escaláveis"] },
+    },
+    tech: {
+      eyebrow: "Padrões da indústria", title: "Construído com os mais altos ", titleItalic: "padrões.",
+      desc: "Desenvolvido segundo os mais altos padrões da indústria para máxima segurança e escalabilidade.",
+      stack: [
+        { name: "JavaScript", sub: "Web e apps" },
+        { name: "Python", sub: "Backend e IA" },
+        { name: "Swift", sub: "iOS" },
+        { name: "Kotlin", sub: "Android" },
+      ],
+      stats: [{ k: "Estável", v: "Comprovado" }, { k: "Rápido", v: "Performance otimizada" }, { k: "Escalável", v: "Cresce consigo" }],
+    },
+    process: {
+      eyebrow: "O processo", title: "Da ideia à app em ", titleItalic: "três passos.",
+      steps: [
+        { n: "01", t: "Planeamento conjunto", d: "Definimos o objetivo. Uma conversa clara e o caminho mais direto para o resultado." },
+        { n: "02", t: "Prototipagem", d: "Vê o design antes. Protótipos clicáveis antes de uma única linha de código." },
+        { n: "03", t: "Lançamento e apoio", d: "A sua app entra no ar. Publicação, entrega e acompanhamento — tudo de uma só fonte." },
+      ],
+    },
+    cta: { eyebrow: "Pronto para começar?", title: "Vamos falar sobre a sua ", titleItalic: "ideia.", desc: "30 minutos, sem compromisso. Recebe uma avaliação honesta — e um plano realista.", button: "Conversa gratuita", note: "Resposta em 24 horas" },
+    contact: {
+      eyebrow: "Contacto", title: "Escreva-me.", desc: "Conte-me brevemente o que precisa — respondo em 24 horas.",
+      name: "Nome", email: "E-mail", message: "Mensagem",
+      submit: "Enviar mensagem", sending: "A enviar…", success: "Obrigado! A sua mensagem chegou.", error: "Ocorreu um erro. Tente novamente mais tarde.",
+      privacy: "Ao enviar aceita o tratamento dos seus dados.",
+    },
+    footer: {
+      tagline: "Desenvolvimento de apps sob medida para empreendedores que querem impacto, não buzzwords.",
+      contact: "Contacto", legal: "Legal", follow: "Seguir",
+      imprint: "Ficha técnica", privacy: "Privacidade", rights: "Todos os direitos reservados.", made: "Feito com cuidado na Alemanha.",
+      standards: "Desenvolvido segundo os mais altos padrões da indústria para máxima segurança e escalabilidade.",
+    },
+    cookie: { text: "Utilizamos cookies para melhorar a sua experiência.", accept: "Aceitar" },
+  },
+  nl: {
+    nav: { services: "Diensten", quality: "Kwaliteit", process: "Proces", contact: "Contact", cta: "Plan gesprek", ctaLong: "Gratis kennismaking" },
+    hero: {
+      badge: "Nu beschikbaar – nieuwe projecten vanaf Q2",
+      title1: "Uw idee, vertaald in een ", titleItalic: "app", titleAfter: " op maat",
+      subtitle: "eenvoudig, snel & toekomstbestendig.",
+      desc: "Ik bouw digitale oplossingen die uw processen versnellen of uw klanten verrassen. Professioneel uitgevoerd — zonder IT-jargon.",
+      cta: "Gratis kennismaking plannen", secondary: "Bekijk diensten",
+      stats: [{ k: "100%", v: "Op maat" }, { k: "AVG", v: "Conform ontwikkeld" }, { k: "7+ jr", v: "Ervaring" }, { k: "1:1", v: "Direct contact" }],
+    },
+    portfolio: {
+      eyebrow: "Diensten", title: "Twee werelden. Eén ambitie: ", titleItalic: "echte impact.",
+      business: { eyebrow: "01 — Zakelijk", title: "Efficiëntie op één druk op de knop.", desc: "Geautomatiseerde processen die tijd besparen en fouten voorkomen. Interne tools, afgestemd op uw team.", bullets: ["Procesautomatisering", "Dashboards & rapportages", "Koppelingen met uw systemen"] },
+      consumer: { eyebrow: "02 — Consument", title: "Klantbinding in de broekzak.", desc: "Intuïtieve bediening en strak design voor uw merk. Native apps voor App Store en Google Play.", bullets: ["Native iOS & Android", "Publicatie in de App Store", "Schaalbare backends"] },
+    },
+    tech: {
+      eyebrow: "Industriestandaarden", title: "Gebouwd volgens de hoogste ", titleItalic: "standaarden.",
+      desc: "Ontwikkeld volgens de hoogste industriestandaarden voor maximale veiligheid en schaalbaarheid.",
+      stack: [
+        { name: "JavaScript", sub: "Web & apps" },
+        { name: "Python", sub: "Backend & AI" },
+        { name: "Swift", sub: "iOS" },
+        { name: "Kotlin", sub: "Android" },
+      ],
+      stats: [{ k: "Stabiel", v: "Bewezen" }, { k: "Snel", v: "Optimale prestaties" }, { k: "Schaalbaar", v: "Groeit mee" }],
+    },
+    process: {
+      eyebrow: "Het proces", title: "Van idee naar app in ", titleItalic: "drie stappen.",
+      steps: [
+        { n: "01", t: "Samen plannen", d: "We bepalen het doel. Een helder gesprek en de kortste weg naar resultaat." },
+        { n: "02", t: "Prototyping", d: "U ziet het ontwerp eerst. Klikbare schetsen voordat er code wordt geschreven." },
+        { n: "03", t: "Lancering & support", d: "Uw app gaat live. Publicatie, oplevering en langdurige support — uit één hand." },
+      ],
+    },
+    cta: { eyebrow: "Klaar om te beginnen?", title: "Laten we het over uw ", titleItalic: "idee hebben.", desc: "30 minuten, vrijblijvend en helder. U krijgt een eerlijke inschatting — en een realistisch plan.", button: "Gratis kennismaking", note: "Antwoord binnen 24 uur" },
+    contact: {
+      eyebrow: "Contact", title: "Stuur mij een bericht.", desc: "Vertel kort wat u zoekt — ik reageer binnen 24 uur.",
+      name: "Naam", email: "E-mail", message: "Bericht",
+      submit: "Bericht versturen", sending: "Versturen…", success: "Bedankt! Uw bericht is aangekomen.", error: "Er ging iets mis. Probeer het later opnieuw.",
+      privacy: "Door te versturen gaat u akkoord met de verwerking van uw gegevens.",
+    },
+    footer: {
+      tagline: "App-ontwikkeling op maat voor ondernemers die impact willen, geen buzzwords.",
+      contact: "Contact", legal: "Juridisch", follow: "Volgen",
+      imprint: "Colofon", privacy: "Privacy", rights: "Alle rechten voorbehouden.", made: "Met zorg gemaakt in Duitsland.",
+      standards: "Ontwikkeld volgens de hoogste industriestandaarden voor maximale veiligheid en schaalbaarheid.",
+    },
+    cookie: { text: "We gebruiken cookies om uw ervaring te verbeteren.", accept: "Accepteren" },
+  },
+};

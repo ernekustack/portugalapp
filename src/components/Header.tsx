@@ -1,15 +1,18 @@
 import { useEffect, useState } from "react";
-
-const links = [
-  { href: "#leistungen", label: "Leistungen" },
-  { href: "#qualitaet", label: "Qualität" },
-  { href: "#prozess", label: "Prozess" },
-  { href: "#kontakt", label: "Kontakt" },
-];
+import { useI18n } from "@/i18n/LanguageContext";
+import { LanguageSwitcher } from "./LanguageSwitcher";
 
 export const Header = () => {
+  const { t } = useI18n();
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
+
+  const links = [
+    { href: "#leistungen", label: t.nav.services },
+    { href: "#qualitaet", label: t.nav.quality },
+    { href: "#prozess", label: t.nav.process },
+    { href: "#kontakt", label: t.nav.contact },
+  ];
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 8);
@@ -21,9 +24,7 @@ export const Header = () => {
   return (
     <header
       className={`fixed top-0 inset-x-0 z-50 transition-all duration-500 ${
-        scrolled
-          ? "backdrop-blur-xl bg-background/70 border-b border-border"
-          : "bg-transparent"
+        scrolled ? "backdrop-blur-xl bg-background/70 border-b border-border" : "bg-transparent"
       }`}
     >
       <div className="container-px mx-auto max-w-7xl flex items-center justify-between h-16 md:h-20">
@@ -49,24 +50,28 @@ export const Header = () => {
         </nav>
 
         <div className="hidden md:flex items-center gap-3">
+          <LanguageSwitcher />
           <a
             href="#kontakt"
             className="inline-flex items-center gap-2 rounded-full bg-primary text-primary-foreground px-4 py-2 text-sm font-medium hover:opacity-90 transition shadow-soft"
           >
-            Erstgespräch
+            {t.nav.cta}
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
           </a>
         </div>
 
-        <button
-          aria-label="Menu"
-          onClick={() => setOpen((o) => !o)}
-          className="md:hidden p-2 -mr-2 rounded-lg hover:bg-secondary"
-        >
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-            {open ? <path d="M6 6l12 12M18 6L6 18"/> : <><path d="M3 6h18"/><path d="M3 12h18"/><path d="M3 18h18"/></>}
-          </svg>
-        </button>
+        <div className="md:hidden flex items-center gap-2">
+          <LanguageSwitcher />
+          <button
+            aria-label="Menu"
+            onClick={() => setOpen((o) => !o)}
+            className="p-2 -mr-2 rounded-lg hover:bg-secondary"
+          >
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+              {open ? <path d="M6 6l12 12M18 6L6 18"/> : <><path d="M3 6h18"/><path d="M3 12h18"/><path d="M3 18h18"/></>}
+            </svg>
+          </button>
+        </div>
       </div>
 
       {open && (
@@ -82,7 +87,7 @@ export const Header = () => {
               onClick={() => setOpen(false)}
               className="mt-2 inline-flex items-center justify-center rounded-full bg-primary text-primary-foreground px-4 py-3 text-sm font-medium"
             >
-              Kostenloses Erstgespräch
+              {t.nav.ctaLong}
             </a>
           </div>
         </div>
