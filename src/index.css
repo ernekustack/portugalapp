@@ -203,6 +203,14 @@
     color: #10b981 !important;
   }
 
+  /* Solid accent/primary CTAs keep dark foreground for contrast (overrides emerald body rule) */
+  [class*="bg-accent"]:not([class*="bg-accent/"]):not([class*="bg-accent-soft"]),
+  [class*="bg-accent"]:not([class*="bg-accent/"]):not([class*="bg-accent-soft"]) *,
+  [class*="bg-primary"]:not([class*="bg-primary/"]),
+  [class*="bg-primary"]:not([class*="bg-primary/"]) * {
+    color: hsl(220 28% 10%) !important;
+  }
+
   /* Re-assert dark text inside white cards (cards win over body rule) */
   .bg-card,
   .bg-card *:not(button):not(a.button):not([class*="bg-accent"]):not([class*="bg-primary"]):not([class*="bg-destructive"]):not([class*="bg-emerald"]) {
