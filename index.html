@@ -13,6 +13,21 @@
     <meta property="og:title" content="App-Entwicklung für Unternehmer – maßgeschneidert & zukunftssicher" />
     <meta property="og:description" content="Interne Tools & Consumer-Apps. Professionell umgesetzt, ohne IT-Vokabular." />
     <meta property="og:type" content="website" />
+    <script>
+      // Restore deep-link path after GitHub Pages 404.html redirect
+      (function () {
+        var q = new URLSearchParams(window.location.search);
+        var p = q.get("p");
+        if (p) {
+          q.delete("p");
+          var extra = q.get("q");
+          q.delete("q");
+          var rest = q.toString();
+          var search = (extra ? "?" + extra : "") + (rest ? (extra ? "&" : "?") + rest : "");
+          window.history.replaceState(null, "", "/portugalapp" + p + search + window.location.hash);
+        }
+      })();
+    </script>
   </head>
 
   <body>
