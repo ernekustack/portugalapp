@@ -1,0 +1,217 @@
+backend:
+  name: git-gateway
+  branch: main
+
+# Lokales Editieren via `npx decap-server` (http://localhost:8081)
+local_backend: true
+
+media_folder: "public/uploads"
+public_folder: "/uploads"
+
+# Wir editieren genau eine Datei: src/content.json
+collections:
+  - name: "content"
+    label: "Inhalte"
+    files:
+      - name: "site"
+        label: "Website-Inhalte"
+        file: "src/content.json"
+        format: "json"
+        editor:
+          preview: false
+        fields:
+          - label: "Bilder"
+            name: "images"
+            widget: "object"
+            fields:
+              - { label: "Hero Hintergrund", name: "heroBackground", widget: "image", required: false }
+              - label: "Initiativen"
+                name: "initiatives"
+                widget: "object"
+                fields:
+                  - { label: "Luz e Morte", name: "luzEMorte", widget: "image", required: false }
+                  - { label: "Alentejo Events", name: "alentejoEvents", widget: "image", required: false }
+
+          - label: "Sprachen (intern)"
+            name: "languages"
+            widget: "list"
+            required: false
+            field: { label: "Code", name: "code", widget: "string" }
+
+          - label: "Übersetzungen"
+            name: "translations"
+            widget: "object"
+            fields:
+              # Eine identische Feldstruktur je Sprache
+              - &lang
+                label: "Deutsch"
+                name: "de"
+                widget: "object"
+                collapsed: true
+                fields:
+                  - label: "Navigation"
+                    name: "nav"
+                    widget: "object"
+                    fields:
+                      - { label: "Leistungen", name: "services", widget: "string" }
+                      - { label: "Qualität", name: "quality", widget: "string" }
+                      - { label: "Prozess", name: "process", widget: "string" }
+                      - { label: "Kontakt", name: "contact", widget: "string" }
+                      - { label: "CTA (kurz)", name: "cta", widget: "string" }
+                      - { label: "CTA (lang)", name: "ctaLong", widget: "string" }
+
+                  - label: "Hero"
+                    name: "hero"
+                    widget: "object"
+                    fields:
+                      - { label: "Badge", name: "badge", widget: "string" }
+                      - { label: "Titel Teil 1", name: "title1", widget: "string" }
+                      - { label: "Titel kursiv", name: "titleItalic", widget: "string" }
+                      - { label: "Titel Teil 2", name: "titleAfter", widget: "string" }
+                      - { label: "Untertitel", name: "subtitle", widget: "string" }
+                      - { label: "Beschreibung", name: "desc", widget: "text" }
+                      - { label: "CTA primär", name: "cta", widget: "string" }
+                      - { label: "CTA sekundär", name: "secondary", widget: "string" }
+                      - label: "Stats"
+                        name: "stats"
+                        widget: "list"
+                        fields:
+                          - { label: "Wert", name: "k", widget: "string" }
+                          - { label: "Beschriftung", name: "v", widget: "string" }
+
+                  - label: "Portfolio / Leistungen"
+                    name: "portfolio"
+                    widget: "object"
+                    fields:
+                      - { label: "Eyebrow", name: "eyebrow", widget: "string" }
+                      - { label: "Titel", name: "title", widget: "string" }
+                      - { label: "Titel kursiv", name: "titleItalic", widget: "string" }
+                      - label: "Business"
+                        name: "business"
+                        widget: "object"
+                        fields:
+                          - { label: "Eyebrow", name: "eyebrow", widget: "string" }
+                          - { label: "Titel", name: "title", widget: "string" }
+                          - { label: "Beschreibung", name: "desc", widget: "text" }
+                          - { label: "Bullets", name: "bullets", widget: "list", field: { label: "Punkt", name: "item", widget: "string" } }
+                      - label: "Consumer"
+                        name: "consumer"
+                        widget: "object"
+                        fields:
+                          - { label: "Eyebrow", name: "eyebrow", widget: "string" }
+                          - { label: "Titel", name: "title", widget: "string" }
+                          - { label: "Beschreibung", name: "desc", widget: "text" }
+                          - { label: "Bullets", name: "bullets", widget: "list", field: { label: "Punkt", name: "item", widget: "string" } }
+
+                  - label: "Tech / Qualität"
+                    name: "tech"
+                    widget: "object"
+                    fields:
+                      - { label: "Eyebrow", name: "eyebrow", widget: "string" }
+                      - { label: "Titel", name: "title", widget: "string" }
+                      - { label: "Titel kursiv", name: "titleItalic", widget: "string" }
+                      - { label: "Beschreibung", name: "desc", widget: "text" }
+                      - label: "Stack"
+                        name: "stack"
+                        widget: "list"
+                        fields:
+                          - { label: "Name", name: "name", widget: "string" }
+                          - { label: "Untertitel", name: "sub", widget: "string" }
+                      - label: "Stats"
+                        name: "stats"
+                        widget: "list"
+                        fields:
+                          - { label: "Wert", name: "k", widget: "string" }
+                          - { label: "Beschriftung", name: "v", widget: "string" }
+
+                  - label: "Prozess"
+                    name: "process"
+                    widget: "object"
+                    fields:
+                      - { label: "Eyebrow", name: "eyebrow", widget: "string" }
+                      - { label: "Titel", name: "title", widget: "string" }
+                      - { label: "Titel kursiv", name: "titleItalic", widget: "string" }
+                      - label: "Schritte"
+                        name: "steps"
+                        widget: "list"
+                        fields:
+                          - { label: "Nummer", name: "n", widget: "string" }
+                          - { label: "Titel", name: "t", widget: "string" }
+                          - { label: "Beschreibung", name: "d", widget: "text" }
+
+                  - label: "CTA-Sektion"
+                    name: "cta"
+                    widget: "object"
+                    fields:
+                      - { label: "Eyebrow", name: "eyebrow", widget: "string" }
+                      - { label: "Titel", name: "title", widget: "string" }
+                      - { label: "Titel kursiv", name: "titleItalic", widget: "string" }
+                      - { label: "Beschreibung", name: "desc", widget: "text" }
+                      - { label: "Button", name: "button", widget: "string" }
+                      - { label: "Hinweis", name: "note", widget: "string" }
+
+                  - label: "Initiativen / Sponsoring"
+                    name: "initiatives"
+                    widget: "object"
+                    fields:
+                      - { label: "Eyebrow", name: "eyebrow", widget: "string" }
+                      - { label: "Titel", name: "title", widget: "string" }
+                      - { label: "Titel kursiv", name: "titleItalic", widget: "string" }
+                      - { label: "Beschreibung", name: "desc", widget: "text" }
+                      - { label: "Sponsoring-Ziel Label", name: "sponsorGoal", widget: "string" }
+                      - { label: "Button", name: "cta", widget: "string" }
+                      - label: "Projekte (Luz e Morte, Alentejo Events)"
+                        name: "projects"
+                        widget: "list"
+                        fields:
+                          - { label: "Name", name: "name", widget: "string" }
+                          - { label: "Tag", name: "tag", widget: "string" }
+                          - { label: "Tagline", name: "tagline", widget: "text" }
+                          - { label: "Sponsoring-Ziel", name: "goal", widget: "text" }
+
+                  - label: "Kontakt"
+                    name: "contact"
+                    widget: "object"
+                    fields:
+                      - { label: "Eyebrow", name: "eyebrow", widget: "string" }
+                      - { label: "Titel", name: "title", widget: "string" }
+                      - { label: "Beschreibung", name: "desc", widget: "text" }
+                      - { label: "Name-Feld", name: "name", widget: "string" }
+                      - { label: "E-Mail-Feld", name: "email", widget: "string" }
+                      - { label: "Nachricht-Feld", name: "message", widget: "string" }
+                      - { label: "Senden", name: "submit", widget: "string" }
+                      - { label: "Sendet…", name: "sending", widget: "string" }
+                      - { label: "Erfolg", name: "success", widget: "string" }
+                      - { label: "Fehler", name: "error", widget: "string" }
+                      - { label: "Datenschutzhinweis", name: "privacy", widget: "text" }
+
+                  - label: "Footer"
+                    name: "footer"
+                    widget: "object"
+                    fields:
+                      - { label: "Tagline", name: "tagline", widget: "text" }
+                      - { label: "Kontakt", name: "contact", widget: "string" }
+                      - { label: "Rechtliches", name: "legal", widget: "string" }
+                      - { label: "Folgen", name: "follow", widget: "string" }
+                      - { label: "Impressum", name: "imprint", widget: "string" }
+                      - { label: "Datenschutz", name: "privacy", widget: "string" }
+                      - { label: "Rights", name: "rights", widget: "string" }
+                      - { label: "Made", name: "made", widget: "string" }
+                      - { label: "Standards", name: "standards", widget: "text" }
+
+                  - label: "Cookie-Banner"
+                    name: "cookie"
+                    widget: "object"
+                    fields:
+                      - { label: "Text", name: "text", widget: "text" }
+                      - { label: "Akzeptieren", name: "accept", widget: "string" }
+
+              - <<: *lang
+                label: "English"
+                name: "en"
+              - <<: *lang
+                label: "Português"
+                name: "pt"
+              - <<: *lang
+                label: "Nederlands"
+                name: "nl"
