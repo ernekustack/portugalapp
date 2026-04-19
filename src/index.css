@@ -203,37 +203,31 @@
     color: #10b981 !important;
   }
 
-  /* Solid accent/primary CTAs keep dark foreground for contrast (overrides emerald body rule) */
-  [class*="bg-accent"]:not([class*="bg-accent/"]):not([class*="bg-accent-soft"]),
-  [class*="bg-accent"]:not([class*="bg-accent/"]):not([class*="bg-accent-soft"]) *,
-  [class*="bg-primary"]:not([class*="bg-primary/"]),
-  [class*="bg-primary"]:not([class*="bg-primary/"]) * {
-    color: hsl(220 28% 10%) !important;
+  /* All buttons & solid CTAs use WHITE text for maximum contrast everywhere */
+  button,
+  button *,
+  a[class*="bg-accent"]:not([class*="bg-accent/"]):not([class*="bg-accent-soft"]),
+  a[class*="bg-accent"]:not([class*="bg-accent/"]):not([class*="bg-accent-soft"]) *,
+  a[class*="bg-primary"]:not([class*="bg-primary/"]),
+  a[class*="bg-primary"]:not([class*="bg-primary/"]) *,
+  a[class*="bg-secondary"]:not([class*="bg-secondary/"]),
+  a[class*="bg-secondary"]:not([class*="bg-secondary/"]) *,
+  .bg-card button,
+  .bg-card button *,
+  .bg-card a[class*="bg-accent"],
+  .bg-card a[class*="bg-accent"] *,
+  .bg-card a[class*="bg-primary"],
+  .bg-card a[class*="bg-primary"] * {
+    color: #ffffff !important;
   }
 
-  /* Re-assert dark text inside white cards (cards win over body rule) */
+  /* Re-assert dark text inside white cards (cards win over body rule) — excludes buttons */
   .bg-card,
-  .bg-card *:not(button):not(a.button):not([class*="bg-accent"]):not([class*="bg-primary"]):not([class*="bg-destructive"]):not([class*="bg-emerald"]) {
+  .bg-card *:not(button):not(button *):not(a[class*="bg-accent"]):not(a[class*="bg-accent"] *):not(a[class*="bg-primary"]):not(a[class*="bg-primary"] *) {
     color: hsl(220 21% 23%) !important;
   }
   .bg-card h1, .bg-card h2, .bg-card h3, .bg-card h4, .bg-card h5, .bg-card h6 {
     color: hsl(220 39% 11%) !important;
-  }
-
-  /* Buttons inside white cards keep their own contrast */
-  .bg-card button,
-  .bg-card a[class*="bg-accent"],
-  .bg-card a[class*="bg-primary"],
-  .bg-card [class*="bg-accent"],
-  .bg-card [class*="bg-primary"] {
-    color: hsl(var(--accent-foreground)) !important;
-  }
-  .bg-card button *,
-  .bg-card a[class*="bg-accent"] *,
-  .bg-card a[class*="bg-primary"] *,
-  .bg-card [class*="bg-accent"] *,
-  .bg-card [class*="bg-primary"] * {
-    color: inherit !important;
   }
 
   .link-underline {
