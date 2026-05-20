@@ -5,6 +5,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import Index from "./pages/Index.tsx";
 import NotFound from "./pages/NotFound.tsx";
+import Connect from "./pages/Connect.tsx";
 
 const queryClient = new QueryClient();
 const routerBasename = import.meta.env.BASE_URL.replace(/\/$/, "") || undefined;
@@ -17,6 +18,8 @@ const App = () => (
       <BrowserRouter basename={routerBasename}>
         <Routes>
           <Route path="/" element={<Index />} />
+          <Route path="/connect" element={<Connect />} />
+          <Route path="/hi" element={<Connect />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
