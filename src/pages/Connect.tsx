@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { Calendar, Flame, MessageCircle, ArrowUpRight, ChevronDown, X } from "lucide-react";
 import { LanguageProvider, useI18n } from "@/i18n/LanguageContext";
 import alentejoLogo from "@/assets/alentejo-eventos-logo.png";
+import luzLogo from "@/assets/luz-e-morte-logo.jpg";
 
 // ⚙️ Hier deine WhatsApp-Nummer eintragen (internationales Format, nur Ziffern):
 const WHATSAPP_NUMBER = "351923595110"; // TODO: durch echte Nummer ersetzen
@@ -38,7 +39,7 @@ const COPY: Record<
   de: {
     tagline: "Kreative Projekte aus dem Alentejo, Portugal.",
     eventos: "Events & Kultur im Alentejo",
-    luz: "Ein Lichtprojekt zwischen Leben und Tod",
+    luz: "Krimis und Morde im Alentejo",
     contact: "Schreib mir auf WhatsApp",
     formTitle: "Nachricht senden",
     namePh: "Dein Name",
@@ -59,7 +60,7 @@ const COPY: Record<
   en: {
     tagline: "Creative projects from the Alentejo, Portugal.",
     eventos: "Events & culture in the Alentejo",
-    luz: "A light project between life and death",
+    luz: "Crime & murders in the Alentejo",
     contact: "Message me on WhatsApp",
     formTitle: "Send a message",
     namePh: "Your name",
@@ -80,7 +81,7 @@ const COPY: Record<
   pt: {
     tagline: "Projetos criativos do Alentejo, Portugal.",
     eventos: "Eventos e cultura no Alentejo",
-    luz: "Um projeto de luz entre a vida e a morte",
+    luz: "Crimes e assassinatos no Alentejo",
     contact: "Escreve-me no WhatsApp",
     formTitle: "Enviar mensagem",
     namePh: "O teu nome",
@@ -101,7 +102,7 @@ const COPY: Record<
   nl: {
     tagline: "Creatieve projecten uit de Alentejo, Portugal.",
     eventos: "Evenementen & cultuur in de Alentejo",
-    luz: "Een lichtproject tussen leven en dood",
+    luz: "Misdaden en moorden in de Alentejo",
     contact: "Stuur me een bericht op WhatsApp",
     formTitle: "Bericht versturen",
     namePh: "Je naam",
@@ -250,8 +251,8 @@ const ConnectInner = () => {
               aria-controls="luz-panel"
               className="group w-full flex items-center gap-4 p-4 text-left cursor-pointer select-none"
             >
-              <span className="h-11 w-11 shrink-0 rounded-xl bg-accent/10 text-accent flex items-center justify-center">
-                <Flame className="h-5 w-5" strokeWidth={1.75} />
+              <span className="h-11 w-11 shrink-0 rounded-xl overflow-hidden flex items-center justify-center bg-black">
+                <img src={luzLogo} alt="" aria-hidden="true" className="h-full w-full object-cover" />
               </span>
               <span className="flex-1 min-w-0">
                 <span className="block font-display text-[17px] font-semibold tracking-tight" style={{ color: "hsl(220 39% 11%)" }}>Luz e Morte</span>
@@ -287,7 +288,7 @@ const ConnectInner = () => {
                     rel="noopener noreferrer"
                     className="btn-neon inline-flex items-center justify-center gap-2 rounded-full px-5 py-3 text-sm font-semibold transition-all"
                   >
-                    <Flame className="h-5 w-5 shrink-0" strokeWidth={1.75} />
+                    <img src={luzLogo} alt="" aria-hidden="true" className="h-5 w-5 object-cover rounded-sm shrink-0" />
                     <span>{c.luzCta}</span>
                   </a>
                 </div>
