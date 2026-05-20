@@ -1,40 +1,27 @@
-# Micro-Landingpage als isolierte Route
+## Kachel 1 „Alentejo Eventos" — Accordion mit Messe-Pitch
 
-## Ziel
-Eine eigenständige, app-artige Visitenkarten-Seite unter `/connect` (Alias `/hi`), die das bestehende Design-System nutzt, aber ohne Header, Footer und Cookie-Banner lädt.
+**Verhalten**
+- Klick auf Kachel 1 leitet nicht mehr sofort weiter, sondern klappt elegant nach unten auf (Accordion via `animate-accordion-down/up`, max-height + opacity transition, `--ease-out-soft`).
+- Pfeil-Icon rotiert 180° im offenen Zustand.
+- Andere Kacheln (Luz e Morte, WhatsApp) bleiben unverändert.
+- State lokal in `ConnectInner` (`eventosOpen`).
 
-## Vorgehen
+**Inhalt im Panel** (i18n DE/EN/PT/NL, DE-Text wörtlich wie vorgegeben)
 
-1. **Neue Seite `src/pages/Connect.tsx`**
-   - Vollflächiger dunkler Hintergrund (bestehende `bg-background` / `gradient-ink` Tokens)
-   - Mobile-first, zentrierter Inhalt, max-width ~420px, safe-area Padding
-   - Aufbau:
-     - Logo (gleiches Mark wie im Header, größer)
-     - Eine Zeile Tagline (Arbeit im Alentejo, i18n aus `translations.ts`)
-     - Drei große Kacheln: Alentejo Eventos, Luz e Morte, Kontakt
-     - Kacheln nutzen `bg-card`, `hairline`, `shadow-card`, neongrüner Accent für Icon/Pfeil
-   - Kein `<Header>`, kein `<Footer>`, kein `<CookieBanner>`
-   - In `<LanguageProvider>` gewrappt, damit Sprachumschaltung funktioniert (optionaler dezenter Switcher oben rechts)
+> **Mehr Sichtbarkeit für dein Business**
+> • Trag deine Events, Märkte oder Touren ein und erreiche Urlauber direkt in der Region.
+>
+> **Frühbucher-Vorteil bis zum 01. Juli**
+> • Sichere dir jetzt die reichweitenstärksten Werbeplätze für die Saison 2026 zum Frühbucher-Rabatt.
 
-2. **Routing in `src/App.tsx`**
-   - Zwei neue Routen oberhalb der Catch-All:
-     - `<Route path="/connect" element={<Connect />} />`
-     - `<Route path="/hi" element={<Connect />} />`
-   - Bestehende Index-Route und 404 bleiben unberührt
+**CTA-Button**
+- Direkt unter den Stichpunkten, full-width, Pill, `bg-accent text-accent-foreground` (neongrün), Hover-Glow.
+- Label DE: „Zur Plattform wechseln ↗" (analog EN/PT/NL).
+- Öffnet `LINK_EVENTOS` in neuem Tab (`target="_blank"`, `rel="noopener noreferrer"`).
 
-3. **i18n-Erweiterung in `src/i18n/translations.ts`**
-   - Neuer `connect`-Block: `tagline`, `tiles.eventos`, `tiles.luz`, `tiles.contact`
-   - DE/EN/PT analog zu bestehenden Blöcken
-
-4. **SEO**
-   - `<title>` und Meta-Description per `document.title` Effekt in `Connect.tsx`
-   - `noindex` Meta optional, falls Messe-only
-
-## Isolation – warum nichts kaputt geht
-- Keine Änderung an `Index.tsx`, `Header`, `Footer`, `CookieBanner`
-- Eigene Route, eigener Komponentenbaum
-- Wiederverwendung nur über Design-Tokens (`index.css`, Tailwind-Theme) und `LanguageProvider`
-- BrowserRouter-Basename (`/portugalapp`) gilt automatisch → finale URL: `https://USER.github.io/portugalapp/connect`
-
-## Offene Mini-Frage
-Soll der Kontakt-Button auf der Kachel direkt `mailto:` / `tel:` öffnen, oder zu `/#kontakt` der Hauptseite springen?
+**Technische Details**
+- Datei: nur `src/pages/Connect.tsx`.
+- Kachel 1 wird aus dem `tiles.map` herausgelöst und als eigenständige Komponente mit Accordion-Body gerendert; Kachel 2 (Luz) bleibt im Map oder wird ebenfalls einzeln gerendert.
+- Übersetzungsblock `eventosPanel` zu `COPY` hinzufügen mit Feldern `pitchTitle1`, `pitchBody1`, `pitchTitle2`, `pitchBody2`, `cta`.
+- A11y: `aria-expanded`, `aria-controls`, Panel mit `role="region"`.
+- Keine Änderungen an Header/Footer/anderen Seiten.
