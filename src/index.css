@@ -248,9 +248,10 @@
 
 @layer utilities {
   .btn-neon {
-    background: hsl(var(--accent)) !important;
-    color: hsl(var(--accent-foreground)) !important;
-    box-shadow: 0 10px 30px -10px hsl(var(--accent) / 0.55);
+    background: hsl(158 64% 46%) !important;
+    color: hsl(220 28% 10%) !important;
+    box-shadow: 0 10px 30px -10px hsl(158 64% 46% / 0.55);
   }
-  .btn-neon:hover { filter: brightness(1.08); box-shadow: 0 14px 40px -10px hsl(var(--accent) / 0.7); }
+  .btn-neon * { color: hsl(220 28% 10%) !important; }
+  .btn-neon:hover { filter: brightness(1.08); box-shadow: 0 14px 40px -10px hsl(158 64% 46% / 0.7); }
 }
