@@ -43,7 +43,7 @@ const COPY: Record<
     pitchBody1: "Trag deine Events, Märkte oder Touren ein und erreiche Urlauber direkt in der Region.",
     pitchTitle2: "Frühbucher-Vorteil bis zum 01. Juli",
     pitchBody2: "Sichere dir jetzt die reichweitenstärksten Werbeplätze für die Saison 2026 zum Frühbucher-Rabatt.",
-    cta: "Zur Plattform wechseln ↗",
+    cta: "Zu Alentejo Eventos wechseln ↗",
   },
   en: {
     tagline: "Creative projects from the Alentejo, Portugal.",
