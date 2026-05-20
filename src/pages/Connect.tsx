@@ -251,8 +251,8 @@ const ConnectInner = () => {
               aria-controls="luz-panel"
               className="group w-full flex items-center gap-4 p-4 text-left cursor-pointer select-none"
             >
-              <span className="h-11 w-11 shrink-0 rounded-xl bg-accent/10 text-accent flex items-center justify-center">
-                <Flame className="h-5 w-5" strokeWidth={1.75} />
+              <span className="h-11 w-11 shrink-0 rounded-xl overflow-hidden flex items-center justify-center bg-black">
+                <img src={luzLogo} alt="" aria-hidden="true" className="h-full w-full object-cover" />
               </span>
               <span className="flex-1 min-w-0">
                 <span className="block font-display text-[17px] font-semibold tracking-tight" style={{ color: "hsl(220 39% 11%)" }}>Luz e Morte</span>
@@ -288,7 +288,7 @@ const ConnectInner = () => {
                     rel="noopener noreferrer"
                     className="btn-neon inline-flex items-center justify-center gap-2 rounded-full px-5 py-3 text-sm font-semibold transition-all"
                   >
-                    <Flame className="h-5 w-5 shrink-0" strokeWidth={1.75} />
+                    <img src={luzLogo} alt="" aria-hidden="true" className="h-5 w-5 object-cover rounded-sm shrink-0" />
                     <span>{c.luzCta}</span>
                   </a>
                 </div>
