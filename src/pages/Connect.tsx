@@ -234,34 +234,67 @@ const ConnectInner = () => {
             </div>
           </div>
 
-          {tiles.map(({ key, title, desc, href, Icon, internal }) => {
-            const inner = (
-              <>
-                <span className="h-11 w-11 shrink-0 rounded-xl bg-accent/10 text-accent flex items-center justify-center">
-                  <Icon className="h-5 w-5" strokeWidth={1.75} />
-                </span>
-                <span className="flex-1 min-w-0">
-                  <span className="block font-display text-[17px] font-semibold tracking-tight">{title}</span>
-                  <span className="block text-[13px] text-muted-foreground truncate">{desc}</span>
-                </span>
-                <ArrowUpRight
-                  className="h-4 w-4 text-muted-foreground group-hover:text-accent transition-colors"
-                  strokeWidth={2}
-                />
-              </>
-            );
-            const cls =
-              "group flex items-center gap-4 rounded-2xl bg-card hairline shadow-soft hover:shadow-card hover:-translate-y-0.5 transition-all duration-300 p-4";
-            return internal ? (
-              <Link key={key} to={href.replace(/^\//, "/")} className={cls}>
-                {inner}
-              </Link>
-            ) : (
-              <a key={key} href={href} target="_blank" rel="noopener noreferrer" className={cls}>
-                {inner}
-              </a>
-            );
-          })}
+          {/* Kachel 2: Luz e Morte — Accordion */}
+          <div className="rounded-2xl bg-card hairline shadow-soft overflow-hidden transition-all duration-300">
+            <div
+              role="button"
+              tabIndex={0}
+              onClick={() => setLuzOpen((v) => !v)}
+              onKeyDown={(e) => {
+                if (e.key === "Enter" || e.key === " ") {
+                  e.preventDefault();
+                  setLuzOpen((v) => !v);
+                }
+              }}
+              aria-expanded={luzOpen}
+              aria-controls="luz-panel"
+              className="group w-full flex items-center gap-4 p-4 text-left cursor-pointer select-none"
+            >
+              <span className="h-11 w-11 shrink-0 rounded-xl bg-accent/10 text-accent flex items-center justify-center">
+                <Flame className="h-5 w-5" strokeWidth={1.75} />
+              </span>
+              <span className="flex-1 min-w-0">
+                <span className="block font-display text-[17px] font-semibold tracking-tight" style={{ color: "hsl(220 39% 11%)" }}>Luz e Morte</span>
+                <span className="block text-[13px] truncate" style={{ color: "hsl(220 21% 38%)" }}>{c.luz}</span>
+              </span>
+              <ChevronDown
+                className={`h-5 w-5 transition-transform duration-300 ${luzOpen ? "rotate-180" : ""}`}
+                strokeWidth={2}
+                style={{ color: luzOpen ? "hsl(158 64% 46%)" : "hsl(220 21% 38%)" }}
+              />
+            </div>
+            <div
+              id="luz-panel"
+              role="region"
+              className={`grid transition-all duration-500 ease-out ${luzOpen ? "grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0"}`}
+              style={{ transitionTimingFunction: "cubic-bezier(0.22, 1, 0.36, 1)" }}
+            >
+              <div className="overflow-hidden">
+                <div className="px-4 pb-4 pt-1 flex flex-col gap-4">
+                  <div className="flex flex-col gap-3">
+                    <div>
+                      <p className="font-display text-[14px] font-semibold tracking-tight">{c.luzPitchTitle1}</p>
+                      <p className="text-[13px] leading-relaxed text-muted-foreground mt-1">• {c.luzPitchBody1}</p>
+                    </div>
+                    <div>
+                      <p className="font-display text-[14px] font-semibold tracking-tight">{c.luzPitchTitle2}</p>
+                      <p className="text-[13px] leading-relaxed text-muted-foreground mt-1">• {c.luzPitchBody2}</p>
+                    </div>
+                  </div>
+                  <a
+                    href={LINK_LUZ}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="btn-neon inline-flex items-center justify-center gap-2 rounded-full px-5 py-3 text-sm font-semibold transition-all"
+                  >
+                    <Flame className="h-5 w-5 shrink-0" strokeWidth={1.75} />
+                    <span>{c.luzCta}</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
 
 
           {/* Kontakt-Kachel öffnet Mini-Formular */}
