@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import { useI18n } from "@/i18n/LanguageContext";
 import { LanguageSwitcher } from "./LanguageSwitcher";
 
@@ -11,6 +12,7 @@ export const Header = () => {
     { href: "#leistungen", label: t.nav.services },
     { href: "#qualitaet", label: t.nav.quality },
     { href: "#prozess", label: t.nav.process },
+    { href: "/connect", label: "Card", route: true as const },
     { href: "#kontakt", label: t.nav.contact },
   ];
 
@@ -38,15 +40,25 @@ export const Header = () => {
         </a>
 
         <nav className="hidden md:flex items-center gap-8">
-          {links.map((l) => (
-            <a
-              key={l.href}
-              href={l.href}
-              className="text-sm text-muted-foreground hover:text-foreground transition-colors link-underline"
-            >
-              {l.label}
-            </a>
-          ))}
+          {links.map((l) =>
+            "route" in l ? (
+              <Link
+                key={l.href}
+                to={l.href}
+                className="text-sm text-muted-foreground hover:text-foreground transition-colors link-underline"
+              >
+                {l.label}
+              </Link>
+            ) : (
+              <a
+                key={l.href}
+                href={l.href}
+                className="text-sm text-muted-foreground hover:text-foreground transition-colors link-underline"
+              >
+                {l.label}
+              </a>
+            )
+          )}
         </nav>
 
         <div className="hidden md:flex items-center gap-3">
