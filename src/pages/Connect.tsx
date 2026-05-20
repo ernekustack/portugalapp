@@ -166,8 +166,8 @@ const ConnectInner = () => {
               aria-controls="eventos-panel"
               className="group w-full flex items-center gap-4 p-4 text-left cursor-pointer select-none"
             >
-              <span className="h-11 w-11 shrink-0 rounded-xl flex items-center justify-center" style={{ background: "hsl(158 64% 46% / 0.12)", color: "hsl(158 64% 46%)" }}>
-                <Calendar className="h-5 w-5" strokeWidth={1.75} />
+              <span className="h-11 w-11 shrink-0 rounded-xl flex items-center justify-center" style={{ background: "hsl(158 64% 46% / 0.12)" }}>
+                <img src={alentejoLogo} alt="" aria-hidden="true" className="h-7 w-7 object-contain" />
               </span>
               <span className="flex-1 min-w-0">
                 <span className="block font-display text-[17px] font-semibold tracking-tight" style={{ color: "hsl(220 39% 11%)" }}>Alentejo Eventos</span>
