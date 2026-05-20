@@ -245,3 +245,12 @@
   }
   .link-underline:hover::after { transform: scaleX(1); transform-origin: left; }
 }
+
+@layer utilities {
+  .btn-neon {
+    background: linear-gradient(135deg, #39ff14, #00e676) !important;
+    color: #06210f !important;
+    box-shadow: 0 10px 30px -10px rgba(57, 255, 20, 0.6);
+  }
+  .btn-neon:hover { filter: brightness(1.1); box-shadow: 0 14px 40px -10px rgba(57, 255, 20, 0.75); }
+}
