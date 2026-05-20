@@ -89,11 +89,17 @@ export const Header = () => {
       {open && (
         <div className="md:hidden border-t border-border bg-background/95 backdrop-blur-xl animate-fade-in">
           <div className="container-px py-4 flex flex-col gap-3">
-            {links.map((l) => (
-              <a key={l.href} href={l.href} onClick={() => setOpen(false)} className="py-2 text-foreground">
-                {l.label}
-              </a>
-            ))}
+            {links.map((l) =>
+              "route" in l ? (
+                <Link key={l.href} to={l.href} onClick={() => setOpen(false)} className="py-2 text-foreground">
+                  {l.label}
+                </Link>
+              ) : (
+                <a key={l.href} href={l.href} onClick={() => setOpen(false)} className="py-2 text-foreground">
+                  {l.label}
+                </a>
+              )
+            )}
             <a
               href="#kontakt"
               onClick={() => setOpen(false)}
