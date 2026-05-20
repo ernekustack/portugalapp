@@ -154,11 +154,9 @@ const ConnectInner = () => {
     window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${text}`, "_blank", "noopener,noreferrer");
   };
 
-  const tiles = [
-    { key: "luz", title: "Luz e Morte", desc: c.luz, href: LINK_LUZ, Icon: Flame, internal: LINK_LUZ.startsWith("/") },
-  ];
-
   const [eventosOpen, setEventosOpen] = useState(false);
+  const [luzOpen, setLuzOpen] = useState(false);
+
 
   return (
     <main className="min-h-[100svh] bg-background text-foreground flex flex-col items-center px-6 py-10 pt-[max(2.5rem,env(safe-area-inset-top))] pb-[max(2.5rem,env(safe-area-inset-bottom))]">
