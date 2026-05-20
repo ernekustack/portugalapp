@@ -2,6 +2,7 @@ import { useEffect, useState, FormEvent } from "react";
 import { Link } from "react-router-dom";
 import { Calendar, Flame, MessageCircle, ArrowUpRight, ChevronDown, X } from "lucide-react";
 import { LanguageProvider, useI18n } from "@/i18n/LanguageContext";
+import alentejoLogo from "@/assets/alentejo-eventos-logo.png";
 
 // ⚙️ Hier deine WhatsApp-Nummer eintragen (internationales Format, nur Ziffern):
 const WHATSAPP_NUMBER = "351923595110"; // TODO: durch echte Nummer ersetzen
@@ -202,7 +203,8 @@ const ConnectInner = () => {
                     rel="noopener noreferrer"
                     className="btn-neon inline-flex items-center justify-center gap-2 rounded-full px-5 py-3 text-sm font-semibold transition-all"
                   >
-                    {c.cta}
+                    <img src={alentejoLogo} alt="" aria-hidden="true" className="h-5 w-5 object-contain shrink-0" />
+                    <span>{c.cta}</span>
                   </a>
                 </div>
               </div>
