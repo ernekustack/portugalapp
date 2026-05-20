@@ -192,7 +192,8 @@ const ConnectInner = () => {
                     href={LINK_EVENTOS}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center justify-center gap-2 rounded-full bg-accent text-accent-foreground px-5 py-3 text-sm font-medium hover:opacity-90 hover:shadow-glow transition-all shadow-soft"
+                    className="inline-flex items-center justify-center gap-2 rounded-full px-5 py-3 text-sm font-semibold transition-all shadow-soft hover:shadow-glow hover:brightness-110"
+                    style={{ background: "linear-gradient(135deg, #39ff14, #00e676)", color: "#06210f" }}
                   >
                     {c.cta}
                   </a>
