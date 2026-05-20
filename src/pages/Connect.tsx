@@ -28,6 +28,11 @@ const COPY: Record<
     pitchTitle2: string;
     pitchBody2: string;
     cta: string;
+    luzPitchTitle1: string;
+    luzPitchBody1: string;
+    luzPitchTitle2: string;
+    luzPitchBody2: string;
+    luzCta: string;
   }
 > = {
   de: {
@@ -45,6 +50,11 @@ const COPY: Record<
     pitchTitle2: "Frühbucher-Vorteil bis zum 01. Juli",
     pitchBody2: "Sichere dir jetzt die reichweitenstärksten Werbeplätze für die Saison 2026 zum Frühbucher-Rabatt.",
     cta: "Zu Alentejo Eventos wechseln ↗",
+    luzPitchTitle1: "Einzigartiges Erlebnis für die Region",
+    luzPitchBody1: "Bieten Sie Urlaubern und Besuchern einen spannenden, interaktiven Mehrwert direkt vor Ort.",
+    luzPitchTitle2: "Werden Sie Teil des Spiels",
+    luzPitchBody2: "Sichern Sie sich für die Saison 2026 einen reichweitenstarken Platz als echter Schauplatz, Kooperationspartner oder Sponsor im Krimispiel.",
+    luzCta: "Zum Spiel wechseln ↗",
   },
   en: {
     tagline: "Creative projects from the Alentejo, Portugal.",
@@ -61,6 +71,11 @@ const COPY: Record<
     pitchTitle2: "Early-bird offer until July 1st",
     pitchBody2: "Secure the highest-reach ad placements for the 2026 season at the early-bird rate.",
     cta: "Go to the platform ↗",
+    luzPitchTitle1: "A unique experience for the region",
+    luzPitchBody1: "Offer visitors and holidaymakers an exciting, interactive added value right on site.",
+    luzPitchTitle2: "Become part of the game",
+    luzPitchBody2: "Secure a high-reach spot for the 2026 season as a real location, partner or sponsor in the crime game.",
+    luzCta: "Go to the game ↗",
   },
   pt: {
     tagline: "Projetos criativos do Alentejo, Portugal.",
@@ -77,6 +92,11 @@ const COPY: Record<
     pitchTitle2: "Vantagem early-bird até 1 de julho",
     pitchBody2: "Garante já os espaços publicitários de maior alcance para a temporada 2026 com desconto early-bird.",
     cta: "Ir para a plataforma ↗",
+    luzPitchTitle1: "Uma experiência única para a região",
+    luzPitchBody1: "Ofereça aos visitantes e turistas um valor acrescentado interativo e emocionante no local.",
+    luzPitchTitle2: "Faça parte do jogo",
+    luzPitchBody2: "Garanta para a temporada 2026 um lugar de grande alcance como cenário real, parceiro ou patrocinador do jogo policial.",
+    luzCta: "Ir para o jogo ↗",
   },
   nl: {
     tagline: "Creatieve projecten uit de Alentejo, Portugal.",
@@ -93,6 +113,11 @@ const COPY: Record<
     pitchTitle2: "Early-bird voordeel tot 1 juli",
     pitchBody2: "Bemachtig nu de advertentieplekken met het grootste bereik voor seizoen 2026 met early-bird korting.",
     cta: "Naar het platform ↗",
+    luzPitchTitle1: "Een unieke ervaring voor de regio",
+    luzPitchBody1: "Bied bezoekers en vakantiegangers een spannende, interactieve meerwaarde direct ter plaatse.",
+    luzPitchTitle2: "Word deel van het spel",
+    luzPitchBody2: "Verzeker je voor seizoen 2026 een plek met groot bereik als echte locatie, partner of sponsor in het misdaadspel.",
+    luzCta: "Naar het spel ↗",
   },
 };
 
