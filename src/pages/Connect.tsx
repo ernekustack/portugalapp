@@ -28,6 +28,11 @@ const COPY: Record<
     pitchTitle2: string;
     pitchBody2: string;
     cta: string;
+    luzPitchTitle1: string;
+    luzPitchBody1: string;
+    luzPitchTitle2: string;
+    luzPitchBody2: string;
+    luzCta: string;
   }
 > = {
   de: {
@@ -45,6 +50,11 @@ const COPY: Record<
     pitchTitle2: "Frühbucher-Vorteil bis zum 01. Juli",
     pitchBody2: "Sichere dir jetzt die reichweitenstärksten Werbeplätze für die Saison 2026 zum Frühbucher-Rabatt.",
     cta: "Zu Alentejo Eventos wechseln ↗",
+    luzPitchTitle1: "Einzigartiges Erlebnis für die Region",
+    luzPitchBody1: "Bieten Sie Urlaubern und Besuchern einen spannenden, interaktiven Mehrwert direkt vor Ort.",
+    luzPitchTitle2: "Werden Sie Teil des Spiels",
+    luzPitchBody2: "Sichern Sie sich für die Saison 2026 einen reichweitenstarken Platz als echter Schauplatz, Kooperationspartner oder Sponsor im Krimispiel.",
+    luzCta: "Zum Spiel wechseln ↗",
   },
   en: {
     tagline: "Creative projects from the Alentejo, Portugal.",
@@ -61,6 +71,11 @@ const COPY: Record<
     pitchTitle2: "Early-bird offer until July 1st",
     pitchBody2: "Secure the highest-reach ad placements for the 2026 season at the early-bird rate.",
     cta: "Go to the platform ↗",
+    luzPitchTitle1: "A unique experience for the region",
+    luzPitchBody1: "Offer visitors and holidaymakers an exciting, interactive added value right on site.",
+    luzPitchTitle2: "Become part of the game",
+    luzPitchBody2: "Secure a high-reach spot for the 2026 season as a real location, partner or sponsor in the crime game.",
+    luzCta: "Go to the game ↗",
   },
   pt: {
     tagline: "Projetos criativos do Alentejo, Portugal.",
@@ -77,6 +92,11 @@ const COPY: Record<
     pitchTitle2: "Vantagem early-bird até 1 de julho",
     pitchBody2: "Garante já os espaços publicitários de maior alcance para a temporada 2026 com desconto early-bird.",
     cta: "Ir para a plataforma ↗",
+    luzPitchTitle1: "Uma experiência única para a região",
+    luzPitchBody1: "Ofereça aos visitantes e turistas um valor acrescentado interativo e emocionante no local.",
+    luzPitchTitle2: "Faça parte do jogo",
+    luzPitchBody2: "Garanta para a temporada 2026 um lugar de grande alcance como cenário real, parceiro ou patrocinador do jogo policial.",
+    luzCta: "Ir para o jogo ↗",
   },
   nl: {
     tagline: "Creatieve projecten uit de Alentejo, Portugal.",
@@ -93,6 +113,11 @@ const COPY: Record<
     pitchTitle2: "Early-bird voordeel tot 1 juli",
     pitchBody2: "Bemachtig nu de advertentieplekken met het grootste bereik voor seizoen 2026 met early-bird korting.",
     cta: "Naar het platform ↗",
+    luzPitchTitle1: "Een unieke ervaring voor de regio",
+    luzPitchBody1: "Bied bezoekers en vakantiegangers een spannende, interactieve meerwaarde direct ter plaatse.",
+    luzPitchTitle2: "Word deel van het spel",
+    luzPitchBody2: "Verzeker je voor seizoen 2026 een plek met groot bereik als echte locatie, partner of sponsor in het misdaadspel.",
+    luzCta: "Naar het spel ↗",
   },
 };
 
@@ -129,11 +154,9 @@ const ConnectInner = () => {
     window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${text}`, "_blank", "noopener,noreferrer");
   };
 
-  const tiles = [
-    { key: "luz", title: "Luz e Morte", desc: c.luz, href: LINK_LUZ, Icon: Flame, internal: LINK_LUZ.startsWith("/") },
-  ];
-
   const [eventosOpen, setEventosOpen] = useState(false);
+  const [luzOpen, setLuzOpen] = useState(false);
+
 
   return (
     <main className="min-h-[100svh] bg-background text-foreground flex flex-col items-center px-6 py-10 pt-[max(2.5rem,env(safe-area-inset-top))] pb-[max(2.5rem,env(safe-area-inset-bottom))]">
@@ -211,34 +234,67 @@ const ConnectInner = () => {
             </div>
           </div>
 
-          {tiles.map(({ key, title, desc, href, Icon, internal }) => {
-            const inner = (
-              <>
-                <span className="h-11 w-11 shrink-0 rounded-xl bg-accent/10 text-accent flex items-center justify-center">
-                  <Icon className="h-5 w-5" strokeWidth={1.75} />
-                </span>
-                <span className="flex-1 min-w-0">
-                  <span className="block font-display text-[17px] font-semibold tracking-tight">{title}</span>
-                  <span className="block text-[13px] text-muted-foreground truncate">{desc}</span>
-                </span>
-                <ArrowUpRight
-                  className="h-4 w-4 text-muted-foreground group-hover:text-accent transition-colors"
-                  strokeWidth={2}
-                />
-              </>
-            );
-            const cls =
-              "group flex items-center gap-4 rounded-2xl bg-card hairline shadow-soft hover:shadow-card hover:-translate-y-0.5 transition-all duration-300 p-4";
-            return internal ? (
-              <Link key={key} to={href.replace(/^\//, "/")} className={cls}>
-                {inner}
-              </Link>
-            ) : (
-              <a key={key} href={href} target="_blank" rel="noopener noreferrer" className={cls}>
-                {inner}
-              </a>
-            );
-          })}
+          {/* Kachel 2: Luz e Morte — Accordion */}
+          <div className="rounded-2xl bg-card hairline shadow-soft overflow-hidden transition-all duration-300">
+            <div
+              role="button"
+              tabIndex={0}
+              onClick={() => setLuzOpen((v) => !v)}
+              onKeyDown={(e) => {
+                if (e.key === "Enter" || e.key === " ") {
+                  e.preventDefault();
+                  setLuzOpen((v) => !v);
+                }
+              }}
+              aria-expanded={luzOpen}
+              aria-controls="luz-panel"
+              className="group w-full flex items-center gap-4 p-4 text-left cursor-pointer select-none"
+            >
+              <span className="h-11 w-11 shrink-0 rounded-xl bg-accent/10 text-accent flex items-center justify-center">
+                <Flame className="h-5 w-5" strokeWidth={1.75} />
+              </span>
+              <span className="flex-1 min-w-0">
+                <span className="block font-display text-[17px] font-semibold tracking-tight" style={{ color: "hsl(220 39% 11%)" }}>Luz e Morte</span>
+                <span className="block text-[13px] truncate" style={{ color: "hsl(220 21% 38%)" }}>{c.luz}</span>
+              </span>
+              <ChevronDown
+                className={`h-5 w-5 transition-transform duration-300 ${luzOpen ? "rotate-180" : ""}`}
+                strokeWidth={2}
+                style={{ color: luzOpen ? "hsl(158 64% 46%)" : "hsl(220 21% 38%)" }}
+              />
+            </div>
+            <div
+              id="luz-panel"
+              role="region"
+              className={`grid transition-all duration-500 ease-out ${luzOpen ? "grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0"}`}
+              style={{ transitionTimingFunction: "cubic-bezier(0.22, 1, 0.36, 1)" }}
+            >
+              <div className="overflow-hidden">
+                <div className="px-4 pb-4 pt-1 flex flex-col gap-4">
+                  <div className="flex flex-col gap-3">
+                    <div>
+                      <p className="font-display text-[14px] font-semibold tracking-tight">{c.luzPitchTitle1}</p>
+                      <p className="text-[13px] leading-relaxed text-muted-foreground mt-1">• {c.luzPitchBody1}</p>
+                    </div>
+                    <div>
+                      <p className="font-display text-[14px] font-semibold tracking-tight">{c.luzPitchTitle2}</p>
+                      <p className="text-[13px] leading-relaxed text-muted-foreground mt-1">• {c.luzPitchBody2}</p>
+                    </div>
+                  </div>
+                  <a
+                    href={LINK_LUZ}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="btn-neon inline-flex items-center justify-center gap-2 rounded-full px-5 py-3 text-sm font-semibold transition-all"
+                  >
+                    <Flame className="h-5 w-5 shrink-0" strokeWidth={1.75} />
+                    <span>{c.luzCta}</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
 
 
           {/* Kontakt-Kachel öffnet Mini-Formular */}
