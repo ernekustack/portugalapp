@@ -22,6 +22,11 @@ const COPY: Record<
     msgPh: string;
     send: string;
     cancel: string;
+    pitchTitle1: string;
+    pitchBody1: string;
+    pitchTitle2: string;
+    pitchBody2: string;
+    cta: string;
   }
 > = {
   de: {
@@ -34,6 +39,11 @@ const COPY: Record<
     msgPh: "Deine Nachricht …",
     send: "Auf WhatsApp öffnen",
     cancel: "Abbrechen",
+    pitchTitle1: "Mehr Sichtbarkeit für dein Business",
+    pitchBody1: "Trag deine Events, Märkte oder Touren ein und erreiche Urlauber direkt in der Region.",
+    pitchTitle2: "Frühbucher-Vorteil bis zum 01. Juli",
+    pitchBody2: "Sichere dir jetzt die reichweitenstärksten Werbeplätze für die Saison 2026 zum Frühbucher-Rabatt.",
+    cta: "Zur Plattform wechseln ↗",
   },
   en: {
     tagline: "Creative projects from the Alentejo, Portugal.",
@@ -45,6 +55,11 @@ const COPY: Record<
     msgPh: "Your message …",
     send: "Open in WhatsApp",
     cancel: "Cancel",
+    pitchTitle1: "More visibility for your business",
+    pitchBody1: "List your events, markets or tours and reach travellers directly in the region.",
+    pitchTitle2: "Early-bird offer until July 1st",
+    pitchBody2: "Secure the highest-reach ad placements for the 2026 season at the early-bird rate.",
+    cta: "Go to the platform ↗",
   },
   pt: {
     tagline: "Projetos criativos do Alentejo, Portugal.",
@@ -56,6 +71,11 @@ const COPY: Record<
     msgPh: "A tua mensagem …",
     send: "Abrir no WhatsApp",
     cancel: "Cancelar",
+    pitchTitle1: "Mais visibilidade para o teu negócio",
+    pitchBody1: "Regista os teus eventos, mercados ou tours e chega aos visitantes diretamente na região.",
+    pitchTitle2: "Vantagem early-bird até 1 de julho",
+    pitchBody2: "Garante já os espaços publicitários de maior alcance para a temporada 2026 com desconto early-bird.",
+    cta: "Ir para a plataforma ↗",
   },
   nl: {
     tagline: "Creatieve projecten uit de Alentejo, Portugal.",
@@ -67,6 +87,11 @@ const COPY: Record<
     msgPh: "Je bericht …",
     send: "Openen in WhatsApp",
     cancel: "Annuleren",
+    pitchTitle1: "Meer zichtbaarheid voor je business",
+    pitchBody1: "Voeg je evenementen, markten of tours toe en bereik reizigers direct in de regio.",
+    pitchTitle2: "Early-bird voordeel tot 1 juli",
+    pitchBody2: "Bemachtig nu de advertentieplekken met het grootste bereik voor seizoen 2026 met early-bird korting.",
+    cta: "Naar het platform ↗",
   },
 };
 
