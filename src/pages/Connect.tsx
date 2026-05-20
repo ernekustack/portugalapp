@@ -4,47 +4,69 @@ import { Calendar, Flame, MessageCircle, ArrowUpRight, X } from "lucide-react";
 import { LanguageProvider, useI18n } from "@/i18n/LanguageContext";
 
 // ⚙️ Hier deine WhatsApp-Nummer eintragen (internationales Format, nur Ziffern):
-const WHATSAPP_NUMBER = "351000000000"; // TODO: durch echte Nummer ersetzen
+const WHATSAPP_NUMBER = "351923595110"; // TODO: durch echte Nummer ersetzen
 
 // Projekt-Links — sobald Live-URLs vorhanden, hier ersetzen.
-const LINK_EVENTOS = "/#initiatives";
+const LINK_EVENTOS = "https://alentejoeventos.com";
 const LINK_LUZ = "/#initiatives";
 
-const COPY: Record<string, {
-  tagline: string; eventos: string; luz: string; contact: string;
-  formTitle: string; namePh: string; msgPh: string; send: string; cancel: string;
-}> = {
+const COPY: Record<
+  string,
+  {
+    tagline: string;
+    eventos: string;
+    luz: string;
+    contact: string;
+    formTitle: string;
+    namePh: string;
+    msgPh: string;
+    send: string;
+    cancel: string;
+  }
+> = {
   de: {
     tagline: "Kreative Projekte aus dem Alentejo, Portugal.",
     eventos: "Events & Kultur im Alentejo",
     luz: "Ein Lichtprojekt zwischen Leben und Tod",
     contact: "Schreib mir auf WhatsApp",
-    formTitle: "Nachricht senden", namePh: "Dein Name", msgPh: "Deine Nachricht …",
-    send: "Auf WhatsApp öffnen", cancel: "Abbrechen",
+    formTitle: "Nachricht senden",
+    namePh: "Dein Name",
+    msgPh: "Deine Nachricht …",
+    send: "Auf WhatsApp öffnen",
+    cancel: "Abbrechen",
   },
   en: {
     tagline: "Creative projects from the Alentejo, Portugal.",
     eventos: "Events & culture in the Alentejo",
     luz: "A light project between life and death",
     contact: "Message me on WhatsApp",
-    formTitle: "Send a message", namePh: "Your name", msgPh: "Your message …",
-    send: "Open in WhatsApp", cancel: "Cancel",
+    formTitle: "Send a message",
+    namePh: "Your name",
+    msgPh: "Your message …",
+    send: "Open in WhatsApp",
+    cancel: "Cancel",
   },
   pt: {
     tagline: "Projetos criativos do Alentejo, Portugal.",
     eventos: "Eventos e cultura no Alentejo",
     luz: "Um projeto de luz entre a vida e a morte",
     contact: "Escreve-me no WhatsApp",
-    formTitle: "Enviar mensagem", namePh: "O teu nome", msgPh: "A tua mensagem …",
-    send: "Abrir no WhatsApp", cancel: "Cancelar",
+    formTitle: "Enviar mensagem",
+    namePh: "O teu nome",
+    msgPh: "A tua mensagem …",
+    send: "Abrir no WhatsApp",
+    cancel: "Cancelar",
   },
   nl: {
     tagline: "Creatieve projecten uit de Alentejo, Portugal.",
     eventos: "Evenementen & cultuur in de Alentejo",
     luz: "Een lichtproject tussen leven en dood",
     contact: "Stuur me een bericht op WhatsApp",
-    formTitle: "Bericht versturen", namePh: "Je naam", msgPh: "Je bericht …",
-    send: "Openen in WhatsApp", cancel: "Annuleren",
+    formTitle: "Bericht versturen",
+    namePh: "Je naam",
+    msgPh: "Je bericht …",
+    send: "Openen in WhatsApp",
+    cancel: "Annuleren",
   },
 };
 
@@ -63,20 +85,33 @@ const ConnectInner = () => {
     meta.name = "robots";
     meta.content = "noindex, nofollow";
     document.head.appendChild(meta);
-    return () => { document.title = prev; document.head.removeChild(meta); };
+    return () => {
+      document.title = prev;
+      document.head.removeChild(meta);
+    };
   }, []);
 
   const submit = (e: FormEvent) => {
     e.preventDefault();
     const n = name.trim().slice(0, 80);
     const m = msg.trim().slice(0, 600);
-    if (!n || !m) { setError("Bitte Name und Nachricht ausfüllen."); return; }
+    if (!n || !m) {
+      setError("Bitte Name und Nachricht ausfüllen.");
+      return;
+    }
     const text = encodeURIComponent(`Hi! ${n}: ${m}`);
     window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${text}`, "_blank", "noopener,noreferrer");
   };
 
   const tiles = [
-    { key: "eventos", title: "Alentejo Eventos", desc: c.eventos, href: LINK_EVENTOS, Icon: Calendar, internal: LINK_EVENTOS.startsWith("/") },
+    {
+      key: "eventos",
+      title: "Alentejo Eventos",
+      desc: c.eventos,
+      href: LINK_EVENTOS,
+      Icon: Calendar,
+      internal: LINK_EVENTOS.startsWith("/"),
+    },
     { key: "luz", title: "Luz e Morte", desc: c.luz, href: LINK_LUZ, Icon: Flame, internal: LINK_LUZ.startsWith("/") },
   ];
 
@@ -92,9 +127,7 @@ const ConnectInner = () => {
           </span>
         </Link>
 
-        <p className="text-center text-[15px] leading-relaxed text-muted-foreground max-w-[18rem]">
-          {c.tagline}
-        </p>
+        <p className="text-center text-[15px] leading-relaxed text-muted-foreground max-w-[18rem]">{c.tagline}</p>
 
         <div className="w-full flex flex-col gap-3.5">
           {tiles.map(({ key, title, desc, href, Icon, internal }) => {
@@ -107,21 +140,32 @@ const ConnectInner = () => {
                   <span className="block font-display text-[17px] font-semibold tracking-tight">{title}</span>
                   <span className="block text-[13px] text-muted-foreground truncate">{desc}</span>
                 </span>
-                <ArrowUpRight className="h-4 w-4 text-muted-foreground group-hover:text-accent transition-colors" strokeWidth={2} />
+                <ArrowUpRight
+                  className="h-4 w-4 text-muted-foreground group-hover:text-accent transition-colors"
+                  strokeWidth={2}
+                />
               </>
             );
-            const cls = "group flex items-center gap-4 rounded-2xl bg-card hairline shadow-soft hover:shadow-card hover:-translate-y-0.5 transition-all duration-300 p-4";
+            const cls =
+              "group flex items-center gap-4 rounded-2xl bg-card hairline shadow-soft hover:shadow-card hover:-translate-y-0.5 transition-all duration-300 p-4";
             return internal ? (
-              <Link key={key} to={href.replace(/^\//, "/")} className={cls}>{inner}</Link>
+              <Link key={key} to={href.replace(/^\//, "/")} className={cls}>
+                {inner}
+              </Link>
             ) : (
-              <a key={key} href={href} target="_blank" rel="noopener noreferrer" className={cls}>{inner}</a>
+              <a key={key} href={href} target="_blank" rel="noopener noreferrer" className={cls}>
+                {inner}
+              </a>
             );
           })}
 
           {/* Kontakt-Kachel öffnet Mini-Formular */}
           <button
             type="button"
-            onClick={() => { setShowForm(true); setError(null); }}
+            onClick={() => {
+              setShowForm(true);
+              setError(null);
+            }}
             className="group flex items-center gap-4 rounded-2xl bg-card hairline shadow-soft hover:shadow-card hover:-translate-y-0.5 transition-all duration-300 p-4 text-left"
           >
             <span className="h-11 w-11 shrink-0 rounded-xl bg-accent/10 text-accent flex items-center justify-center">
@@ -131,7 +175,10 @@ const ConnectInner = () => {
               <span className="block font-display text-[17px] font-semibold tracking-tight">WhatsApp</span>
               <span className="block text-[13px] text-muted-foreground truncate">{c.contact}</span>
             </span>
-            <ArrowUpRight className="h-4 w-4 text-muted-foreground group-hover:text-accent transition-colors" strokeWidth={2} />
+            <ArrowUpRight
+              className="h-4 w-4 text-muted-foreground group-hover:text-accent transition-colors"
+              strokeWidth={2}
+            />
           </button>
         </div>
       </div>
@@ -153,18 +200,31 @@ const ConnectInner = () => {
           >
             <div className="flex items-center justify-between">
               <h2 className="font-display text-xl font-semibold tracking-tight">{c.formTitle}</h2>
-              <button type="button" onClick={() => setShowForm(false)} aria-label={c.cancel} className="p-1 -mr-1 rounded-lg hover:bg-secondary">
+              <button
+                type="button"
+                onClick={() => setShowForm(false)}
+                aria-label={c.cancel}
+                className="p-1 -mr-1 rounded-lg hover:bg-secondary"
+              >
                 <X className="h-5 w-5 text-muted-foreground" />
               </button>
             </div>
             <input
-              type="text" value={name} onChange={(e) => setName(e.target.value)} maxLength={80}
-              placeholder={c.namePh} required
+              type="text"
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+              maxLength={80}
+              placeholder={c.namePh}
+              required
               className="w-full rounded-xl bg-secondary/60 hairline px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-accent/40"
             />
             <textarea
-              value={msg} onChange={(e) => setMsg(e.target.value)} maxLength={600} rows={4}
-              placeholder={c.msgPh} required
+              value={msg}
+              onChange={(e) => setMsg(e.target.value)}
+              maxLength={600}
+              rows={4}
+              placeholder={c.msgPh}
+              required
               className="w-full rounded-xl bg-secondary/60 hairline px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-accent/40 resize-none"
             />
             {error && <p className="text-xs text-destructive">{error}</p>}
