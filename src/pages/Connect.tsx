@@ -39,7 +39,7 @@ const COPY: Record<
   de: {
     tagline: "Kreative Projekte aus dem Alentejo, Portugal.",
     eventos: "Events & Kultur im Alentejo",
-    luz: "Ein Lichtprojekt zwischen Leben und Tod",
+    luz: "Krimis und Morde im Alentejo",
     contact: "Schreib mir auf WhatsApp",
     formTitle: "Nachricht senden",
     namePh: "Dein Name",
@@ -60,7 +60,7 @@ const COPY: Record<
   en: {
     tagline: "Creative projects from the Alentejo, Portugal.",
     eventos: "Events & culture in the Alentejo",
-    luz: "A light project between life and death",
+    luz: "Crime & murders in the Alentejo",
     contact: "Message me on WhatsApp",
     formTitle: "Send a message",
     namePh: "Your name",
@@ -81,7 +81,7 @@ const COPY: Record<
   pt: {
     tagline: "Projetos criativos do Alentejo, Portugal.",
     eventos: "Eventos e cultura no Alentejo",
-    luz: "Um projeto de luz entre a vida e a morte",
+    luz: "Crimes e assassinatos no Alentejo",
     contact: "Escreve-me no WhatsApp",
     formTitle: "Enviar mensagem",
     namePh: "O teu nome",
@@ -102,7 +102,7 @@ const COPY: Record<
   nl: {
     tagline: "Creatieve projecten uit de Alentejo, Portugal.",
     eventos: "Evenementen & cultuur in de Alentejo",
-    luz: "Een lichtproject tussen leven en dood",
+    luz: "Misdaden en moorden in de Alentejo",
     contact: "Stuur me een bericht op WhatsApp",
     formTitle: "Bericht versturen",
     namePh: "Je naam",
