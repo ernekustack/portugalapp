@@ -151,25 +151,33 @@ const ConnectInner = () => {
         <div className="w-full flex flex-col gap-3.5">
           {/* Kachel 1: Alentejo Eventos — Accordion */}
           <div className="rounded-2xl bg-card hairline shadow-soft overflow-hidden transition-all duration-300">
-            <button
-              type="button"
+            <div
+              role="button"
+              tabIndex={0}
               onClick={() => setEventosOpen((v) => !v)}
+              onKeyDown={(e) => {
+                if (e.key === "Enter" || e.key === " ") {
+                  e.preventDefault();
+                  setEventosOpen((v) => !v);
+                }
+              }}
               aria-expanded={eventosOpen}
               aria-controls="eventos-panel"
-              className="group w-full flex items-center gap-4 p-4 text-left"
+              className="group w-full flex items-center gap-4 p-4 text-left cursor-pointer select-none"
             >
-              <span className="h-11 w-11 shrink-0 rounded-xl bg-accent/10 text-accent flex items-center justify-center">
+              <span className="h-11 w-11 shrink-0 rounded-xl flex items-center justify-center" style={{ background: "hsl(158 64% 46% / 0.12)", color: "hsl(158 64% 46%)" }}>
                 <Calendar className="h-5 w-5" strokeWidth={1.75} />
               </span>
               <span className="flex-1 min-w-0">
-                <span className="block font-display text-[17px] font-semibold tracking-tight">Alentejo Eventos</span>
-                <span className="block text-[13px] text-muted-foreground truncate">{c.eventos}</span>
+                <span className="block font-display text-[17px] font-semibold tracking-tight" style={{ color: "hsl(220 39% 11%)" }}>Alentejo Eventos</span>
+                <span className="block text-[13px] truncate" style={{ color: "hsl(220 21% 38%)" }}>{c.eventos}</span>
               </span>
               <ChevronDown
-                className={`h-5 w-5 text-muted-foreground transition-transform duration-300 ${eventosOpen ? "rotate-180 text-accent" : ""}`}
+                className={`h-5 w-5 transition-transform duration-300 ${eventosOpen ? "rotate-180" : ""}`}
                 strokeWidth={2}
+                style={{ color: eventosOpen ? "hsl(158 64% 46%)" : "hsl(220 21% 38%)" }}
               />
-            </button>
+            </div>
             <div
               id="eventos-panel"
               role="region"
