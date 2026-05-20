@@ -203,7 +203,8 @@ const ConnectInner = () => {
                     rel="noopener noreferrer"
                     className="btn-neon inline-flex items-center justify-center gap-2 rounded-full px-5 py-3 text-sm font-semibold transition-all"
                   >
-                    {c.cta}
+                    <img src={alentejoLogo} alt="" aria-hidden="true" className="h-5 w-5 object-contain shrink-0" />
+                    <span>{c.cta}</span>
                   </a>
                 </div>
               </div>
