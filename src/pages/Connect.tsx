@@ -203,7 +203,7 @@ const ConnectInner = () => {
             >
               <span
                 className="h-11 w-11 shrink-0 rounded-xl flex items-center justify-center"
-                style={{ background: "hsl(158 64% 46% / 0.12)" }}
+                style={{ background: "hsl(24 79% 37% / 0.12)" }}
               >
                 <img src={alentejoLogo} alt="" aria-hidden="true" className="h-7 w-7 object-contain" />
               </span>
@@ -221,7 +221,7 @@ const ConnectInner = () => {
               <ChevronDown
                 className={`h-5 w-5 transition-transform duration-300 ${eventosOpen ? "rotate-180" : ""}`}
                 strokeWidth={2}
-                style={{ color: eventosOpen ? "hsl(158 64% 46%)" : "hsl(220 21% 38%)" }}
+                style={{ color: eventosOpen ? "hsl(24 79% 37%)" : "hsl(220 21% 38%)" }}
               />
             </div>
             <div
@@ -289,7 +289,7 @@ const ConnectInner = () => {
               <ChevronDown
                 className={`h-5 w-5 transition-transform duration-300 ${luzOpen ? "rotate-180" : ""}`}
                 strokeWidth={2}
-                style={{ color: luzOpen ? "hsl(158 64% 46%)" : "hsl(220 21% 38%)" }}
+                style={{ color: luzOpen ? "hsl(24 79% 37%)" : "hsl(220 21% 38%)" }}
               />
             </div>
             <div

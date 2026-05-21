@@ -26,19 +26,19 @@
     --secondary-foreground: 220 14% 96%;
 
     --muted: 220 22% 14%;
-    --muted-foreground: 158 40% 66%;
+    --muted-foreground: 24 40% 66%;
 
     /* Emerald accent */
-    --accent: 158 64% 46%;
+    --accent: 24 79% 37%;
     --accent-foreground: 220 28% 10%;
-    --accent-soft: 158 50% 18%;
+    --accent-soft: 24 50% 18%;
 
     --destructive: 0 72% 55%;
     --destructive-foreground: 0 0% 100%;
 
     --border: 220 20% 18%;
     --input: 220 20% 18%;
-    --ring: 158 64% 46%;
+    --ring: 24 79% 37%;
 
     --radius: 0.875rem;
 
@@ -46,18 +46,18 @@
     --surface: 220 28% 7%;
     --surface-2: 220 26% 11%;
     --ink: 220 30% 6%;
-    --ink-soft: 158 36% 74%;
+    --ink-soft: 24 36% 74%;
 
     /* Gradients */
-    --gradient-hero: radial-gradient(1200px 600px at 80% -10%, hsl(158 64% 46% / 0.18), transparent 60%),
+    --gradient-hero: radial-gradient(1200px 600px at 80% -10%, hsl(24 79% 37% / 0.18), transparent 60%),
                      radial-gradient(900px 500px at -10% 10%, hsl(220 28% 30% / 0.25), transparent 60%);
     --gradient-ink: linear-gradient(180deg, hsl(220 28% 11%) 0%, hsl(220 32% 6%) 100%);
-    --gradient-accent: linear-gradient(135deg, hsl(158 64% 46%), hsl(165 70% 40%));
+    --gradient-accent: linear-gradient(135deg, hsl(24 79% 37%), hsl(18 75% 32%));
 
     /* Shadows tuned for dark surfaces */
     --shadow-soft: 0 1px 2px hsl(0 0% 0% / 0.3), 0 8px 24px -12px hsl(0 0% 0% / 0.5);
     --shadow-card: 0 1px 0 hsl(0 0% 0% / 0.3), 0 30px 60px -24px hsl(0 0% 0% / 0.6);
-    --shadow-glow: 0 30px 80px -30px hsl(158 64% 46% / 0.5);
+    --shadow-glow: 0 30px 80px -30px hsl(24 79% 37% / 0.5);
 
     /* Motion */
     --ease-out-soft: cubic-bezier(0.22, 1, 0.36, 1);
@@ -75,12 +75,12 @@
     --secondary: 220 22% 14%;
     --secondary-foreground: 220 14% 96%;
     --muted: 220 22% 14%;
-    --muted-foreground: 158 38% 68%;
-    --accent: 158 64% 48%;
+    --muted-foreground: 24 38% 68%;
+    --accent: 24 79% 39%;
     --accent-foreground: 220 28% 10%;
     --border: 220 22% 18%;
     --input: 220 22% 18%;
-    --ring: 158 64% 48%;
+    --ring: 24 79% 39%;
   }
 }
 
@@ -179,7 +179,7 @@
 
   .ring-soft { box-shadow: inset 0 0 0 1px hsl(var(--border)); }
 
-  /* Force emerald text on all dark/anthracite surfaces for readability */
+  /* Force brand-orange text on all dark/anthracite surfaces for readability */
   body,
   .surface,
   .surface-2,
@@ -189,7 +189,7 @@
   .bg-popover,
   .bg-gradient-ink,
   .bg-gradient-hero {
-    color: #10b981 !important;
+    color: #ab5014 !important;
   }
 
   body h1, body h2, body h3, body h4, body h5, body h6,
@@ -200,7 +200,7 @@
   .surface label, .surface small,
   .surface-2 h1, .surface-2 h2, .surface-2 h3, .surface-2 h4, .surface-2 h5, .surface-2 h6,
   .surface-2 p, .surface-2 li, .surface-2 span, .surface-2 a, .surface-2 strong, .surface-2 em {
-    color: #10b981 !important;
+    color: #ab5014 !important;
   }
 
   /* All buttons & solid CTAs use WHITE text for maximum contrast everywhere */
@@ -248,10 +248,10 @@
 
 @layer utilities {
   .btn-neon {
-    background: hsl(158 64% 46%) !important;
+    background: hsl(24 79% 37%) !important;
     color: hsl(220 28% 10%) !important;
-    box-shadow: 0 10px 30px -10px hsl(158 64% 46% / 0.55);
+    box-shadow: 0 10px 30px -10px hsl(24 79% 37% / 0.55);
   }
   .btn-neon * { color: hsl(220 28% 10%) !important; }
-  .btn-neon:hover { filter: brightness(1.08); box-shadow: 0 14px 40px -10px hsl(158 64% 46% / 0.7); }
+  .btn-neon:hover { filter: brightness(1.08); box-shadow: 0 14px 40px -10px hsl(24 79% 37% / 0.7); }
 }
