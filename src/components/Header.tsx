@@ -36,7 +36,7 @@ export const Header = () => {
             src={logoFarol}
             alt="Studio Southwest Logo"
             className="h-8 w-8 md:h-9 md:w-9 object-contain"
-          />,
+          />
           <span className="font-display font-semibold tracking-tight text-[15px]">
             Studio Southwest<span className="text-accent">.</span>
           </span>
