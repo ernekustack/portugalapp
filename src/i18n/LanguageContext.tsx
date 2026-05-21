@@ -8,15 +8,14 @@ const LanguageContext = createContext<Ctx | null>(null);
 const SUPPORTED: Lang[] = ["de", "en", "pt", "nl"];
 
 const detect = (): Lang => {
-  if (typeof window === "undefined") return "de";
+  if (typeof window === "undefined") return "en";
   const saved = localStorage.getItem("lang") as Lang | null;
   if (saved && SUPPORTED.includes(saved)) return saved;
-  const nav = navigator.language.slice(0, 2).toLowerCase() as Lang;
-  return SUPPORTED.includes(nav) ? nav : "de";
+  return "en";
 };
 
 export const LanguageProvider = ({ children }: { children: ReactNode }) => {
-  const [lang, setLangState] = useState<Lang>("de");
+  const [lang, setLangState] = useState<Lang>("en");
 
   useEffect(() => {
     setLangState(detect());
