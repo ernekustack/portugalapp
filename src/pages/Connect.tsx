@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { Calendar, Flame, MessageCircle, ArrowUpRight, ChevronDown, X } from "lucide-react";
 import { LanguageProvider, useI18n } from "@/i18n/LanguageContext";
 import alentejoLogo from "@/assets/alentejo-eventos-logo.png";
+import logoFarol from "@/assets/logo-farol.jpg";
 import luzLogo from "@/assets/luz-e-morte-logo.jpg";
 
 // ⚙️ Hier deine WhatsApp-Nummer eintragen (internationales Format, nur Ziffern):
@@ -174,9 +175,7 @@ const ConnectInner = () => {
     <main className="min-h-[100svh] bg-background text-foreground flex flex-col items-center px-6 py-10 pt-[max(2.5rem,env(safe-area-inset-top))] pb-[max(2.5rem,env(safe-area-inset-bottom))]">
       <div className="w-full max-w-[420px] mx-auto flex flex-col items-center gap-10 flex-1 justify-center">
         <Link to="/" className="flex flex-col items-center gap-4" aria-label="Studio Southwest">
-          <span className="h-14 w-14 rounded-2xl bg-gradient-ink flex items-center justify-center shadow-card">
-            <span className="h-3.5 w-3.5 rounded-sm bg-accent" />
-          </span>
+          <img src={logoFarol} alt="Studio Southwest Logo" className="h-16 w-16 object-contain" />
           <span className="font-display font-semibold tracking-tight text-2xl">
             Studio Southwest<span className="text-accent">.</span>
           </span>
