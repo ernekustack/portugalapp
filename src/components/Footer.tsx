@@ -11,7 +11,7 @@ export const Footer = () => {
               <span className="h-7 w-7 rounded-lg bg-gradient-ink flex items-center justify-center">
                 <span className="h-2 w-2 rounded-sm bg-accent" />
               </span>
-              <span className="font-display font-semibold tracking-tight">Studio<span className="text-accent">.</span></span>
+              <span className="font-display font-semibold tracking-tight">Studio Southwest<span className="text-accent">.</span></span>
             </div>
             <p className="mt-5 text-sm text-muted-foreground max-w-sm leading-relaxed">{t.footer.tagline}</p>
 
@@ -58,7 +58,7 @@ export const Footer = () => {
         </div>
 
         <div className="mt-14 pt-6 border-t border-border flex flex-col md:flex-row gap-3 md:items-center justify-between text-xs text-muted-foreground">
-          <div>© {new Date().getFullYear()} Studio. {t.footer.rights}</div>
+          <div>© {new Date().getFullYear()} Studio Southwest. {t.footer.rights}</div>
           <div>{t.footer.made}</div>
         </div>
       </div>

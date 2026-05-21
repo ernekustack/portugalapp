@@ -132,7 +132,7 @@ const ConnectInner = () => {
 
   useEffect(() => {
     const prev = document.title;
-    document.title = "Studio — Connect";
+    document.title = "Studio Southwest — Connect";
     const meta = document.createElement("meta");
     meta.name = "robots";
     meta.content = "noindex, nofollow";
@@ -162,12 +162,12 @@ const ConnectInner = () => {
   return (
     <main className="min-h-[100svh] bg-background text-foreground flex flex-col items-center px-6 py-10 pt-[max(2.5rem,env(safe-area-inset-top))] pb-[max(2.5rem,env(safe-area-inset-bottom))]">
       <div className="w-full max-w-[420px] mx-auto flex flex-col items-center gap-10 flex-1 justify-center">
-        <Link to="/" className="flex flex-col items-center gap-4" aria-label="Studio">
+        <Link to="/" className="flex flex-col items-center gap-4" aria-label="Studio Southwest">
           <span className="h-14 w-14 rounded-2xl bg-gradient-ink flex items-center justify-center shadow-card">
             <span className="h-3.5 w-3.5 rounded-sm bg-accent" />
           </span>
           <span className="font-display font-semibold tracking-tight text-2xl">
-            Studio<span className="text-accent">.</span>
+            Studio Southwest<span className="text-accent">.</span>
           </span>
         </Link>
 
@@ -323,7 +323,7 @@ const ConnectInner = () => {
       </div>
 
       <p className="text-[11px] tracking-widest uppercase text-muted-foreground/70 mt-8">
-        © {new Date().getFullYear()} Studio
+        © {new Date().getFullYear()} Studio Southwest
       </p>
 
       {/* Modal-Formular */}
