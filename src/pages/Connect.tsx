@@ -127,7 +127,15 @@ const COPY: Record<
 };
 
 const ConnectInner = () => {
-  const { lang } = useI18n();
+  const { lang, setLang } = useI18n();
+
+  useEffect(() => {
+    if (typeof window === "undefined") return;
+    if (!sessionStorage.getItem("connect-lang-init")) {
+      setLang("en");
+      sessionStorage.setItem("connect-lang-init", "1");
+    }
+  }, [setLang]);
   const c = COPY[lang] ?? COPY.de;
   const [showForm, setShowForm] = useState(false);
   const [name, setName] = useState("");
