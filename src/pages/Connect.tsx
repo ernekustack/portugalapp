@@ -132,7 +132,7 @@ const ConnectInner = () => {
 
   useEffect(() => {
     const prev = document.title;
-    document.title = "Studio — Connect";
+    document.title = "Studio Southwest — Connect";
     const meta = document.createElement("meta");
     meta.name = "robots";
     meta.content = "noindex, nofollow";
