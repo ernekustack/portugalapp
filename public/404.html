@@ -6,10 +6,9 @@
     <script>
       // SPA fallback for GitHub Pages: rewrite the URL so BrowserRouter can handle it.
       (function () {
-        var repo = "/portugalapp";
         var l = window.location;
-        var path = l.pathname.replace(repo, "") || "/";
-        var redirect = repo + "/?p=" + encodeURIComponent(path) +
+        var path = l.pathname || "/";
+        var redirect = "/?p=" + encodeURIComponent(path) +
           (l.search ? "&q=" + encodeURIComponent(l.search.slice(1)) : "") +
           l.hash;
         l.replace(redirect);
