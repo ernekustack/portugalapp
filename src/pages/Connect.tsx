@@ -52,7 +52,7 @@ const COPY: Record<
     pitchBody2: "Sichere dir jetzt die reichweitenstärksten Werbeplätze für die Saison 2026 zum Frühbucher-Rabatt.",
     cta: "Zu Alentejo Eventos wechseln ↗",
     luzPitchTitle1: "Internationale Reichweite für die Region",
-    luzPitchBody1: "Profitieren Sie von 100.000+ Downloads im Play Store und weltweite Sichtbarkeit.",
+    luzPitchBody1: "Profitieren Sie von pontentiell 10.000+ Downloads im Play Store und weltweite Sichtbarkeit.",
     luzPitchTitle2: "Werden Sie Teil des Spiels",
     luzPitchBody2:
       "Sichern Sie sich für die Saison 2026 einen reichweitenstarken Platz als echter Schauplatz, Kooperationspartner oder Sponsor im Krimispiel.",
@@ -74,7 +74,7 @@ const COPY: Record<
     pitchBody2: "Secure the highest-reach ad placements for the 2026 season at the early-bird rate.",
     cta: "Go to the platform ↗",
     luzPitchTitle1: "International reach for the region",
-    luzPitchBody1: "Benefit from 100,000+ Play Store downloads and worldwide visibility.",
+    luzPitchBody1: "Benefit from potetial 10,000+ Play Store downloads and worldwide visibility.",
     luzPitchTitle2: "Become part of the game",
     luzPitchBody2:
       "Secure a high-reach spot for the 2026 season as a real location, partner or sponsor in the crime game.",
@@ -96,7 +96,7 @@ const COPY: Record<
     pitchBody2: "Garante já os espaços publicitários de maior alcance para a temporada 2026 com desconto early-bird.",
     cta: "Ir para a plataforma ↗",
     luzPitchTitle1: "Alcance internacional para a região",
-    luzPitchBody1: "Beneficie de mais de 100.000 downloads na Play Store e visibilidade mundial.",
+    luzPitchBody1: "Aproveite o potencial de mais de 10.000 downloads na Play Store e visibilidade mundial.",
     luzPitchTitle2: "Faça parte do jogo",
     luzPitchBody2:
       "Garanta para a temporada 2026 um lugar de grande alcance como cenário real, parceiro ou patrocinador do jogo policial.",
@@ -118,7 +118,7 @@ const COPY: Record<
     pitchBody2: "Bemachtig nu de advertentieplekken met het grootste bereik voor seizoen 2026 met early-bird korting.",
     cta: "Naar het platform ↗",
     luzPitchTitle1: "Internationaal bereik voor de regio",
-    luzPitchBody1: "Profiteer van 100.000+ downloads in de Play Store en wereldwijde zichtbaarheid.",
+    luzPitchBody1: "Profiteer van mogelijk meer dan 10.000+ downloads in de Play Store en wereldwijde zichtbaarheid.",
     luzPitchTitle2: "Word deel van het spel",
     luzPitchBody2:
       "Verzeker je voor seizoen 2026 een plek met groot bereik als echte locatie, partner of sponsor in het misdaadspel.",
