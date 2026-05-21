@@ -10,9 +10,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Instrument+Serif&display=swap" rel="stylesheet" />
 
-    <link rel="manifest" href="/portugalapp/manifest.webmanifest" />
-    <link rel="icon" type="image/png" href="/portugalapp/icon-192.png">
-    <link rel="apple-touch-icon" href="/portugalapp/apple-touch-icon.png" />
+    <link rel="manifest" href="/manifest.webmanifest" />
+    <link rel="icon" type="image/png" href="/icon-192.png">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
     <meta name="theme-color" content="#ffffff" />
     <meta name="mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -33,7 +33,7 @@
           q.delete("q");
           var rest = q.toString();
           var search = (extra ? "?" + extra : "") + (rest ? (extra ? "&" : "?") + rest : "");
-          window.history.replaceState(null, "", "/portugalapp" + p + search + window.location.hash);
+          window.history.replaceState(null, "", p + search + window.location.hash);
         }
       })();
     </script>
