@@ -37,7 +37,7 @@ const COPY: Record<
   }
 > = {
   de: {
-    tagline: "Kreative Projekte aus dem Alentejo, Portugal.",
+    tagline: "Kreative Projekte aus dem Alentejo.",
     eventos: "Events & Kultur im Alentejo",
     luz: "Krimis und Morde im Alentejo",
     contact: "Schreib mir auf WhatsApp",
@@ -54,7 +54,8 @@ const COPY: Record<
     luzPitchTitle1: "Internationale Reichweite für die Region",
     luzPitchBody1: "Profitieren Sie von 100.000+ Downloads im Play Store und weltweite Sichtbarkeit.",
     luzPitchTitle2: "Werden Sie Teil des Spiels",
-    luzPitchBody2: "Sichern Sie sich für die Saison 2026 einen reichweitenstarken Platz als echter Schauplatz, Kooperationspartner oder Sponsor im Krimispiel.",
+    luzPitchBody2:
+      "Sichern Sie sich für die Saison 2026 einen reichweitenstarken Platz als echter Schauplatz, Kooperationspartner oder Sponsor im Krimispiel.",
     luzCta: "Zum Spiel wechseln ↗",
   },
   en: {
@@ -75,7 +76,8 @@ const COPY: Record<
     luzPitchTitle1: "International reach for the region",
     luzPitchBody1: "Benefit from 100,000+ Play Store downloads and worldwide visibility.",
     luzPitchTitle2: "Become part of the game",
-    luzPitchBody2: "Secure a high-reach spot for the 2026 season as a real location, partner or sponsor in the crime game.",
+    luzPitchBody2:
+      "Secure a high-reach spot for the 2026 season as a real location, partner or sponsor in the crime game.",
     luzCta: "Go to the game ↗",
   },
   pt: {
@@ -96,7 +98,8 @@ const COPY: Record<
     luzPitchTitle1: "Alcance internacional para a região",
     luzPitchBody1: "Beneficie de mais de 100.000 downloads na Play Store e visibilidade mundial.",
     luzPitchTitle2: "Faça parte do jogo",
-    luzPitchBody2: "Garanta para a temporada 2026 um lugar de grande alcance como cenário real, parceiro ou patrocinador do jogo policial.",
+    luzPitchBody2:
+      "Garanta para a temporada 2026 um lugar de grande alcance como cenário real, parceiro ou patrocinador do jogo policial.",
     luzCta: "Ir para o jogo ↗",
   },
   nl: {
@@ -117,7 +120,8 @@ const COPY: Record<
     luzPitchTitle1: "Internationaal bereik voor de regio",
     luzPitchBody1: "Profiteer van 100.000+ downloads in de Play Store en wereldwijde zichtbaarheid.",
     luzPitchTitle2: "Word deel van het spel",
-    luzPitchBody2: "Verzeker je voor seizoen 2026 een plek met groot bereik als echte locatie, partner of sponsor in het misdaadspel.",
+    luzPitchBody2:
+      "Verzeker je voor seizoen 2026 een plek met groot bereik als echte locatie, partner of sponsor in het misdaadspel.",
     luzCta: "Naar het spel ↗",
   },
 };
@@ -158,7 +162,6 @@ const ConnectInner = () => {
   const [eventosOpen, setEventosOpen] = useState(false);
   const [luzOpen, setLuzOpen] = useState(false);
 
-
   return (
     <main className="min-h-[100svh] bg-background text-foreground flex flex-col items-center px-6 py-10 pt-[max(2.5rem,env(safe-area-inset-top))] pb-[max(2.5rem,env(safe-area-inset-bottom))]">
       <div className="w-full max-w-[420px] mx-auto flex flex-col items-center gap-10 flex-1 justify-center">
@@ -190,12 +193,22 @@ const ConnectInner = () => {
               aria-controls="eventos-panel"
               className="group w-full flex items-center gap-4 p-4 text-left cursor-pointer select-none"
             >
-              <span className="h-11 w-11 shrink-0 rounded-xl flex items-center justify-center" style={{ background: "hsl(158 64% 46% / 0.12)" }}>
+              <span
+                className="h-11 w-11 shrink-0 rounded-xl flex items-center justify-center"
+                style={{ background: "hsl(158 64% 46% / 0.12)" }}
+              >
                 <img src={alentejoLogo} alt="" aria-hidden="true" className="h-7 w-7 object-contain" />
               </span>
               <span className="flex-1 min-w-0">
-                <span className="block font-display text-[17px] font-semibold tracking-tight" style={{ color: "hsl(220 39% 11%)" }}>Alentejo Eventos</span>
-                <span className="block text-[13px] truncate" style={{ color: "hsl(220 21% 38%)" }}>{c.eventos}</span>
+                <span
+                  className="block font-display text-[17px] font-semibold tracking-tight"
+                  style={{ color: "hsl(220 39% 11%)" }}
+                >
+                  Alentejo Eventos
+                </span>
+                <span className="block text-[13px] truncate" style={{ color: "hsl(220 21% 38%)" }}>
+                  {c.eventos}
+                </span>
               </span>
               <ChevronDown
                 className={`h-5 w-5 transition-transform duration-300 ${eventosOpen ? "rotate-180" : ""}`}
@@ -255,8 +268,15 @@ const ConnectInner = () => {
                 <img src={luzLogo} alt="" aria-hidden="true" className="h-full w-full object-cover" />
               </span>
               <span className="flex-1 min-w-0">
-                <span className="block font-display text-[17px] font-semibold tracking-tight" style={{ color: "hsl(220 39% 11%)" }}>Luz e Morte</span>
-                <span className="block text-[13px] truncate" style={{ color: "hsl(220 21% 38%)" }}>{c.luz}</span>
+                <span
+                  className="block font-display text-[17px] font-semibold tracking-tight"
+                  style={{ color: "hsl(220 39% 11%)" }}
+                >
+                  Luz e Morte
+                </span>
+                <span className="block text-[13px] truncate" style={{ color: "hsl(220 21% 38%)" }}>
+                  {c.luz}
+                </span>
               </span>
               <ChevronDown
                 className={`h-5 w-5 transition-transform duration-300 ${luzOpen ? "rotate-180" : ""}`}
@@ -295,8 +315,6 @@ const ConnectInner = () => {
               </div>
             </div>
           </div>
-
-
 
           {/* Kontakt-Kachel öffnet Mini-Formular */}
           <button
