@@ -323,7 +323,7 @@ const ConnectInner = () => {
       </div>
 
       <p className="text-[11px] tracking-widest uppercase text-muted-foreground/70 mt-8">
-        © {new Date().getFullYear()} Studio
+        © {new Date().getFullYear()} Studio Southwest
       </p>
 
       {/* Modal-Formular */}
