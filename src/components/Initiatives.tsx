@@ -32,8 +32,8 @@ export const Initiatives = () => {
                     style={{
                       background:
                         i === 0
-                          ? "linear-gradient(135deg, hsl(220 28% 12%), hsl(158 50% 18%))"
-                          : "linear-gradient(135deg, hsl(158 50% 22%), hsl(40 60% 55%))",
+                          ? "linear-gradient(135deg, hsl(220 28% 12%), hsl(24 50% 18%))"
+                          : "linear-gradient(135deg, hsl(24 50% 22%), hsl(40 60% 55%))",
                     }}
                   >
                     <Icon className="h-12 w-12 text-white/90" strokeWidth={1.5} />
@@ -60,7 +60,7 @@ export const Initiatives = () => {
 
                     <div
                       className="mt-2 rounded-lg p-4 border"
-                      style={{ background: "hsl(158 60% 96%)", borderColor: "hsl(158 40% 80%)" }}
+                      style={{ background: "hsl(24 60% 96%)", borderColor: "hsl(24 40% 80%)" }}
                     >
                       <p
                         className="text-xs tracking-widest uppercase mb-1 font-semibold"
