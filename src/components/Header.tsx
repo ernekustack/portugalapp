@@ -35,7 +35,7 @@ export const Header = () => {
             <span className="h-2 w-2 rounded-sm bg-accent" />
           </span>
           <span className="font-display font-semibold tracking-tight text-[15px]">
-            Studio<span className="text-accent">.</span>
+            Studio Southwest<span className="text-accent">.</span>
           </span>
         </a>
 
