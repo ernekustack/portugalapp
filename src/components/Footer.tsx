@@ -58,7 +58,7 @@ export const Footer = () => {
         </div>
 
         <div className="mt-14 pt-6 border-t border-border flex flex-col md:flex-row gap-3 md:items-center justify-between text-xs text-muted-foreground">
-          <div>© {new Date().getFullYear()} Studio. {t.footer.rights}</div>
+          <div>© {new Date().getFullYear()} Studio Southwest. {t.footer.rights}</div>
           <div>{t.footer.made}</div>
         </div>
       </div>
