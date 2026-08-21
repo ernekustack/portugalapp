@@ -6,6 +6,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import Index from "./pages/Index.tsx";
 import NotFound from "./pages/NotFound.tsx";
 import Connect from "./pages/Connect.tsx";
+import Lume from "./pages/Lume.tsx";
 
 const queryClient = new QueryClient();
 const routerBasename = import.meta.env.BASE_URL.replace(/\/$/, "") || undefined;
@@ -20,6 +21,7 @@ const App = () => (
           <Route path="/" element={<Index />} />
           <Route path="/connect" element={<Connect />} />
           <Route path="/hi" element={<Connect />} />
+          <Route path="/lume" element={<Lume />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

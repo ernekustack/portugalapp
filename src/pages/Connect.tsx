@@ -13,7 +13,7 @@ const WHATSAPP_NUMBER = "351923595110"; // TODO: durch echte Nummer ersetzen
 // Projekt-Links — sobald Live-URLs vorhanden, hier ersetzen.
 const LINK_EVENTOS = "https://alentejoeventos.com";
 const LINK_LUZ = "https://luz-e-morte.lovable.app";
-const LINK_LUME = "https://lume.studiosouthwest.eu";
+const LINK_LUME = "/lume";
 
 const COPY: Record<
   string,
@@ -412,8 +412,6 @@ const ConnectInner = () => {
                   </div>
                   <a
                     href={LINK_LUME}
-                    target="_blank"
-                    rel="noopener noreferrer"
                     className="btn-neon inline-flex items-center justify-center gap-2 rounded-full px-5 py-3 text-sm font-semibold transition-all"
                   >
                     <img src={lumeDragon} alt="" aria-hidden="true" className="h-5 w-5 object-cover rounded-sm shrink-0" />
