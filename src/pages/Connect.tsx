@@ -37,6 +37,12 @@ const COPY: Record<
     luzPitchTitle2: string;
     luzPitchBody2: string;
     luzCta: string;
+    lume: string;
+    lumePitchTitle1: string;
+    lumePitchBody1: string;
+    lumePitchTitle2: string;
+    lumePitchBody2: string;
+    lumeCta: string;
   }
 > = {
   de: {
