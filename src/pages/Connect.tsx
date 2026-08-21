@@ -416,7 +416,7 @@ const ConnectInner = () => {
                     rel="noopener noreferrer"
                     className="btn-neon inline-flex items-center justify-center gap-2 rounded-full px-5 py-3 text-sm font-semibold transition-all"
                   >
-                    <img src={lumeDragon} alt="" aria-hidden="true" className="h-5 w-5 object-cover rounded-sm shrink-0" />
+                    <img src={lumeDragon.url} alt="" aria-hidden="true" className="h-5 w-5 object-cover rounded-sm shrink-0" />
                     <span>{c.lumeCta}</span>
                   </a>
                 </div>
