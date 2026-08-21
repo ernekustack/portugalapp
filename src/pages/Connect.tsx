@@ -150,6 +150,12 @@ const COPY: Record<
     luzPitchBody2:
       "Verzeker je voor seizoen 2026 een plek met groot bereik als echte locatie, partner of sponsor in het misdaadspel.",
     luzCta: "Naar het spel ↗",
+    lume: "Magische verhalen om aan te raken",
+    lumePitchTitle1: "Interactieve ervaring voor jonge lezers",
+    lumePitchBody1: "Combineert fantasy-verhalen met speelse elementen – boeken worden avonturen.",
+    lumePitchTitle2: "Word early supporter",
+    lumePitchBody2: "Krijg exclusieve toegang tot de beta en help de magische wereld vorm te geven.",
+    lumeCta: "Naar Lume Magic Book ↗",
   },
 };
 
