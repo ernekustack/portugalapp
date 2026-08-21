@@ -94,6 +94,12 @@ const COPY: Record<
     luzPitchBody2:
       "Secure a high-reach spot for the 2026 season as a real location, partner or sponsor in the crime game.",
     luzCta: "Go to the game ↗",
+    lume: "Magical stories to touch",
+    lumePitchTitle1: "Interactive experience for young readers",
+    lumePitchBody1: "Combines fantasy storytelling with playful elements – books become adventures.",
+    lumePitchTitle2: "Become an early supporter",
+    lumePitchBody2: "Get exclusive beta access and help shape the magical world.",
+    lumeCta: "Go to Lume Magic Book ↗",
   },
   pt: {
     tagline: "Projetos criativos do Alentejo, Portugal.",
