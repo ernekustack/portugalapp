@@ -11,6 +11,11 @@ import Lume from "./pages/Lume.tsx";
 const queryClient = new QueryClient();
 const routerBasename = import.meta.env.BASE_URL.replace(/\/$/, "") || undefined;
 
+// Direktverbindung: auf lume.* wird die Lume-Seite als Startseite ausgeliefert
+const isLumeHost =
+  typeof window !== "undefined" &&
+  /^lume\./i.test(window.location.hostname);
+
 const App = () => (
   <QueryClientProvider client={queryClient}>
     <TooltipProvider>
@@ -18,7 +23,7 @@ const App = () => (
       <Sonner />
       <BrowserRouter basename={routerBasename}>
         <Routes>
-          <Route path="/" element={<Index />} />
+          <Route path="/" element={isLumeHost ? <Lume /> : <Index />} />
           <Route path="/connect" element={<Connect />} />
           <Route path="/hi" element={<Connect />} />
           <Route path="/lume" element={<Lume />} />
