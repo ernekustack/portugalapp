@@ -5,7 +5,7 @@ import { LanguageProvider, useI18n } from "@/i18n/LanguageContext";
 import alentejoLogo from "@/assets/alentejo-eventos-logo.png";
 import logoFarol from "@/assets/logo-farol.jpg";
 import luzLogo from "@/assets/luz-e-morte-logo.jpg";
-import lumeDragon from "@/assets/lume-dragon.png";
+import lumeDragon from "@/assets/lume-dragon-logo.png.asset.json";
 
 // ⚙️ Hier deine WhatsApp-Nummer eintragen (internationales Format, nur Ziffern):
 const WHATSAPP_NUMBER = "351923595110"; // TODO: durch echte Nummer ersetzen
