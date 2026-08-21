@@ -202,6 +202,7 @@ const ConnectInner = () => {
 
   const [eventosOpen, setEventosOpen] = useState(false);
   const [luzOpen, setLuzOpen] = useState(false);
+  const [lumeOpen, setLumeOpen] = useState(false);
 
   return (
     <main className="min-h-[100svh] bg-background text-foreground flex flex-col items-center px-6 py-10 pt-[max(2.5rem,env(safe-area-inset-top))] pb-[max(2.5rem,env(safe-area-inset-bottom))]">
