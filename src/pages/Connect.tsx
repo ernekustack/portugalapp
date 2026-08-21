@@ -66,11 +66,11 @@ const COPY: Record<
     luzPitchBody2:
       "Sichern Sie sich für die Saison 2026 einen reichweitenstarken Platz als echter Schauplatz, Kooperationspartner oder Sponsor im Krimispiel.",
     luzCta: "Zum Spiel wechseln ↗",
-    lume: "Magische Geschichten zum Anfassen",
-    lumePitchTitle1: "Interaktives Erlebnis für junge Leser",
-    lumePitchBody1: "Kombiniert Fantasy-Storytelling mit spielerischen Elementen – Bücher werden zum Abenteuer.",
-    lumePitchTitle2: "Frühunterstützer werden",
-    lumePitchBody2: "Sichere dir exklusiven Zugang zur Beta und gestalte die magische Welt mit.",
+    lume: "Ein personalisierbares Geschenk",
+    lumePitchTitle1: "Ein Abenteuer an der wilden Küste",
+    lumePitchBody1: "Ein packendes Abenteuer an der wilden Küste Portugals, in dem ein kleiner Klippendrache über sich hinauswachsen muss. Wenn der alte Leuchtturm in der Sturmnacht erlischt, steht alles auf dem Spiel.",
+    lumePitchTitle2: "Ein einzigartiges Leseerlebnis",
+    lumePitchBody2: "Eine herzerwärmende Geschichte für junge Leserinnen und Leser, die als personalisierbares Buch ein einzigartiges Leseerlebnis schafft.",
     lumeCta: "Zum Lume Magic Book ↗",
   },
   en: {
