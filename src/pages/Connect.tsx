@@ -122,6 +122,12 @@ const COPY: Record<
     luzPitchBody2:
       "Garanta para a temporada 2026 um lugar de grande alcance como cenário real, parceiro ou patrocinador do jogo policial.",
     luzCta: "Ir para o jogo ↗",
+    lume: "Histórias mágicas para tocar",
+    lumePitchTitle1: "Experiência interativa para jovens leitores",
+    lumePitchBody1: "Combina narrativa de fantasia com elementos lúdicos – os livros tornam-se aventuras.",
+    lumePitchTitle2: "Torna-te apoiante early-bird",
+    lumePitchBody2: "Garante acesso exclusivo à beta e ajuda a moldar o mundo mágico.",
+    lumeCta: "Ir para o Lume Magic Book ↗",
   },
   nl: {
     tagline: "Creatieve projecten uit de Alentejo, Portugal.",
