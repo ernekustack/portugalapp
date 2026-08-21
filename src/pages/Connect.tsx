@@ -356,7 +356,75 @@ const ConnectInner = () => {
             </div>
           </div>
 
-          {/* Kontakt-Kachel öffnet Mini-Formular */}
+          {/* Kachel 3: Lume Magic Book — Accordion */}
+          <div className="rounded-2xl bg-card hairline shadow-soft overflow-hidden transition-all duration-300">
+            <div
+              role="button"
+              tabIndex={0}
+              onClick={() => setLumeOpen((v) => !v)}
+              onKeyDown={(e) => {
+                if (e.key === "Enter" || e.key === " ") {
+                  e.preventDefault();
+                  setLumeOpen((v) => !v);
+                }
+              }}
+              aria-expanded={lumeOpen}
+              aria-controls="lume-panel"
+              className="group w-full flex items-center gap-4 p-4 text-left cursor-pointer select-none"
+            >
+              <span className="h-11 w-11 shrink-0 rounded-xl overflow-hidden flex items-center justify-center bg-black">
+                <img src={lumeDragon} alt="" aria-hidden="true" className="h-full w-full object-cover" />
+              </span>
+              <span className="flex-1 min-w-0">
+                <span
+                  className="block font-display text-[17px] font-semibold tracking-tight"
+                  style={{ color: "hsl(220 39% 11%)" }}
+                >
+                  Lume Magic Book
+                </span>
+                <span className="block text-[13px] truncate" style={{ color: "hsl(220 21% 38%)" }}>
+                  {c.lume}
+                </span>
+              </span>
+              <ChevronDown
+                className={`h-5 w-5 transition-transform duration-300 ${lumeOpen ? "rotate-180" : ""}`}
+                strokeWidth={2}
+                style={{ color: lumeOpen ? "hsl(24 79% 37%)" : "hsl(220 21% 38%)" }}
+              />
+            </div>
+            <div
+              id="lume-panel"
+              role="region"
+              className={`grid transition-all duration-500 ease-out ${lumeOpen ? "grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0"}`}
+              style={{ transitionTimingFunction: "cubic-bezier(0.22, 1, 0.36, 1)" }}
+            >
+              <div className="overflow-hidden">
+                <div className="px-4 pb-4 pt-1 flex flex-col gap-4">
+                  <div className="flex flex-col gap-3">
+                    <div>
+                      <p className="font-display text-[14px] font-semibold tracking-tight">{c.lumePitchTitle1}</p>
+                      <p className="text-[13px] leading-relaxed text-muted-foreground mt-1">• {c.lumePitchBody1}</p>
+                    </div>
+                    <div>
+                      <p className="font-display text-[14px] font-semibold tracking-tight">{c.lumePitchTitle2}</p>
+                      <p className="text-[13px] leading-relaxed text-muted-foreground mt-1">• {c.lumePitchBody2}</p>
+                    </div>
+                  </div>
+                  <a
+                    href={LINK_LUME}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="btn-neon inline-flex items-center justify-center gap-2 rounded-full px-5 py-3 text-sm font-semibold transition-all"
+                  >
+                    <img src={lumeDragon} alt="" aria-hidden="true" className="h-5 w-5 object-cover rounded-sm shrink-0" />
+                    <span>{c.lumeCta}</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Kachel 4: Kontakt-Kachel öffnet Mini-Formular */}
           <button
             type="button"
             onClick={() => {
