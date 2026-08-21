@@ -5,6 +5,7 @@ import { LanguageProvider, useI18n } from "@/i18n/LanguageContext";
 import alentejoLogo from "@/assets/alentejo-eventos-logo.png";
 import logoFarol from "@/assets/logo-farol.jpg";
 import luzLogo from "@/assets/luz-e-morte-logo.jpg";
+import lumeDragon from "@/assets/lume-dragon.png";
 
 // ⚙️ Hier deine WhatsApp-Nummer eintragen (internationales Format, nur Ziffern):
 const WHATSAPP_NUMBER = "351923595110"; // TODO: durch echte Nummer ersetzen
@@ -12,6 +13,7 @@ const WHATSAPP_NUMBER = "351923595110"; // TODO: durch echte Nummer ersetzen
 // Projekt-Links — sobald Live-URLs vorhanden, hier ersetzen.
 const LINK_EVENTOS = "https://alentejoeventos.com";
 const LINK_LUZ = "https://luz-e-morte.lovable.app";
+const LINK_LUME = "https://lume-magic-book.lovable.app"; // TODO: durch echte URL ersetzen
 
 const COPY: Record<
   string,
@@ -35,6 +37,12 @@ const COPY: Record<
     luzPitchTitle2: string;
     luzPitchBody2: string;
     luzCta: string;
+    lume: string;
+    lumePitchTitle1: string;
+    lumePitchBody1: string;
+    lumePitchTitle2: string;
+    lumePitchBody2: string;
+    lumeCta: string;
   }
 > = {
   de: {
@@ -58,6 +66,12 @@ const COPY: Record<
     luzPitchBody2:
       "Sichern Sie sich für die Saison 2026 einen reichweitenstarken Platz als echter Schauplatz, Kooperationspartner oder Sponsor im Krimispiel.",
     luzCta: "Zum Spiel wechseln ↗",
+    lume: "Magische Geschichten zum Anfassen",
+    lumePitchTitle1: "Interaktives Erlebnis für junge Leser",
+    lumePitchBody1: "Kombiniert Fantasy-Storytelling mit spielerischen Elementen – Bücher werden zum Abenteuer.",
+    lumePitchTitle2: "Frühunterstützer werden",
+    lumePitchBody2: "Sichere dir exklusiven Zugang zur Beta und gestalte die magische Welt mit.",
+    lumeCta: "Zum Lume Magic Book ↗",
   },
   en: {
     tagline: "Creative projects from the Alentejo, Portugal.",
@@ -80,6 +94,12 @@ const COPY: Record<
     luzPitchBody2:
       "Secure a high-reach spot for the 2026 season as a real location, partner or sponsor in the crime game.",
     luzCta: "Go to the game ↗",
+    lume: "Magical stories to touch",
+    lumePitchTitle1: "Interactive experience for young readers",
+    lumePitchBody1: "Combines fantasy storytelling with playful elements – books become adventures.",
+    lumePitchTitle2: "Become an early supporter",
+    lumePitchBody2: "Get exclusive beta access and help shape the magical world.",
+    lumeCta: "Go to Lume Magic Book ↗",
   },
   pt: {
     tagline: "Projetos criativos do Alentejo, Portugal.",
@@ -102,6 +122,12 @@ const COPY: Record<
     luzPitchBody2:
       "Garanta para a temporada 2026 um lugar de grande alcance como cenário real, parceiro ou patrocinador do jogo policial.",
     luzCta: "Ir para o jogo ↗",
+    lume: "Histórias mágicas para tocar",
+    lumePitchTitle1: "Experiência interativa para jovens leitores",
+    lumePitchBody1: "Combina narrativa de fantasia com elementos lúdicos – os livros tornam-se aventuras.",
+    lumePitchTitle2: "Torna-te apoiante early-bird",
+    lumePitchBody2: "Garante acesso exclusivo à beta e ajuda a moldar o mundo mágico.",
+    lumeCta: "Ir para o Lume Magic Book ↗",
   },
   nl: {
     tagline: "Creatieve projecten uit de Alentejo, Portugal.",
@@ -124,6 +150,12 @@ const COPY: Record<
     luzPitchBody2:
       "Verzeker je voor seizoen 2026 een plek met groot bereik als echte locatie, partner of sponsor in het misdaadspel.",
     luzCta: "Naar het spel ↗",
+    lume: "Magische verhalen om aan te raken",
+    lumePitchTitle1: "Interactieve ervaring voor jonge lezers",
+    lumePitchBody1: "Combineert fantasy-verhalen met speelse elementen – boeken worden avonturen.",
+    lumePitchTitle2: "Word early supporter",
+    lumePitchBody2: "Krijg exclusieve toegang tot de beta en help de magische wereld vorm te geven.",
+    lumeCta: "Naar Lume Magic Book ↗",
   },
 };
 
@@ -170,6 +202,7 @@ const ConnectInner = () => {
 
   const [eventosOpen, setEventosOpen] = useState(false);
   const [luzOpen, setLuzOpen] = useState(false);
+  const [lumeOpen, setLumeOpen] = useState(false);
 
   return (
     <main className="min-h-[100svh] bg-background text-foreground flex flex-col items-center px-6 py-10 pt-[max(2.5rem,env(safe-area-inset-top))] pb-[max(2.5rem,env(safe-area-inset-bottom))]">
@@ -323,7 +356,75 @@ const ConnectInner = () => {
             </div>
           </div>
 
-          {/* Kontakt-Kachel öffnet Mini-Formular */}
+          {/* Kachel 3: Lume Magic Book — Accordion */}
+          <div className="rounded-2xl bg-card hairline shadow-soft overflow-hidden transition-all duration-300">
+            <div
+              role="button"
+              tabIndex={0}
+              onClick={() => setLumeOpen((v) => !v)}
+              onKeyDown={(e) => {
+                if (e.key === "Enter" || e.key === " ") {
+                  e.preventDefault();
+                  setLumeOpen((v) => !v);
+                }
+              }}
+              aria-expanded={lumeOpen}
+              aria-controls="lume-panel"
+              className="group w-full flex items-center gap-4 p-4 text-left cursor-pointer select-none"
+            >
+              <span className="h-11 w-11 shrink-0 rounded-xl overflow-hidden flex items-center justify-center bg-black">
+                <img src={lumeDragon} alt="" aria-hidden="true" className="h-full w-full object-cover" />
+              </span>
+              <span className="flex-1 min-w-0">
+                <span
+                  className="block font-display text-[17px] font-semibold tracking-tight"
+                  style={{ color: "hsl(220 39% 11%)" }}
+                >
+                  Lume Magic Book
+                </span>
+                <span className="block text-[13px] truncate" style={{ color: "hsl(220 21% 38%)" }}>
+                  {c.lume}
+                </span>
+              </span>
+              <ChevronDown
+                className={`h-5 w-5 transition-transform duration-300 ${lumeOpen ? "rotate-180" : ""}`}
+                strokeWidth={2}
+                style={{ color: lumeOpen ? "hsl(24 79% 37%)" : "hsl(220 21% 38%)" }}
+              />
+            </div>
+            <div
+              id="lume-panel"
+              role="region"
+              className={`grid transition-all duration-500 ease-out ${lumeOpen ? "grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0"}`}
+              style={{ transitionTimingFunction: "cubic-bezier(0.22, 1, 0.36, 1)" }}
+            >
+              <div className="overflow-hidden">
+                <div className="px-4 pb-4 pt-1 flex flex-col gap-4">
+                  <div className="flex flex-col gap-3">
+                    <div>
+                      <p className="font-display text-[14px] font-semibold tracking-tight">{c.lumePitchTitle1}</p>
+                      <p className="text-[13px] leading-relaxed text-muted-foreground mt-1">• {c.lumePitchBody1}</p>
+                    </div>
+                    <div>
+                      <p className="font-display text-[14px] font-semibold tracking-tight">{c.lumePitchTitle2}</p>
+                      <p className="text-[13px] leading-relaxed text-muted-foreground mt-1">• {c.lumePitchBody2}</p>
+                    </div>
+                  </div>
+                  <a
+                    href={LINK_LUME}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="btn-neon inline-flex items-center justify-center gap-2 rounded-full px-5 py-3 text-sm font-semibold transition-all"
+                  >
+                    <img src={lumeDragon} alt="" aria-hidden="true" className="h-5 w-5 object-cover rounded-sm shrink-0" />
+                    <span>{c.lumeCta}</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Kachel 4: Kontakt-Kachel öffnet Mini-Formular */}
           <button
             type="button"
             onClick={() => {
