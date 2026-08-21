@@ -5,7 +5,7 @@ import { LanguageProvider, useI18n } from "@/i18n/LanguageContext";
 import alentejoLogo from "@/assets/alentejo-eventos-logo.png";
 import logoFarol from "@/assets/logo-farol.jpg";
 import luzLogo from "@/assets/luz-e-morte-logo.jpg";
-import lumeDragon from "@/assets/lume-dragon-logo.png.asset.json";
+import lumeDragon from "@/assets/lume-dragon.png";
 
 // ⚙️ Hier deine WhatsApp-Nummer eintragen (internationales Format, nur Ziffern):
 const WHATSAPP_NUMBER = "351923595110"; // TODO: durch echte Nummer ersetzen
@@ -373,7 +373,7 @@ const ConnectInner = () => {
               className="group w-full flex items-center gap-4 p-4 text-left cursor-pointer select-none"
             >
               <span className="h-11 w-11 shrink-0 rounded-xl overflow-hidden flex items-center justify-center bg-black">
-                <img src={lumeDragon.url} alt="" aria-hidden="true" className="h-full w-full object-cover" />
+                <img src={lumeDragon} alt="" aria-hidden="true" className="h-full w-full object-cover" />
               </span>
               <span className="flex-1 min-w-0">
                 <span
@@ -416,7 +416,7 @@ const ConnectInner = () => {
                     rel="noopener noreferrer"
                     className="btn-neon inline-flex items-center justify-center gap-2 rounded-full px-5 py-3 text-sm font-semibold transition-all"
                   >
-                    <img src={lumeDragon.url} alt="" aria-hidden="true" className="h-5 w-5 object-cover rounded-sm shrink-0" />
+                    <img src={lumeDragon} alt="" aria-hidden="true" className="h-5 w-5 object-cover rounded-sm shrink-0" />
                     <span>{c.lumeCta}</span>
                   </a>
                 </div>
