@@ -23,7 +23,7 @@ const App = () => (
       <Sonner />
       <BrowserRouter basename={routerBasename}>
         <Routes>
-          <Route path="/" element={<Index />} />
+          <Route path="/" element={isLumeHost ? <Lume /> : <Index />} />
           <Route path="/connect" element={<Connect />} />
           <Route path="/hi" element={<Connect />} />
           <Route path="/lume" element={<Lume />} />
