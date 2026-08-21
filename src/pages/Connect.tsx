@@ -66,6 +66,12 @@ const COPY: Record<
     luzPitchBody2:
       "Sichern Sie sich für die Saison 2026 einen reichweitenstarken Platz als echter Schauplatz, Kooperationspartner oder Sponsor im Krimispiel.",
     luzCta: "Zum Spiel wechseln ↗",
+    lume: "Magische Geschichten zum Anfassen",
+    lumePitchTitle1: "Interaktives Erlebnis für junge Leser",
+    lumePitchBody1: "Kombiniert Fantasy-Storytelling mit spielerischen Elementen – Bücher werden zum Abenteuer.",
+    lumePitchTitle2: "Frühunterstützer werden",
+    lumePitchBody2: "Sichere dir exklusiven Zugang zur Beta und gestalte die magische Welt mit.",
+    lumeCta: "Zum Lume Magic Book ↗",
   },
   en: {
     tagline: "Creative projects from the Alentejo, Portugal.",
