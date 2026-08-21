@@ -373,7 +373,7 @@ const ConnectInner = () => {
               className="group w-full flex items-center gap-4 p-4 text-left cursor-pointer select-none"
             >
               <span className="h-11 w-11 shrink-0 rounded-xl overflow-hidden flex items-center justify-center bg-black">
-                <img src={lumeDragon} alt="" aria-hidden="true" className="h-full w-full object-cover" />
+                <img src={lumeDragon.url} alt="" aria-hidden="true" className="h-full w-full object-cover" />
               </span>
               <span className="flex-1 min-w-0">
                 <span
