@@ -37,7 +37,7 @@ export const ContactForm = () => {
       const res = await fetch(FORM_ENDPOINT, {
         method: "POST",
         headers: { Accept: "application/json", "Content-Type": "application/json" },
-        body: JSON.stringify(parsed.data),
+        body: JSON.stringify({ ...parsed.data, _subject: `Kontakt: ${parsed.data.name}`, _template: "table" }),
       });
       if (!res.ok) throw new Error("submit failed");
       setStatus("success");
