@@ -31,6 +31,7 @@ collections:
                 fields:
                   - { label: "Luz e Morte", name: "luzEMorte", widget: "image", required: false }
                   - { label: "Alentejo Events", name: "alentejoEvents", widget: "image", required: false }
+                  - { label: "Lume Magic Book", name: "lume", widget: "image", required: false }
 
           - label: "Sprachen (intern)"
             name: "languages"
@@ -164,10 +165,11 @@ collections:
                         name: "projects"
                         widget: "list"
                         fields:
-                          - { label: "Name", name: "name", widget: "string" }
-                          - { label: "Tag", name: "tag", widget: "string" }
-                          - { label: "Tagline", name: "tagline", widget: "text" }
-                          - { label: "Sponsoring-Ziel", name: "goal", widget: "text" }
+                      - { label: "Name", name: "name", widget: "string" }
+                      - { label: "Tag", name: "tag", widget: "string" }
+                      - { label: "Tagline", name: "tagline", widget: "text" }
+                      - { label: "Sponsoring-Ziel", name: "goal", widget: "text" }
+                      - { label: "Link zum Projekt", name: "link", widget: "string" }
 
                   - label: "Kontakt"
                     name: "contact"
