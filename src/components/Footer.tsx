@@ -28,8 +28,8 @@ export const Footer = () => {
           <div className="md:col-span-3">
             <div className="text-xs uppercase tracking-[0.2em] text-muted-foreground font-medium">{t.footer.contact}</div>
             <ul className="mt-4 space-y-2.5 text-sm">
-              <li><a className="link-underline hover:text-accent" href="mailto:hallo@studio.app">hallo@studio.app</a></li>
-              <li><a className="link-underline hover:text-accent" href="tel:+490000">+49 (0) 000 000 000</a></li>
+              <li><a className="link-underline hover:text-accent" href="mailto:studiosouthwest@posteo.de">studiosouthwest@posteo.de</a></li>
+
             </ul>
           </div>
 
