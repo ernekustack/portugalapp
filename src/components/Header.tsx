@@ -108,7 +108,7 @@ export const Header = () => {
               onClick={() => setOpen(false)}
               className="mt-2 inline-flex items-center justify-center rounded-full bg-accent text-accent-foreground px-4 py-3 text-sm font-medium"
             >
-              {t.nav.ctaLong}
+              {t.nav.contact}
             </a>
           </div>
         </div>
