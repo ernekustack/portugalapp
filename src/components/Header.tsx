@@ -30,16 +30,16 @@ export const Header = () => {
       }`}
     >
       <div className="container-px mx-auto max-w-7xl flex items-center justify-between h-16 md:h-20">
-        <a href="#top" className="flex items-center gap-2 group">
-          <img
-            src={logoFarol}
-            alt="Studio Southwest Logo"
-            className="h-8 w-8 md:h-9 md:w-9 object-contain"
-          />
-          <span className="font-display font-semibold tracking-tight text-[15px]">
-            Studio Southwest<span className="text-accent">.</span>
+        <a href="#top" className="flex items-center group">
+          <span className="bg-white rounded-xl shadow-soft p-1.5">
+            <img
+              src={logoFarol.url}
+              alt="Studio Southwest Logo"
+              className="h-8 md:h-9 object-contain"
+            />
           </span>
         </a>
+
 
         <nav className="hidden md:flex items-center gap-8">
           {links.map((l) =>
