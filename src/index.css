@@ -230,6 +230,24 @@
     color: hsl(220 39% 11%) !important;
   }
 
+  /* Form fields sit on dark backgrounds even inside white cards → brand orange text */
+  .bg-card input,
+  .bg-card textarea,
+  .bg-card select,
+  input,
+  textarea,
+  select {
+    color: #ab5014 !important;
+  }
+  .bg-card input::placeholder,
+  .bg-card textarea::placeholder,
+  input::placeholder,
+  textarea::placeholder {
+    color: #ab5014 !important;
+    opacity: 0.55;
+  }
+
+
   .link-underline {
     position: relative;
   }
