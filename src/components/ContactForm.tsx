@@ -33,19 +33,29 @@ export const ContactForm = () => {
     }
     setErrors({});
     setStatus("sending");
+    const form = e.currentTarget;
     try {
-      const res = await fetch(FORM_ENDPOINT, {
-        method: "POST",
-        headers: { Accept: "application/json", "Content-Type": "application/json" },
-        body: JSON.stringify({ ...parsed.data, _subject: `Kontakt: ${parsed.data.name}`, _template: "table" }),
-      });
-      if (!res.ok) throw new Error("submit failed");
+      const fdSend = new FormData();
+      fdSend.append("name", parsed.data.name);
+      fdSend.append("email", parsed.data.email);
+      fdSend.append("message", parsed.data.message);
+      fdSend.append("_subject", `Kontakt: ${parsed.data.name}`);
+      fdSend.append("_template", "table");
+      fdSend.append("_captcha", "false");
+      const res = await fetch(FORM_ENDPOINT, { method: "POST", headers: { Accept: "application/json" }, body: fdSend });
+      const json = await res.json().catch(() => null as null | { success?: string; message?: string });
+      if (!res.ok || (json && String(json.success) !== "true")) {
+        setErrorDetail(json?.message ?? null);
+        throw new Error("submit failed");
+      }
       setStatus("success");
-      e.currentTarget.reset();
+      setErrorDetail(null);
+      form.reset();
     } catch {
       setStatus("error");
     }
   };
+
 
   return (
     <section id="kontakt" className="py-24 md:py-32 surface">
