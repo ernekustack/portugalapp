@@ -14,7 +14,6 @@ export const Header = () => {
     { href: "#qualitaet", label: t.nav.quality },
     { href: "#prozess", label: t.nav.process },
     { href: "/connect", label: "Card", route: true as const },
-    { href: "#kontakt", label: t.nav.contact },
   ];
 
   useEffect(() => {
