@@ -3,9 +3,11 @@ import { z } from "zod";
 import { Reveal } from "./Reveal";
 import { useI18n } from "@/i18n/LanguageContext";
 
-// Replace with your real Formspree endpoint (e.g. https://formspree.io/f/abcd1234)
-// Submissions are stored on Formspree and viewable as a list — no own DB needed.
-const FORM_ENDPOINT = "https://formspree.io/f/your-form-id";
+// Sendet direkt an studiosouthwest@posteo.de (FormSubmit, kein Backend nötig).
+// Wichtig: Beim ersten Absenden kommt eine Bestätigungsmail von FormSubmit — einmal bestätigen.
+const CONTACT_EMAIL = "studiosouthwest@posteo.de";
+const FORM_ENDPOINT = `https://formsubmit.co/ajax/${CONTACT_EMAIL}`;
+
 
 const schema = z.object({
   name: z.string().trim().min(1).max(100),
