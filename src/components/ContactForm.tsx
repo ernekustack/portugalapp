@@ -19,6 +19,7 @@ export const ContactForm = () => {
   const { t } = useI18n();
   const [status, setStatus] = useState<"idle" | "sending" | "success" | "error">("idle");
   const [errors, setErrors] = useState<Record<string, string>>({});
+  const [errorDetail, setErrorDetail] = useState<string | null>(null);
 
   const onSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
