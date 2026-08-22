@@ -9,7 +9,8 @@
     "heroBackground": "",
     "initiatives": {
       "luzEMorte": "",
-      "alentejoEvents": ""
+      "alentejoEvents": "",
+      "lume": ""
     }
   },
   "translations": {
@@ -147,7 +148,7 @@
         "eyebrow": "Initiativen & Partnerschaften",
         "title": "Projekte mit ",
         "titleItalic": "Haltung.",
-        "desc": "Zwei Herzensprojekte, die ich aktiv vorantreibe. Werden Sie Partner und gestalten Sie mit.",
+        "desc": "Drei Herzensprojekte, die ich aktiv vorantreibe. Werden Sie Partner und gestalten Sie mit.",
         "sponsorGoal": "Sponsoring-Ziel",
         "cta": "Partnerschaft anfragen",
         "projects": [
@@ -155,13 +156,22 @@
             "name": "Luz e Morte",
             "tag": "Spieleprojekt",
             "tagline": "Ein atmosphärisches Spielprojekt, das Storytelling und Kunst vereint.",
-            "goal": "Unterstützung bei der Finalisierung der Grafik und dem globalen Release."
+            "goal": "Unterstützung bei der Finalisierung der Grafik und dem globalen Release.",
+            "link": "https://luz-e-morte.lovable.app"
           },
           {
             "name": "Alentejo Events",
             "tag": "Event-App",
             "tagline": "Die digitale Heimat für alle Veranstaltungen im Alentejo.",
-            "goal": "Strategische Partnerschaften mit regionalen Akteuren und Veranstaltern."
+            "goal": "Strategische Partnerschaften mit regionalen Akteuren und Veranstaltern.",
+            "link": "https://alentejoeventos.com"
+          },
+          {
+            "name": "Lume Magic Book",
+            "tag": "Kinderbuch",
+            "tagline": "Ein personalisiertes Kinderbuch über einen kleinen Klippendrachen an der Küste Portugals.",
+            "goal": "Unterstützung für Druck, Personalisierung und Vermarktung.",
+            "link": "https://lume.studiosouthwest.eu"
           }
         ]
       },
