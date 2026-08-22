@@ -258,3 +258,22 @@
   .btn-neon * { color: hsl(220 28% 10%) !important; }
   .btn-neon:hover { filter: brightness(1.08); box-shadow: 0 14px 40px -10px hsl(24 79% 37% / 0.7); }
 }
+
+/* Formularfelder & Labels: Markenorange (außerhalb der Tailwind-Layer, damit nicht gepurged) */
+input,
+textarea,
+select,
+label,
+.bg-card input,
+.bg-card textarea,
+.bg-card select,
+.bg-card label {
+  color: #ab5014 !important;
+}
+input::placeholder,
+textarea::placeholder,
+.bg-card input::placeholder,
+.bg-card textarea::placeholder {
+  color: #ab5014 !important;
+  opacity: 0.6;
+}
