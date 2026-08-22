@@ -230,13 +230,15 @@
     color: hsl(220 39% 11%) !important;
   }
 
-  /* Form fields sit on dark backgrounds even inside white cards → brand orange text */
+  /* Form fields & labels → brand orange */
   .bg-card input,
   .bg-card textarea,
   .bg-card select,
+  .bg-card label,
   input,
   textarea,
-  select {
+  select,
+  label {
     color: #ab5014 !important;
   }
   .bg-card input::placeholder,
