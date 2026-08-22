@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { ArrowLeft, MessageCircle } from "lucide-react";
-import { LanguageProvider, useI18n } from "@/i18n/LanguageContext";
+import { useI18n } from "@/i18n/LanguageContext";
 import lumeDragon from "@/assets/lume-dragon.png";
 
 const WHATSAPP_NUMBER = "351923595110";
@@ -132,9 +132,7 @@ const LumeContent = () => {
 };
 
 const Lume = () => (
-  <LanguageProvider>
     <LumeContent />
-  </LanguageProvider>
 );
 
 export default Lume;

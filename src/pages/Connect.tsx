@@ -1,7 +1,7 @@
 import { useEffect, useState, FormEvent } from "react";
 import { Link } from "react-router-dom";
 import { Calendar, Flame, MessageCircle, ArrowUpRight, ChevronDown, X } from "lucide-react";
-import { LanguageProvider, useI18n } from "@/i18n/LanguageContext";
+import { useI18n } from "@/i18n/LanguageContext";
 import alentejoLogo from "@/assets/alentejo-eventos-logo.png";
 import logoFarol from "@/assets/logo-farol.jpg";
 import luzLogo from "@/assets/luz-e-morte-logo.jpg";
@@ -505,9 +505,7 @@ const ConnectInner = () => {
 };
 
 const Connect = () => (
-  <LanguageProvider>
     <ConnectInner />
-  </LanguageProvider>
 );
 
 export default Connect;
