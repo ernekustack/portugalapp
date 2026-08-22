@@ -39,7 +39,7 @@ export const Initiatives = () => {
                     href={p.link}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="block relative aspect-[16/10] w-full overflow-hidden group"
+                    className="block relative aspect-[16/10] w-full overflow-hidden group bg-black/40"
                     aria-label={p.name}
                   >
                     {img ? (
