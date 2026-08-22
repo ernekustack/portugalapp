@@ -8,11 +8,9 @@ import { Initiatives } from "@/components/Initiatives";
 import { ContactForm } from "@/components/ContactForm";
 import { Footer } from "@/components/Footer";
 import { CookieBanner } from "@/components/CookieBanner";
-import { LanguageProvider } from "@/i18n/LanguageContext";
 
 const Index = () => {
   return (
-    <LanguageProvider>
       <main className="min-h-screen bg-background text-foreground">
         <Header />
         <Hero />
@@ -25,7 +23,6 @@ const Index = () => {
         <Footer />
         <CookieBanner />
       </main>
-    </LanguageProvider>
   );
 };
 
