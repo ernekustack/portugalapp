@@ -104,8 +104,12 @@ export const ContactForm = () => {
               </div>
             )}
             {status === "error" && (
-              <div className="rounded-2xl bg-destructive/10 text-destructive border border-destructive/20 px-4 py-3 text-sm">
-                {t.contact.error}
+              <div className="rounded-2xl bg-destructive/10 text-destructive border border-destructive/20 px-4 py-3 text-sm space-y-1">
+                <p>{t.contact.error}</p>
+                {errorDetail && <p className="opacity-80">{errorDetail}</p>}
+                <p>
+                  <a className="underline" href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>
+                </p>
               </div>
             )}
           </form>
