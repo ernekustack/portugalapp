@@ -264,10 +264,13 @@ input,
 textarea,
 select,
 label,
-.bg-card input,
-.bg-card textarea,
-.bg-card select,
-.bg-card label {
+.bg-card input[class],
+.bg-card textarea[class],
+.bg-card select[class],
+.bg-card label[class],
+.bg-card form input,
+.bg-card form textarea,
+.bg-card form label {
   color: #ab5014 !important;
 }
 input::placeholder,
