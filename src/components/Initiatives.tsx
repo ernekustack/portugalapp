@@ -39,7 +39,7 @@ export const Initiatives = () => {
                     href={p.link}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="block relative aspect-[16/10] w-full overflow-hidden group bg-black/40"
+                    className="block relative aspect-[4/5] w-full overflow-hidden group"
                     aria-label={p.name}
                   >
                     {img ? (
@@ -47,7 +47,7 @@ export const Initiatives = () => {
                         src={img}
                         alt={p.name}
                         loading="lazy"
-                        className="h-full w-full object-contain transition-transform duration-500 group-hover:scale-[1.02]"
+                        className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.04]"
                       />
                     ) : (
                       <div
