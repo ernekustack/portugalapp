@@ -34,7 +34,7 @@ export const InDevelopment = () => {
             const inner = (
               <>
                 {/* Grafik */}
-                <div className="relative aspect-[16/10] w-full overflow-hidden rounded-t-2xl">
+                <div className="relative h-28 w-full overflow-hidden rounded-t-2xl">
                   {img ? (
                     <img
                       src={img}
@@ -47,7 +47,7 @@ export const InDevelopment = () => {
                       className="h-full w-full flex items-center justify-center"
                       style={{ background: FALLBACK_BG[i % FALLBACK_BG.length] }}
                     >
-                      <Sparkles className="h-8 w-8 text-white/70" strokeWidth={1.5} />
+                      <Sparkles className="h-6 w-6 text-white/70" strokeWidth={1.5} />
                     </div>
                   )}
                   <span className="absolute top-2.5 left-2.5 text-[10px] tracking-widest uppercase px-2 py-0.5 rounded-full bg-white/15 text-white backdrop-blur">
