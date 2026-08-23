@@ -34,8 +34,9 @@ export const LanguageProvider = ({ children }: { children: ReactNode }) => {
   return <LanguageContext.Provider value={value}>{children}</LanguageContext.Provider>;
 };
 
+const fallback: Ctx = { lang: "en", setLang: () => {}, t: translations.en };
+
 export const useI18n = () => {
   const ctx = useContext(LanguageContext);
-  if (!ctx) throw new Error("useI18n must be used within LanguageProvider");
-  return ctx;
+  return ctx ?? fallback;
 };
