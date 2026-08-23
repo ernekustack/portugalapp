@@ -37,7 +37,7 @@ export const Footer = () => {
             <div className="text-xs uppercase tracking-[0.2em] text-muted-foreground font-medium">{t.footer.legal}</div>
             <ul className="mt-4 space-y-2.5 text-sm">
               <li><a href="#" className="link-underline hover:text-foreground">{t.footer.imprint}</a></li>
-              <li><a href="#" className="link-underline hover:text-foreground">{t.footer.privacy}</a></li>
+              <li><Link to="/datenschutz" className="link-underline hover:text-foreground">{t.footer.privacy}</Link></li>
             </ul>
           </div>
 
