@@ -1,15 +1,21 @@
 import { Link } from "react-router-dom";
-import { ArrowLeft, HandHeart, Handshake, Megaphone, Sparkles } from "lucide-react";
+import { ArrowLeft, BookOpen, CalendarDays, Gamepad2, Map, Sparkles } from "lucide-react";
 import { useI18n } from "@/i18n/LanguageContext";
 import { LanguageSwitcher } from "@/components/LanguageSwitcher";
 
 type Copy = {
   kicker: string;
   title: string;
-  intro: string;
-  blocks: { t: string; d: string }[];
+  storyTitle: string;
+  storyIntro: string;
+  imagineLabel: string;
+  projects: { name: string; desc: string; imagine: string }[];
+  mapTitle: string;
+  mapText: string;
   stepsTitle: string;
   steps: string[];
+  closingTitle: string;
+  closingText: string;
   cta: string;
   mail: string;
   back: string;
@@ -19,13 +25,36 @@ const COPY: Record<string, Copy> = {
   de: {
     kicker: "Studio Southwest",
     title: "Partnerschaft",
-    intro:
-      "Wir entwickeln Apps, Spiele und Bücher im Südwesten Portugals. Partner unterstützen konkrete Projekte – finanziell, inhaltlich oder durch Reichweite – und werden sichtbarer Teil der Entstehung.",
-    blocks: [
-      { t: "Projekt-Sponsoring", d: "Sie fördern ein Projekt gezielt: Entwicklung, Illustration, Übersetzung oder Veröffentlichung. Nennung in App, Buch und auf dieser Website." },
-      { t: "Kooperation", d: "Gemeinsame Inhalte, regionale Vernetzung im Alentejo oder eine App-Funktion, die zu Ihrem Angebot passt." },
-      { t: "Reichweite", d: "Sie helfen mit Kanälen, Presse oder Community statt mit Budget – oft der wertvollste Beitrag." },
+    storyTitle: "Wenn Ihr Ort Teil einer Geschichte wird",
+    storyIntro:
+      "Wir erzählen Geschichten über den Alentejo – in einem Buch, in einem Spiel und auf einer Plattform für Erlebnisse in der Region. Immer geht es um echte Orte. Vielleicht auch um Ihren. Kein lautes Marketing, keine Banner, keine Anzeigen. Stattdessen: Gäste und Spieler entdecken echte Orte auf eine Weise, die ihnen im Gedächtnis bleibt – und die sie später wirklich besuchen wollen.",
+    imagineLabel: "Stellen Sie sich vor",
+    projects: [
+      {
+        name: "Lume Magic Book",
+        desc:
+          "Ein persönliches Buch über den Klippendrachen Lume und die Küste Portugals – für Familien im Urlaub. Gäste bestellen es einfach per QR-Code direkt bei Ihnen vor Ort. Sie erhalten ein festes Partnerpaket: 48 Gutscheine in 4 Sprachen, einen Gutscheinständer zum Aufstellen oder Aufhängen – und eine eigene Doppelseite am Ende des Buches, auf der Ihr Haus vorkommt.",
+        imagine:
+          "Ein Kind blättert zuhause noch einmal durch sein Urlaubsbuch – und findet darin Ihr Haus am Meer wieder.",
+      },
+      {
+        name: "Alentejo Events",
+        desc:
+          "Eine Plattform, die zeigt, was im Alentejo gerade los ist – Feste, Natur, Kultur, Ausflüge. Ihr Betrieb, Ihre Veranstaltung, Ihr Ausflug wird für Menschen sichtbar, die genau danach suchen.",
+        imagine:
+          "Ein Gast plant seinen Tag im Alentejo – und findet dabei genau Ihren Hof, Ihr Fest, Ihren Weinberg.",
+      },
+      {
+        name: "Spiel Luz e Morte",
+        desc:
+          "Ein atmosphärisches Spiel, das tief in die Mythen und Geschichte des Alentejo eintaucht. Echte Orte werden Teil der Geschichte – mit echtem Namen, echter Lage.",
+        imagine:
+          "Ihr Weingut taucht als geheimnisvoller Schauplatz im Spiel auf. Wer es spielt, will den Ort später wirklich sehen.",
+      },
     ],
+    mapTitle: "Ein Ort, drei Wege dorthin",
+    mapText:
+      "Eine Karte des Alentejo verbindet alle drei Projekte: Sie ist Spielfeld im Spiel, Hintergrund im Buch und Wegweiser bei den Events. Ihr Betrieb kann an mehreren Stellen gleichzeitig auftauchen.",
     stepsTitle: "So läuft es ab",
     steps: [
       "Kurze Nachricht mit Ihrem Interesse.",
@@ -33,6 +62,9 @@ const COPY: Record<string, Copy> = {
       "Schlanke Vereinbarung, ein Ansprechpartner.",
       "Regelmäßige Updates bis zum Release.",
     ],
+    closingTitle: "Welcher Ort in Ihrer Nähe hätte eine Geschichte verdient?",
+    closingText:
+      "Schreiben Sie uns einfach kurz – wir erzählen Ihnen gerne mehr und finden gemeinsam die passende Einbindung für Ihren Betrieb.",
     cta: "Partnerschaft anfragen",
     mail: "Direkt per E-Mail",
     back: "Zurück zur Startseite",
@@ -40,13 +72,36 @@ const COPY: Record<string, Copy> = {
   en: {
     kicker: "Studio Southwest",
     title: "Partnership",
-    intro:
-      "We build apps, games and books in the south-west of Portugal. Partners support specific projects – with funding, content or reach – and become a visible part of how they come to life.",
-    blocks: [
-      { t: "Project sponsoring", d: "Fund one project: development, illustration, translation or release. Credited in the app, the book and on this site." },
-      { t: "Cooperation", d: "Shared content, regional collaboration in the Alentejo, or an app feature that fits your offering." },
-      { t: "Reach", d: "Support with channels, press or community instead of budget – often the most valuable contribution." },
+    storyTitle: "When your place becomes part of a story",
+    storyIntro:
+      "We tell stories about the Alentejo – in a book, in a game and on a platform for regional experiences. Always about real places. Perhaps yours, too. No loud marketing, no banners, no ads. Instead: guests and players discover real places in a way they remember – and later truly want to visit.",
+    imagineLabel: "Imagine",
+    projects: [
+      {
+        name: "Lume Magic Book",
+        desc:
+          "A personal book about Lume the cliff dragon and the Portuguese coast – for families on holiday. Guests order it via QR code right where they stay. You get a fixed partner package: 48 vouchers in 4 languages, a voucher stand to place or hang – and your own double page at the end of the book featuring your house.",
+        imagine:
+          "A child leafs through their holiday book back home – and finds your house by the sea in it again.",
+      },
+      {
+        name: "Alentejo Events",
+        desc:
+          "A platform showing what's happening in the Alentejo – festivals, nature, culture, day trips. Your business, your event, your tour becomes visible to people looking for exactly that.",
+        imagine:
+          "A guest plans their day in the Alentejo – and finds your farm, your festival, your vineyard.",
+      },
+      {
+        name: "Luz e Morte (game)",
+        desc:
+          "An atmospheric game diving deep into the myths and history of the Alentejo. Real places become part of the story – with their real name and real location.",
+        imagine:
+          "Your winery appears as a mysterious location in the game. Whoever plays it wants to see the place for real.",
+      },
     ],
+    mapTitle: "One place, three ways to reach it",
+    mapText:
+      "A map of the Alentejo connects all three projects: it is the game board, the backdrop in the book and the guide for the events. Your business can appear in several places at once.",
     stepsTitle: "How it works",
     steps: [
       "A short message about your interest.",
@@ -54,6 +109,9 @@ const COPY: Record<string, Copy> = {
       "A lean agreement, one contact person.",
       "Regular updates until release.",
     ],
+    closingTitle: "Which place near you deserves a story?",
+    closingText:
+      "Just send us a short message – we're happy to tell you more and find the right fit for your business together.",
     cta: "Request partnership",
     mail: "Email directly",
     back: "Back to home",
@@ -61,13 +119,36 @@ const COPY: Record<string, Copy> = {
   pt: {
     kicker: "Studio Southwest",
     title: "Parceria",
-    intro:
-      "Criamos aplicações, jogos e livros no sudoeste de Portugal. Os parceiros apoiam projetos concretos – com financiamento, conteúdo ou alcance – e tornam-se parte visível do processo.",
-    blocks: [
-      { t: "Patrocínio de projeto", d: "Apoia um projeto específico: desenvolvimento, ilustração, tradução ou lançamento. Com menção na app, no livro e neste site." },
-      { t: "Cooperação", d: "Conteúdos comuns, ligação regional no Alentejo ou uma funcionalidade que encaixe na sua oferta." },
-      { t: "Alcance", d: "Ajuda com canais, imprensa ou comunidade em vez de orçamento – muitas vezes o mais valioso." },
+    storyTitle: "Quando o seu lugar passa a fazer parte de uma história",
+    storyIntro:
+      "Contamos histórias sobre o Alentejo – num livro, num jogo e numa plataforma de experiências da região. Sempre sobre lugares reais. Talvez também sobre o seu. Sem marketing ruidoso, sem banners, sem anúncios. Em vez disso: hóspedes e jogadores descobrem lugares reais de uma forma que fica na memória – e que mais tarde querem visitar de verdade.",
+    imagineLabel: "Imagine",
+    projects: [
+      {
+        name: "Lume Magic Book",
+        desc:
+          "Um livro personalizado sobre Lume, o dragão das falésias, e a costa portuguesa – para famílias em férias. Os hóspedes encomendam-no por código QR no seu alojamento. Recebe um pacote de parceiro fixo: 48 vouchers em 4 línguas, um expositor para colocar ou pendurar – e uma dupla página no final do livro onde aparece a sua casa.",
+        imagine:
+          "Uma criança folheia o seu livro de férias em casa – e reencontra ali a sua casa à beira-mar.",
+      },
+      {
+        name: "Alentejo Events",
+        desc:
+          "Uma plataforma que mostra o que se passa no Alentejo – festas, natureza, cultura, passeios. O seu negócio, o seu evento, o seu passeio torna-se visível para quem procura exatamente isso.",
+        imagine:
+          "Um hóspede planeia o seu dia no Alentejo – e encontra a sua herdade, a sua festa, a sua vinha.",
+      },
+      {
+        name: "Jogo Luz e Morte",
+        desc:
+          "Um jogo atmosférico que mergulha nos mitos e na história do Alentejo. Lugares reais tornam-se parte da história – com nome real e localização real.",
+        imagine:
+          "A sua quinta aparece como cenário misterioso no jogo. Quem joga quer depois ver o lugar de verdade.",
+      },
     ],
+    mapTitle: "Um lugar, três caminhos até ele",
+    mapText:
+      "Um mapa do Alentejo liga os três projetos: é tabuleiro no jogo, fundo no livro e guia nos eventos. O seu negócio pode surgir em vários pontos ao mesmo tempo.",
     stepsTitle: "Como funciona",
     steps: [
       "Uma mensagem curta com o seu interesse.",
@@ -75,6 +156,9 @@ const COPY: Record<string, Copy> = {
       "Acordo simples, um único contacto.",
       "Atualizações regulares até ao lançamento.",
     ],
+    closingTitle: "Que lugar perto de si merecia uma história?",
+    closingText:
+      "Escreva-nos uma mensagem curta – contamos-lhe com gosto mais e encontramos juntos a melhor forma de integrar o seu negócio.",
     cta: "Pedir parceria",
     mail: "Enviar e-mail",
     back: "Voltar ao início",
@@ -82,13 +166,36 @@ const COPY: Record<string, Copy> = {
   nl: {
     kicker: "Studio Southwest",
     title: "Partnerschap",
-    intro:
-      "Wij maken apps, games en boeken in het zuidwesten van Portugal. Partners steunen concrete projecten – met budget, inhoud of bereik – en worden zichtbaar deel van het ontstaan.",
-    blocks: [
-      { t: "Projectsponsoring", d: "U steunt één project: ontwikkeling, illustratie, vertaling of release. Met vermelding in de app, het boek en op deze site." },
-      { t: "Samenwerking", d: "Gedeelde content, regionale verbinding in de Alentejo of een functie die bij uw aanbod past." },
-      { t: "Bereik", d: "Hulp met kanalen, pers of community in plaats van budget – vaak de waardevolste bijdrage." },
+    storyTitle: "Als uw plek deel wordt van een verhaal",
+    storyIntro:
+      "Wij vertellen verhalen over de Alentejo – in een boek, in een game en op een platform voor belevenissen in de regio. Altijd over echte plekken. Misschien ook over die van u. Geen luide marketing, geen banners, geen advertenties. In plaats daarvan: gasten en spelers ontdekken echte plekken op een manier die bijblijft – en die ze later echt willen bezoeken.",
+    imagineLabel: "Stelt u zich voor",
+    projects: [
+      {
+        name: "Lume Magic Book",
+        desc:
+          "Een persoonlijk boek over klifdraak Lume en de Portugese kust – voor gezinnen op vakantie. Gasten bestellen het eenvoudig via QR-code bij u ter plaatse. U krijgt een vast partnerpakket: 48 vouchers in 4 talen, een voucherstandaard om te plaatsen of op te hangen – en een eigen dubbele pagina achterin het boek waarin uw huis voorkomt.",
+        imagine:
+          "Een kind bladert thuis nog eens door zijn vakantieboek – en vindt daarin uw huis aan de zee terug.",
+      },
+      {
+        name: "Alentejo Events",
+        desc:
+          "Een platform dat laat zien wat er in de Alentejo speelt – feesten, natuur, cultuur, excursies. Uw bedrijf, uw evenement, uw excursie wordt zichtbaar voor mensen die daar juist naar zoeken.",
+        imagine:
+          "Een gast plant zijn dag in de Alentejo – en vindt precies uw boerderij, uw feest, uw wijngaard.",
+      },
+      {
+        name: "Game Luz e Morte",
+        desc:
+          "Een atmosferische game die diep in de mythen en geschiedenis van de Alentejo duikt. Echte plekken worden deel van het verhaal – met echte naam en echte locatie.",
+        imagine:
+          "Uw wijngoed duikt op als mysterieuze locatie in de game. Wie het speelt, wil de plek later echt zien.",
+      },
     ],
+    mapTitle: "Één plek, drie wegen ernaartoe",
+    mapText:
+      "Een kaart van de Alentejo verbindt alle drie projecten: speelveld in de game, achtergrond in het boek en wegwijzer bij de events. Uw bedrijf kan op meerdere plekken tegelijk verschijnen.",
     stepsTitle: "Zo werkt het",
     steps: [
       "Een kort bericht met uw interesse.",
@@ -96,13 +203,16 @@ const COPY: Record<string, Copy> = {
       "Eenvoudige afspraak, één contactpersoon.",
       "Regelmatige updates tot de release.",
     ],
+    closingTitle: "Welke plek bij u in de buurt verdient een verhaal?",
+    closingText:
+      "Stuur ons kort een bericht – we vertellen u graag meer en vinden samen de passende invulling voor uw bedrijf.",
     cta: "Partnerschap aanvragen",
     mail: "Direct e-mailen",
     back: "Terug naar de startpagina",
   },
 };
 
-const ICONS = [Handshake, Megaphone, HandHeart];
+const ICONS = [BookOpen, CalendarDays, Gamepad2];
 
 const Partnerschaft = () => {
   const { lang } = useI18n();
@@ -128,25 +238,50 @@ const Partnerschaft = () => {
             {c.title}
             <span className="text-accent">.</span>
           </h1>
-          <p className="mt-5 max-w-2xl text-muted-foreground leading-relaxed">{c.intro}</p>
+          <h2 className="mt-6 font-display text-2xl md:text-3xl font-semibold tracking-tight max-w-2xl">
+            {c.storyTitle}
+          </h2>
+          <p className="mt-5 max-w-2xl text-muted-foreground leading-relaxed">{c.storyIntro}</p>
         </header>
 
         <div className="mt-12 grid gap-5 md:grid-cols-3">
-          {c.blocks.map((b, i) => {
+          {c.projects.map((p, i) => {
             const Icon = ICONS[i % ICONS.length];
             return (
-              <section key={b.t} className="bg-card rounded-2xl p-5 sm:p-6 shadow-soft h-full">
+              <section key={p.name} className="bg-card rounded-2xl p-5 sm:p-6 shadow-soft h-full flex flex-col">
                 <Icon className="h-6 w-6 text-accent" strokeWidth={1.75} />
-                <h2 className="mt-4 font-display text-lg font-semibold tracking-tight" style={{ color: "#1F2937" }}>
-                  {b.t}
-                </h2>
+                <h3 className="mt-4 font-display text-lg font-semibold tracking-tight" style={{ color: "#1F2937" }}>
+                  {p.name}
+                </h3>
                 <p className="mt-2 text-sm leading-relaxed" style={{ color: "#1F2937" }}>
-                  {b.d}
+                  {p.desc}
                 </p>
+                <div
+                  className="mt-4 rounded-lg border p-3.5"
+                  style={{ background: "hsl(24 60% 96%)", borderColor: "hsl(24 40% 80%)" }}
+                >
+                  <p
+                    className="text-[11px] tracking-widest uppercase mb-1 font-semibold"
+                    style={{ color: "#ab5014" }}
+                  >
+                    {c.imagineLabel}
+                  </p>
+                  <p className="text-[13px] leading-relaxed" style={{ color: "#1F2937" }}>
+                    {p.imagine}
+                  </p>
+                </div>
               </section>
             );
           })}
         </div>
+
+        <section className="mt-12">
+          <h2 className="font-display text-2xl font-semibold tracking-tight flex items-center gap-2">
+            <Map className="h-5 w-5 text-accent" strokeWidth={1.75} />
+            {c.mapTitle}
+          </h2>
+          <p className="mt-4 max-w-2xl text-muted-foreground leading-relaxed">{c.mapText}</p>
+        </section>
 
         <section className="mt-12">
           <h2 className="font-display text-2xl font-semibold tracking-tight flex items-center gap-2">
@@ -165,7 +300,14 @@ const Partnerschaft = () => {
           </ol>
         </section>
 
-        <div className="mt-12 flex flex-col sm:flex-row gap-3">
+        <section className="mt-12">
+          <h2 className="font-display text-2xl md:text-3xl font-semibold tracking-tight max-w-2xl">
+            {c.closingTitle}
+          </h2>
+          <p className="mt-4 max-w-2xl text-muted-foreground leading-relaxed">{c.closingText}</p>
+        </section>
+
+        <div className="mt-8 flex flex-col sm:flex-row gap-3">
           <Link
             to="/#kontakt"
             className="inline-flex items-center justify-center gap-2 rounded-full bg-accent text-accent-foreground px-6 py-3.5 text-sm font-medium shadow-glow hover:opacity-95 transition"
