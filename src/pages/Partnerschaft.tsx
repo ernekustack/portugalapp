@@ -307,19 +307,13 @@ const Partnerschaft = () => {
           <p className="mt-4 max-w-2xl text-muted-foreground leading-relaxed">{c.closingText}</p>
         </section>
 
-        <div className="mt-8 flex flex-col sm:flex-row gap-3">
+        <div className="mt-8">
           <Link
             to="/#kontakt"
             className="inline-flex items-center justify-center gap-2 rounded-full bg-accent text-accent-foreground px-6 py-3.5 text-sm font-medium shadow-glow hover:opacity-95 transition"
           >
             {c.cta}
           </Link>
-          <a
-            href="mailto:studiosouthwest@posteo.de?subject=Partnerschaft"
-            className="inline-flex items-center justify-center gap-2 rounded-full px-6 py-3.5 text-sm font-medium text-foreground hover:text-accent transition-colors hairline"
-          >
-            {c.mail}
-          </a>
         </div>
       </div>
     </main>
