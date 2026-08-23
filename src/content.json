@@ -26,7 +26,8 @@
         "process": "Prozess",
         "contact": "Kontakt",
         "cta": "Erstgespräch",
-        "ctaLong": "Kostenloses Erstgespräch"
+        "ctaLong": "Kostenloses Erstgespräch",
+        "partnerschaft": "Partnerschaft"
       },
       "hero": {
         "badge": "Aktuell verfügbar – neue Projekte in Q4",
@@ -242,7 +243,8 @@
         "process": "Process",
         "contact": "Contact",
         "cta": "Book a call",
-        "ctaLong": "Free consultation"
+        "ctaLong": "Free consultation",
+        "partnerschaft": "Partnership"
       },
       "hero": {
         "badge": "Available now – new projects in Q4",
@@ -458,7 +460,8 @@
         "process": "Processo",
         "contact": "Contacto",
         "cta": "Marcar conversa",
-        "ctaLong": "Conversa gratuita"
+        "ctaLong": "Conversa gratuita",
+        "partnerschaft": "Parceria"
       },
       "hero": {
         "badge": "Disponível agora – novos projetos a partir do 2.º trimestre",
@@ -674,7 +677,8 @@
         "process": "Proces",
         "contact": "Contact",
         "cta": "Plan gesprek",
-        "ctaLong": "Gratis kennismaking"
+        "ctaLong": "Gratis kennismaking",
+        "partnerschaft": "Partnerschap"
       },
       "hero": {
         "badge": "Nu beschikbaar – nieuwe projecten in Q4",
