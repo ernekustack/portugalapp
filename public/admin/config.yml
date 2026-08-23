@@ -178,6 +178,26 @@ collections:
                       - { label: "Sponsoring-Ziel", name: "goal", widget: "text" }
                       - { label: "Link zum Projekt", name: "link", widget: "string" }
 
+                  - label: "In Entwicklung"
+                    name: "inDevelopment"
+                    widget: "object"
+                    collapsed: true
+                    fields:
+                      - { label: "Eyebrow", name: "eyebrow", widget: "string" }
+                      - { label: "Titel", name: "title", widget: "string" }
+                      - { label: "Titel kursiv", name: "titleItalic", widget: "string" }
+                      - { label: "Beschreibung", name: "desc", widget: "text" }
+                      - { label: "Badge", name: "badge", widget: "string" }
+                      - { label: "Ansehen-Link", name: "visit", widget: "string" }
+                      - { label: "Bald online", name: "soon", widget: "string" }
+                      - label: "Apps"
+                        name: "items"
+                        widget: "list"
+                        fields:
+                          - { label: "Name", name: "name", widget: "string" }
+                          - { label: "Kurztext", name: "desc", widget: "text" }
+                          - { label: "Link", name: "link", widget: "string" }
+
                   - label: "Kontakt"
                     name: "contact"
                     widget: "object"
