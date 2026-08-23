@@ -13,6 +13,7 @@ export const Header = () => {
     { href: "#leistungen", label: t.nav.services },
     { href: "#qualitaet", label: t.nav.quality },
     { href: "#prozess", label: t.nav.process },
+    { href: "/partnerschaft", label: t.nav.partnerschaft, route: true as const },
     { href: "/connect", label: "Card", route: true as const },
   ];
 
