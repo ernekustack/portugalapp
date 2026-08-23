@@ -40,9 +40,9 @@ const COPY: Record<string, Copy> = {
       {
         name: "Alentejo Events",
         desc:
-          "Eine Plattform, die zeigt, was im Alentejo gerade los ist – Feste, Natur, Kultur, Ausflüge. Ihr Betrieb, Ihre Veranstaltung, Ihr Ausflug wird für Menschen sichtbar, die genau danach suchen.",
+          "Die Bühne für das, was den Alentejo bewegt. Der Alentejo lebt von seinen Momenten: von den großen Festen in den Dörfern, den verborgenen Naturparadiesen, kulturellen Entdeckungen und den besonderen Ausflügen abseits der üblichen Pfade. Doch wer das Besondere sucht, muss es erst einmal finden – und genau hier schließt sich die Lücke. Alentejo Events ist der digitale Treffpunkt für alles, was diese Region zu bieten hat. Ob Ihr Betrieb, Ihre Veranstaltung, Ihr handgemachtes Event oder Ihr Ausflugsziel: Wir bringen Ihr Angebot genau dorthin, wo die Menschen aktiv danach suchen. Schluss mit dem Suchen im Verborgenen – machen Sie Ihre Leidenschaft für Einheimische und Reisende direkt sichtbar.",
         imagine:
-          "Ein Gast plant seinen Tag im Alentejo – und findet dabei genau Ihren Hof, Ihr Fest, Ihren Weinberg.",
+          "Stellen Sie sich einen ganz normalen Tag vor: Ein Gast plant seinen Aufenthalt oder seinen Ausflug im Alentejo. Er sucht nach Inspiration, nach echten Erlebnissen, nach einem Ort mit Charakter – und findet dabei dank Ihrer Präsenz genau Ihren Hof, Ihr Fest oder Ihren Weinberg.",
       },
       {
         name: "Spiel Luz e Morte",
@@ -87,9 +87,9 @@ const COPY: Record<string, Copy> = {
       {
         name: "Alentejo Events",
         desc:
-          "A platform showing what's happening in the Alentejo – festivals, nature, culture, day trips. Your business, your event, your tour becomes visible to people looking for exactly that.",
+          "The stage for everything that moves the Alentejo. This region lives from its moments: the big village festivals, hidden natural paradises, cultural discoveries and special trips off the beaten track. But whoever looks for the special first has to find it – and that is exactly the gap we close. Alentejo Events is the digital meeting point for everything this region has to offer. Whether your business, your event, your handmade happening or your destination: we bring your offer exactly where people are actively searching for it. No more hiding – make your passion directly visible to locals and travellers.",
         imagine:
-          "A guest plans their day in the Alentejo – and finds your farm, your festival, your vineyard.",
+          "Imagine an ordinary day: a guest plans their stay or a trip in the Alentejo. They look for inspiration, for real experiences, for a place with character – and thanks to your presence they find exactly your farm, your festival or your vineyard.",
       },
       {
         name: "Luz e Morte (game)",
@@ -134,9 +134,9 @@ const COPY: Record<string, Copy> = {
       {
         name: "Alentejo Events",
         desc:
-          "Uma plataforma que mostra o que se passa no Alentejo – festas, natureza, cultura, passeios. O seu negócio, o seu evento, o seu passeio torna-se visível para quem procura exatamente isso.",
+          "O palco para tudo o que move o Alentejo. Esta região vive dos seus momentos: as grandes festas nas aldeias, os paraísos naturais escondidos, as descobertas culturais e os passeios especiais fora dos caminhos habituais. Mas quem procura o especial tem primeiro de o encontrar – e é exatamente essa lacuna que preenchemos. O Alentejo Events é o ponto de encontro digital para tudo o que esta região tem para oferecer. Seja o seu negócio, o seu evento, a sua iniciativa artesanal ou o seu destino: levamos a sua oferta exatamente para onde as pessoas a procuram ativamente. Basta de ficar escondido – torne a sua paixão visível para locais e viajantes.",
         imagine:
-          "Um hóspede planeia o seu dia no Alentejo – e encontra a sua herdade, a sua festa, a sua vinha.",
+          "Imagine um dia normal: um hóspede planeia a sua estadia ou o seu passeio no Alentejo. Procura inspiração, experiências verdadeiras, um lugar com carácter – e, graças à sua presença, encontra exatamente a sua herdade, a sua festa ou a sua vinha.",
       },
       {
         name: "Jogo Luz e Morte",
@@ -181,9 +181,9 @@ const COPY: Record<string, Copy> = {
       {
         name: "Alentejo Events",
         desc:
-          "Een platform dat laat zien wat er in de Alentejo speelt – feesten, natuur, cultuur, excursies. Uw bedrijf, uw evenement, uw excursie wordt zichtbaar voor mensen die daar juist naar zoeken.",
+          "Het podium voor alles wat de Alentejo beweegt. Deze regio leeft van haar momenten: de grote dorpsfeesten, verborgen natuurparadijzen, culturele ontdekkingen en bijzondere excursies buiten de gebaande paden. Maar wie het bijzondere zoekt, moet het eerst vinden – en precies dat gat vullen wij. Alentejo Events is het digitale ontmoetingspunt voor alles wat deze regio te bieden heeft. Of het uw bedrijf, uw evenement, uw handgemaakte event of uw uitje is: wij brengen uw aanbod precies daar waar mensen er actief naar zoeken. Niet langer verborgen – maak uw passie direct zichtbaar voor locals en reizigers.",
         imagine:
-          "Een gast plant zijn dag in de Alentejo – en vindt precies uw boerderij, uw feest, uw wijngaard.",
+          "Stelt u zich een gewone dag voor: een gast plant zijn verblijf of zijn uitje in de Alentejo. Hij zoekt inspiratie, echte belevenissen, een plek met karakter – en vindt dankzij uw aanwezigheid precies uw boerderij, uw feest of uw wijngaard.",
       },
       {
         name: "Game Luz e Morte",
