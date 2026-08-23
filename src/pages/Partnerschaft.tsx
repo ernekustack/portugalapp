@@ -35,7 +35,7 @@ const COPY: Record<string, Copy> = {
         desc:
           "Ein personalisiertes Buch über den Klippendrachen Lume und die Küste Portugals – für Familien im Urlaub. Gäste kaufen den Gutschein bei Ihnen oder erhalten ihn als Präsent. Sie erhalten ein festes Partnerpaket: 48 Gutscheine in 4 Sprachen, einen Gutscheinständer zum Aufstellen oder Aufhängen als Testpaket – und eine eigene Doppelseite am Ende des Buches, auf der Ihr Haus optimal dargestellt wird.",
         imagine:
-          "Ein Kind blättert zuhause noch einmal durch sein Urlaubsbuch – und findet darin Ihr Haus am Meer wieder.",
+          "Die Familie bekommt ein wundervoll personalisiertes Buch mit Name und Bild von Kind/Kindern, sie lesen gemeinsam – und erinnern sich an die tolle Zeit bei Ihnen.",
       },
       {
         name: "Alentejo Events",
@@ -82,7 +82,7 @@ const COPY: Record<string, Copy> = {
         desc:
           "A personalised book about Lume the cliff dragon and the Portuguese coast – for families on holiday. Guests buy the voucher from you or receive it as a gift. You get a fixed partner package: 48 vouchers in 4 languages, a voucher stand to place or hang as a test package – and your own double page at the end of the book, showing your house at its best.",
         imagine:
-          "A child leafs through their holiday book back home – and finds your house by the sea in it again.",
+          "The family receives a wonderful personalised book with the name and picture of their child/children, they read together – and remember the great time they had with you.",
       },
       {
         name: "Alentejo Events",
@@ -129,7 +129,7 @@ const COPY: Record<string, Copy> = {
         desc:
           "Um livro personalizado sobre Lume, o dragão das falésias, e a costa portuguesa – para famílias em férias. Os hóspedes compram o voucher consigo ou recebem-no como presente. Recebe um pacote de parceiro fixo: 48 vouchers em 4 línguas, um expositor para colocar ou pendurar como pacote de teste – e uma dupla página no final do livro onde a sua casa é apresentada da melhor forma.",
         imagine:
-          "Uma criança folheia o seu livro de férias em casa – e reencontra ali a sua casa à beira-mar.",
+          "A família recebe um livro maravilhoso e personalizado com o nome e a foto do(s) filho(s), leem juntos – e lembram-se do tempo maravilhoso que passaram consigo.",
       },
       {
         name: "Alentejo Events",
@@ -176,7 +176,7 @@ const COPY: Record<string, Copy> = {
         desc:
           "Een gepersonaliseerd boek over klifdraak Lume en de Portugese kust – voor gezinnen op vakantie. Gasten kopen de voucher bij u of krijgen hem cadeau. U krijgt een vast partnerpakket: 48 vouchers in 4 talen, een voucherstandaard om te plaatsen of op te hangen als testpakket – en een eigen dubbele pagina achterin het boek waarin uw huis optimaal wordt getoond.",
         imagine:
-          "Een kind bladert thuis nog eens door zijn vakantieboek – en vindt daarin uw huis aan de zee terug.",
+          "Het gezin ontvangt een prachtig gepersonaliseerd boek met de naam en foto van het kind/de kinderen, ze lezen samen – en denken terug aan de geweldige tijd bij u.",
       },
       {
         name: "Alentejo Events",
