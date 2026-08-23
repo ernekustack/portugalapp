@@ -32,6 +32,13 @@ collections:
                   - { label: "Luz e Morte", name: "luzEMorte", widget: "image", required: false }
                   - { label: "Alentejo Events", name: "alentejoEvents", widget: "image", required: false }
                   - { label: "Lume Magic Book", name: "lume", widget: "image", required: false }
+                  - label: "In Entwicklung"
+                    name: "inDevelopment"
+                    widget: "object"
+                    fields:
+                      - { label: "App 1", name: "p1", widget: "image", required: false }
+                      - { label: "App 2", name: "p2", widget: "image", required: false }
+                      - { label: "App 3", name: "p3", widget: "image", required: false }
 
           - label: "Sprachen (intern)"
             name: "languages"
