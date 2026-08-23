@@ -65,7 +65,7 @@ const COPY: Record<string, Copy> = {
     closingTitle: "Welcher Ort in Ihrer Nähe hätte eine Geschichte verdient?",
     closingText:
       "Schreiben Sie uns einfach kurz – wir erzählen Ihnen gerne mehr und finden gemeinsam die passende Einbindung für Ihren Betrieb.",
-    cta: "Partnerschaft anfragen",
+    cta: "Kontakt aufnehmen",
     mail: "Direkt per E-Mail",
     back: "Zurück zur Startseite",
   },
