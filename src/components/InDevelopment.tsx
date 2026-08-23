@@ -34,7 +34,7 @@ export const InDevelopment = () => {
             const inner = (
               <>
                 {/* Grafik */}
-                <div className="relative aspect-[16/10] w-full overflow-hidden rounded-t-2xl">
+                <div className="relative h-28 w-full overflow-hidden rounded-t-2xl">
                   {img ? (
                     <img
                       src={img}
