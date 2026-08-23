@@ -47,9 +47,9 @@ const COPY: Record<string, Copy> = {
       {
         name: "Spiel Luz e Morte",
         desc:
-          "Ein atmosphärisches Spiel, das tief in die Mythen und Geschichte des Alentejo eintaucht. Echte Orte werden Teil der Geschichte – mit echtem Namen, echter Lage.",
+          "Wo echte Schauplätze auf Krimi-Spannung treffen – und Ihr Betrieb Teil der Geschichte wird. Luz e Morte ist ein atmosphärisches Kriminalspiel, das tief in die Mythen und die Geschichte des Alentejo eintaucht. Das Besondere: Echte Orte und reale Betriebe – mit ihrem echten Namen und ihrer echten Lage – werden zum zentralen Schauplatz der Ermittlungen. Für Hotels, Restaurants, Weingüter und lokale Unternehmen bedeutet das eine neue Form der Präsenz: organische Einbindung in den Handlungsstrang, hohe Aufmerksamkeit, weil Spieler sich intensiv mit den Schauplätzen auseinandersetzen, und eine echte Verknüpfung, die die Neugier eines reisefreudigen Publikums direkt in Ihren Betrieb lenkt.",
         imagine:
-          "Ihr Weingut taucht als geheimnisvoller Schauplatz im Spiel auf. Wer es spielt, will den Ort später wirklich sehen.",
+          "Stellen Sie sich vor: Ein Ermittler (Spieler) sucht im Spiel nach Hinweisen und wird dabei direkt zu Ihrem Hotel, Restaurant oder Ihrem Hof geführt. Machen Sie Ihren Betrieb zu einem unvergesslichen Teil des Abenteuers – und lassen Sie uns neue Kunden für Sie generieren.",
       },
     ],
     mapTitle: "Ein Ort, drei Wege dorthin",
@@ -94,9 +94,9 @@ const COPY: Record<string, Copy> = {
       {
         name: "Luz e Morte (game)",
         desc:
-          "An atmospheric game diving deep into the myths and history of the Alentejo. Real places become part of the story – with their real name and real location.",
+          "Where real locations meet crime-thriller suspense – and your business becomes part of the story. Luz e Morte is an atmospheric crime game diving deep into the myths and history of the Alentejo. What makes it special: real places and real businesses – with their actual name and location – become the central scene of the investigation. For hotels, restaurants, wineries and local businesses this means a new form of presence: organic integration into the storyline, high attention because players engage intensively with the locations, and a real link that channels the curiosity of a travel-minded audience straight to you.",
         imagine:
-          "Your winery appears as a mysterious location in the game. Whoever plays it wants to see the place for real.",
+          "Imagine: an investigator (the player) searches for clues in the game and is led directly to your hotel, restaurant or farm. Make your business an unforgettable part of the adventure – and let us generate new customers for you.",
       },
     ],
     mapTitle: "One place, three ways to reach it",
@@ -141,9 +141,9 @@ const COPY: Record<string, Copy> = {
       {
         name: "Jogo Luz e Morte",
         desc:
-          "Um jogo atmosférico que mergulha nos mitos e na história do Alentejo. Lugares reais tornam-se parte da história – com nome real e localização real.",
+          "Onde cenários reais encontram a tensão de um policial – e o seu negócio passa a fazer parte da história. Luz e Morte é um jogo policial atmosférico que mergulha nos mitos e na história do Alentejo. O especial: lugares reais e negócios reais – com o nome verdadeiro e a localização verdadeira – tornam-se o cenário central da investigação. Para hotéis, restaurantes, quintas e empresas locais isso significa uma nova forma de presença: integração orgânica na narrativa, muita atenção porque os jogadores exploram intensamente os cenários, e uma ligação real que leva a curiosidade de um público viajante diretamente até si.",
         imagine:
-          "A sua quinta aparece como cenário misterioso no jogo. Quem joga quer depois ver o lugar de verdade.",
+          "Imagine: um investigador (o jogador) procura pistas no jogo e é conduzido diretamente ao seu hotel, restaurante ou herdade. Torne o seu negócio numa parte inesquecível da aventura – e deixe-nos gerar novos clientes para si.",
       },
     ],
     mapTitle: "Um lugar, três caminhos até ele",
@@ -188,9 +188,9 @@ const COPY: Record<string, Copy> = {
       {
         name: "Game Luz e Morte",
         desc:
-          "Een atmosferische game die diep in de mythen en geschiedenis van de Alentejo duikt. Echte plekken worden deel van het verhaal – met echte naam en echte locatie.",
+          "Waar echte locaties samenkomen met misdaadspanning – en uw bedrijf deel wordt van het verhaal. Luz e Morte is een atmosferische misdaadgame die diep in de mythen en geschiedenis van de Alentejo duikt. Het bijzondere: echte plekken en echte bedrijven – met hun echte naam en echte locatie – worden het centrale decor van het onderzoek. Voor hotels, restaurants, wijngoederen en lokale ondernemingen betekent dat een nieuwe vorm van aanwezigheid: organische integratie in de verhaallijn, veel aandacht omdat spelers zich intensief met de locaties bezighouden, en een echte verbinding die de nieuwsgierigheid van een reislustig publiek direct naar u leidt.",
         imagine:
-          "Uw wijngoed duikt op als mysterieuze locatie in de game. Wie het speelt, wil de plek later echt zien.",
+          "Stelt u zich voor: een rechercheur (de speler) zoekt in de game naar aanwijzingen en wordt daarbij direct naar uw hotel, restaurant of boerderij geleid. Maak uw bedrijf een onvergetelijk deel van het avontuur – en laat ons nieuwe klanten voor u genereren.",
       },
     ],
     mapTitle: "Één plek, drie wegen ernaartoe",
