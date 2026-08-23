@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { useI18n } from "@/i18n/LanguageContext";
 
 export const Footer = () => {
