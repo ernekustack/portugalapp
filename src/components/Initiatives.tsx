@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { useI18n } from "@/i18n/LanguageContext";
 import { images } from "@/i18n/translations";
 import { Reveal } from "./Reveal";
@@ -95,9 +96,7 @@ export const Initiatives = () => {
                         asChild
                         className="bg-accent text-accent-foreground hover:bg-accent/90 w-full"
                       >
-                        <a href={p.link} target="_blank" rel="noopener noreferrer">
-                          {s.cta}
-                        </a>
+                        <Link to="/partnerschaft">{s.cta}</Link>
                       </Button>
                     </div>
                   </div>
