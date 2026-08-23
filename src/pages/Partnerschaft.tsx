@@ -47,7 +47,7 @@ const COPY: Record<string, Copy> = {
       {
         name: "Spiel Luz e Morte",
         desc:
-          "Wo echte Schauplätze auf Krimi-Spannung treffen – und Ihr Betrieb Teil der Geschichte wird. Das Besondere: Echte Orte und reale Betriebe – mit ihrem echten Namen und ihrer echten Lage – werden zum zentralen Schauplatz der Ermittlungen. Für Hotels, Restaurants, Weingüter und lokale Unternehmen bedeutet das eine neue Form der Präsenz: organische Einbindung in den Handlungsstrang, hohe Aufmerksamkeit, weil Spieler sich intensiv mit den Schauplätzen auseinandersetzen, und die Neugier eines reisefreudigen Publikums direkt in Ihren Betrieb lenkt.",
+          "Wo echte Schauplätze auf Krimi-Spannung treffen – und Ihr Betrieb Teil der Geschichte wird. Das Besondere: Echte Orte und reale Betriebe – mit ihrem echten Namen und ihrer echten Lage – werden zum zentralen Schauplatz der Ermittlungen. Für Hotels, Restaurants, Weingüter und lokale Unternehmen bedeutet das eine neue Form der Präsenz: organische Einbindung in den Handlungsstrang, hohe Aufmerksamkeit, weil Spieler sich intensiv mit den Schauplätzen auseinandersetzen, und die Neugier eines reisefreudigen Publikums wird direkt in Ihren Betrieb gelenkt.",
         imagine:
           "Stellen Sie sich vor: Ein Ermittler (Spieler) sucht im Spiel nach Hinweisen und wird dabei direkt zu Ihrem Hotel, Restaurant oder Ihrem Hof geführt. Machen Sie Ihren Betrieb zu einem unvergesslichen Teil des Abenteuers – und lassen Sie uns neue Kunden für Sie generieren.",
       },
@@ -141,7 +141,7 @@ const COPY: Record<string, Copy> = {
       {
         name: "Jogo Luz e Morte",
         desc:
-          "Onde cenários reais encontram a tensão de um policial – e o seu negócio passa a fazer parte da história. O especial: lugares reais e negócios reais – com o nome verdadeiro e a localização verdadeira – tornam-se o cenário central da investigação. Para hotéis, restaurantes, quintas e empresas locais isso significa uma nova forma de presença: integração orgânica na narrativa, muita atenção porque os jogadores exploram intensamente os cenários, e a curiosidade de um público viajante diretamente até si.",
+          "Onde cenários reais encontram a tensão de um policial – e o seu negócio passa a fazer parte da história. O especial: lugares reais e negócios reais – com o nome verdadeiro e a localização verdadeira – tornam-se o cenário central da investigação. Para hotéis, restaurantes, quintas e empresas locais isso significa uma nova forma de presença: integração orgânica na narrativa, muita atenção porque os jogadores exploram intensamente os cenários, e a curiosidade de um público viajante é conduzida diretamente até si.",
         imagine:
           "Imagine: um investigador (o jogador) procura pistas no jogo e é conduzido diretamente ao seu hotel, restaurante ou herdade. Torne o seu negócio numa parte inesquecível da aventura – e deixe-nos gerar novos clientes para si.",
       },
