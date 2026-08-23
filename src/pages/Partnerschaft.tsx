@@ -47,7 +47,7 @@ const COPY: Record<string, Copy> = {
       {
         name: "Spiel Luz e Morte",
         desc:
-          "Wo echte Schauplätze auf Krimi-Spannung treffen – und Ihr Betrieb Teil der Geschichte wird. Das Besondere: Echte Orte und reale Betriebe – mit ihrem echten Namen und ihrer echten Lage – werden zum zentralen Schauplatz der Ermittlungen. Für Hotels, Restaurants, Weingüter und lokale Unternehmen bedeutet das eine neue Form der Präsenz: organische Einbindung in den Handlungsstrang, hohe Aufmerksamkeit, weil Spieler sich intensiv mit den Schauplätzen auseinandersetzen, und die Neugier eines reisefreudigen Publikums wird direkt in Ihren Betrieb gelenkt.",
+          "Wo echte Schauplätze auf Krimi-Spannung treffen und Ihr Betrieb Teil der Geschichte wird. Das Besondere: Echte Orte und reale Betriebe werden mit ihrem echten Namen und ihrer echten Lage zum zentralen Schauplatz der (Spiel-)Ermittlungen. Für Hotels, Restaurants, Weingüter und lokale Unternehmen bedeutet das eine neue Form der Präsenz: organische Einbindung in den Handlungsstrang, hohe Aufmerksamkeit, weil Spieler sich intensiv mit den Schauplätzen auseinandersetzen und die Neugier eines reisefreudigen Publikums wird direkt in Ihren Betrieb gelenkt.",
         imagine:
           "Stellen Sie sich vor: Ein Ermittler (Spieler) sucht im Spiel nach Hinweisen und wird dabei direkt zu Ihrem Hotel, Restaurant oder Ihrem Hof geführt. Machen Sie Ihren Betrieb zu einem unvergesslichen Teil des Abenteuers – und lassen Sie uns neue Kunden für Sie generieren.",
       },
