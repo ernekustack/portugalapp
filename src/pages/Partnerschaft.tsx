@@ -65,7 +65,7 @@ const COPY: Record<string, Copy> = {
     closingTitle: "Welcher Ort in Ihrer Nähe hätte eine Geschichte verdient?",
     closingText:
       "Schreiben Sie uns einfach kurz – wir erzählen Ihnen gerne mehr und finden gemeinsam die passende Einbindung für Ihren Betrieb.",
-    cta: "Partnerschaft anfragen",
+    cta: "Kontakt aufnehmen",
     mail: "Direkt per E-Mail",
     back: "Zurück zur Startseite",
   },
@@ -112,7 +112,7 @@ const COPY: Record<string, Copy> = {
     closingTitle: "Which place near you deserves a story?",
     closingText:
       "Just send us a short message – we're happy to tell you more and find the right fit for your business together.",
-    cta: "Request partnership",
+    cta: "Get in touch",
     mail: "Email directly",
     back: "Back to home",
   },
@@ -159,7 +159,7 @@ const COPY: Record<string, Copy> = {
     closingTitle: "Que lugar perto de si merecia uma história?",
     closingText:
       "Escreva-nos uma mensagem curta – contamos-lhe com gosto mais e encontramos juntos a melhor forma de integrar o seu negócio.",
-    cta: "Pedir parceria",
+    cta: "Entrar em contacto",
     mail: "Enviar e-mail",
     back: "Voltar ao início",
   },
@@ -206,7 +206,7 @@ const COPY: Record<string, Copy> = {
     closingTitle: "Welke plek bij u in de buurt verdient een verhaal?",
     closingText:
       "Stuur ons kort een bericht – we vertellen u graag meer en vinden samen de passende invulling voor uw bedrijf.",
-    cta: "Partnerschap aanvragen",
+    cta: "Contact opnemen",
     mail: "Direct e-mailen",
     back: "Terug naar de startpagina",
   },
