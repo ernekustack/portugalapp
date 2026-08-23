@@ -8,6 +8,7 @@ import NotFound from "./pages/NotFound.tsx";
 import Connect from "./pages/Connect.tsx";
 import Lume from "./pages/Lume.tsx";
 import Partnerschaft from "./pages/Partnerschaft.tsx";
+import Datenschutz from "./pages/Datenschutz.tsx";
 import { LanguageProvider } from "@/i18n/LanguageContext";
 
 const queryClient = new QueryClient();
