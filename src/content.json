@@ -13,7 +13,7 @@
       "lume": "/__l5e/assets-v1/3b93a3e0-10bd-48c8-9204-4541e2211558/lume.png"
     },
     "inDevelopment": {
-      "p1": "",
+      "p1": "/__l5e/assets-v1/8bf6e00d-9033-4b42-a8c7-176752dbaf7c/logik-auditor.png",
       "p2": "",
       "p3": ""
     }
@@ -187,8 +187,8 @@
         "desc": "Diese Apps entstehen gerade im Studio – die ersten Neuheiten folgen in Kürze.",
         "items": [
           {
-            "name": "App 1",
-            "desc": "Was wird hier entstehen? Details folgen in Kürze.",
+            "name": "Logik-Auditor",
+            "desc": "Ein Unterstützungstool für Autoren.",
             "link": ""
           },
           {
@@ -403,8 +403,8 @@
         "desc": "These apps are currently being built in the studio – the first releases are on their way.",
         "items": [
           {
-            "name": "App 1",
-            "desc": "What will this become? Details coming soon.",
+            "name": "Logik-Auditor",
+            "desc": "A support tool for authors.",
             "link": ""
           },
           {
@@ -619,8 +619,8 @@
         "desc": "Estas aplicações estão a ser criadas no estúdio – as primeiras novidades chegam em breve.",
         "items": [
           {
-            "name": "App 1",
-            "desc": "O que vai ser isto? Detalhes em breve.",
+            "name": "Logik-Auditor",
+            "desc": "Uma ferramenta de apoio para autores.",
             "link": ""
           },
           {
@@ -835,8 +835,8 @@
         "desc": "Deze apps worden momenteel in de studio gebouwd – de eerste nieuwtjes volgen binnenkort.",
         "items": [
           {
-            "name": "App 1",
-            "desc": "Wat gaat dit worden? Details volgen binnenkort.",
+            "name": "Logik-Auditor",
+            "desc": "Een ondersteuningshulpmiddel voor auteurs.",
             "link": ""
           },
           {
