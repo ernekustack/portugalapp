@@ -201,7 +201,10 @@
             "desc": "Was wird hier entstehen? Details folgen in Kürze.",
             "link": ""
           }
-        ]
+        ],
+        "badge": "In Arbeit",
+        "visit": "Ansehen",
+        "soon": "Bald online"
       },
       "contact": {
         "eyebrow": "Kontakt",
@@ -414,7 +417,10 @@
             "desc": "What will this become? Details coming soon.",
             "link": ""
           }
-        ]
+        ],
+        "badge": "In progress",
+        "visit": "View",
+        "soon": "Coming soon"
       },
       "contact": {
         "eyebrow": "Contact",
@@ -627,7 +633,10 @@
             "desc": "O que vai ser isto? Detalhes em breve.",
             "link": ""
           }
-        ]
+        ],
+        "badge": "Em curso",
+        "visit": "Ver",
+        "soon": "Em breve"
       },
       "contact": {
         "eyebrow": "Contacto",
@@ -840,7 +849,10 @@
             "desc": "Wat gaat dit worden? Details volgen binnenkort.",
             "link": ""
           }
-        ]
+        ],
+        "badge": "In aanbouw",
+        "visit": "Bekijk",
+        "soon": "Binnenkort online"
       },
       "contact": {
         "eyebrow": "Contact",
