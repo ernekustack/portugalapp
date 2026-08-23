@@ -47,7 +47,7 @@ const COPY: Record<string, Copy> = {
       {
         name: "Spiel Luz e Morte",
         desc:
-          "Wo echte Schauplätze auf Krimi-Spannung treffen – und Ihr Betrieb Teil der Geschichte wird. Luz e Morte ist ein atmosphärisches Kriminalspiel, das tief in die Mythen und die Geschichte des Alentejo eintaucht. Das Besondere: Echte Orte und reale Betriebe – mit ihrem echten Namen und ihrer echten Lage – werden zum zentralen Schauplatz der Ermittlungen. Für Hotels, Restaurants, Weingüter und lokale Unternehmen bedeutet das eine neue Form der Präsenz: organische Einbindung in den Handlungsstrang, hohe Aufmerksamkeit, weil Spieler sich intensiv mit den Schauplätzen auseinandersetzen, und eine echte Verknüpfung, die die Neugier eines reisefreudigen Publikums direkt in Ihren Betrieb lenkt.",
+          "Wo echte Schauplätze auf Krimi-Spannung treffen – und Ihr Betrieb Teil der Geschichte wird. Das Besondere: Echte Orte und reale Betriebe – mit ihrem echten Namen und ihrer echten Lage – werden zum zentralen Schauplatz der Ermittlungen. Für Hotels, Restaurants, Weingüter und lokale Unternehmen bedeutet das eine neue Form der Präsenz: organische Einbindung in den Handlungsstrang, hohe Aufmerksamkeit, weil Spieler sich intensiv mit den Schauplätzen auseinandersetzen, und die Neugier eines reisefreudigen Publikums wird direkt in Ihren Betrieb gelenkt.",
         imagine:
           "Stellen Sie sich vor: Ein Ermittler (Spieler) sucht im Spiel nach Hinweisen und wird dabei direkt zu Ihrem Hotel, Restaurant oder Ihrem Hof geführt. Machen Sie Ihren Betrieb zu einem unvergesslichen Teil des Abenteuers – und lassen Sie uns neue Kunden für Sie generieren.",
       },
@@ -94,7 +94,7 @@ const COPY: Record<string, Copy> = {
       {
         name: "Luz e Morte (game)",
         desc:
-          "Where real locations meet crime-thriller suspense – and your business becomes part of the story. Luz e Morte is an atmospheric crime game diving deep into the myths and history of the Alentejo. What makes it special: real places and real businesses – with their actual name and location – become the central scene of the investigation. For hotels, restaurants, wineries and local businesses this means a new form of presence: organic integration into the storyline, high attention because players engage intensively with the locations, and a real link that channels the curiosity of a travel-minded audience straight to you.",
+          "Where real locations meet crime-thriller suspense – and your business becomes part of the story. What makes it special: real places and real businesses – with their actual name and location – become the central scene of the investigation. For hotels, restaurants, wineries and local businesses this means a new form of presence: organic integration into the storyline, high attention because players engage intensively with the locations, and the curiosity of a travel-minded audience is channelled straight to you.",
         imagine:
           "Imagine: an investigator (the player) searches for clues in the game and is led directly to your hotel, restaurant or farm. Make your business an unforgettable part of the adventure – and let us generate new customers for you.",
       },
@@ -141,7 +141,7 @@ const COPY: Record<string, Copy> = {
       {
         name: "Jogo Luz e Morte",
         desc:
-          "Onde cenários reais encontram a tensão de um policial – e o seu negócio passa a fazer parte da história. Luz e Morte é um jogo policial atmosférico que mergulha nos mitos e na história do Alentejo. O especial: lugares reais e negócios reais – com o nome verdadeiro e a localização verdadeira – tornam-se o cenário central da investigação. Para hotéis, restaurantes, quintas e empresas locais isso significa uma nova forma de presença: integração orgânica na narrativa, muita atenção porque os jogadores exploram intensamente os cenários, e uma ligação real que leva a curiosidade de um público viajante diretamente até si.",
+          "Onde cenários reais encontram a tensão de um policial – e o seu negócio passa a fazer parte da história. O especial: lugares reais e negócios reais – com o nome verdadeiro e a localização verdadeira – tornam-se o cenário central da investigação. Para hotéis, restaurantes, quintas e empresas locais isso significa uma nova forma de presença: integração orgânica na narrativa, muita atenção porque os jogadores exploram intensamente os cenários, e a curiosidade de um público viajante é conduzida diretamente até si.",
         imagine:
           "Imagine: um investigador (o jogador) procura pistas no jogo e é conduzido diretamente ao seu hotel, restaurante ou herdade. Torne o seu negócio numa parte inesquecível da aventura – e deixe-nos gerar novos clientes para si.",
       },
@@ -188,7 +188,7 @@ const COPY: Record<string, Copy> = {
       {
         name: "Game Luz e Morte",
         desc:
-          "Waar echte locaties samenkomen met misdaadspanning – en uw bedrijf deel wordt van het verhaal. Luz e Morte is een atmosferische misdaadgame die diep in de mythen en geschiedenis van de Alentejo duikt. Het bijzondere: echte plekken en echte bedrijven – met hun echte naam en echte locatie – worden het centrale decor van het onderzoek. Voor hotels, restaurants, wijngoederen en lokale ondernemingen betekent dat een nieuwe vorm van aanwezigheid: organische integratie in de verhaallijn, veel aandacht omdat spelers zich intensief met de locaties bezighouden, en een echte verbinding die de nieuwsgierigheid van een reislustig publiek direct naar u leidt.",
+          "Waar echte locaties samenkomen met misdaadspanning – en uw bedrijf deel wordt van het verhaal. Het bijzondere: echte plekken en echte bedrijven – met hun echte naam en echte locatie – worden het centrale decor van het onderzoek. Voor hotels, restaurants, wijngoederen en lokale ondernemingen betekent dat een nieuwe vorm van aanwezigheid: organische integratie in de verhaallijn, veel aandacht omdat spelers zich intensief met de locaties bezighouden, en de nieuwsgierigheid van een reislustig publiek direct naar u leidt.",
         imagine:
           "Stelt u zich voor: een rechercheur (de speler) zoekt in de game naar aanwijzingen en wordt daarbij direct naar uw hotel, restaurant of boerderij geleid. Maak uw bedrijf een onvergetelijk deel van het avontuur – en laat ons nieuwe klanten voor u genereren.",
       },
