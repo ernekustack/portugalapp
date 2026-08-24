@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { ArrowLeft, MessageCircle } from "lucide-react";
 import { useI18n } from "@/i18n/LanguageContext";
-import lumeDragon from "@/assets/lume-dragon.png";
+import lumeDragon from "@/assets/lume-dragon.webp";
 
 const WHATSAPP_NUMBER = "351923595110";
 

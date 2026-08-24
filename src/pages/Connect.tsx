@@ -2,10 +2,10 @@ import { useEffect, useState, FormEvent } from "react";
 import { Link } from "react-router-dom";
 import { Calendar, Flame, MessageCircle, ArrowUpRight, ChevronDown, X } from "lucide-react";
 import { useI18n } from "@/i18n/LanguageContext";
-import alentejoLogo from "@/assets/alentejo-eventos-logo.png";
-import logoFarol from "@/assets/logo-farol.jpg";
-import luzLogo from "@/assets/luz-e-morte-logo.jpg";
-import lumeDragon from "@/assets/lume-dragon.png";
+import alentejoLogo from "@/assets/alentejo-eventos-logo.webp";
+import logoFarol from "@/assets/logo-farol.webp";
+import luzLogo from "@/assets/luz-e-morte-logo.webp";
+import lumeDragon from "@/assets/lume-dragon.webp";
 
 // ⚙️ Hier deine WhatsApp-Nummer eintragen (internationales Format, nur Ziffern):
 const WHATSAPP_NUMBER = "351923595110"; // TODO: durch echte Nummer ersetzen
