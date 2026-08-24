@@ -8,14 +8,14 @@
   "images": {
     "heroBackground": "",
     "initiatives": {
-      "luzEMorte": "/__l5e/assets-v1/8055b58b-4f85-44d7-b82f-c6afac682dd1/luz-e-morte.png",
-      "alentejoEvents": "/__l5e/assets-v1/e338f607-d168-4f05-94e2-5b3eecd00ed7/alentejo-eventos.png",
-      "lume": "/__l5e/assets-v1/3b93a3e0-10bd-48c8-9204-4541e2211558/lume.png"
+      "luzEMorte": "/__l5e/assets-v1/00440937-bea5-4434-b292-a537d26bef3c/luz-e-morte.webp",
+      "alentejoEvents": "/__l5e/assets-v1/9988499a-fa4e-49b1-a95c-116d169dfe64/alentejo-eventos.webp",
+      "lume": "/__l5e/assets-v1/1cf35d4a-7e79-4e4c-b49b-a9b97bda6853/lume.webp"
     },
     "inDevelopment": {
-      "p1": "/__l5e/assets-v1/8bf6e00d-9033-4b42-a8c7-176752dbaf7c/logik-auditor.png",
-      "p2": "/__l5e/assets-v1/cc31336c-7549-45e1-bdd4-bf3a90aed328/rumo.png",
-      "p3": "/__l5e/assets-v1/b10932ba-78bc-42e5-a6b1-0bb58dee24fa/timeline-ink.png"
+      "p1": "/__l5e/assets-v1/ac923f72-fd3f-43f0-98fa-261688771cb8/logik-auditor.webp",
+      "p2": "/__l5e/assets-v1/99820f63-5437-428f-848b-4e39e70b6ee3/rumo.webp",
+      "p3": "/__l5e/assets-v1/ebfcff6b-a7f7-4f7b-912f-a9f32b578a0d/timeline-ink.webp"
     }
   },
   "translations": {

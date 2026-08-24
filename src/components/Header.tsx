@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { useI18n } from "@/i18n/LanguageContext";
 import { LanguageSwitcher } from "./LanguageSwitcher";
-import logoFarol from "@/assets/logo-farol.asset.json";
+import logoFarol from "@/assets/logo-farol.webp.asset.json";
 
 export const Header = () => {
   const { t } = useI18n();
